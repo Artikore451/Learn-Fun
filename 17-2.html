@@ -1,0 +1,54 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>READ AND PRINT AN EMPLOYEE DETAIL</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+ 
+/*structure declaration*<br>/
+struct employee<br>{<br>
+    char    name[30];<br>
+    int     empId;<br>
+    float   salary;<br>
+};<br><br>
+ 
+int main()<br>
+{<br>
+    /*declare structure variable*/<br>
+    struct employee emp;<br><br>
+     
+    /*read employee details*/<br>
+    printf("\nEnter details :\n");<br>
+    printf("Name ?:");          gets(emp.name);<br>
+    printf("ID ?:");            scanf("%d",&emp.empId);<br>
+    printf("Salary ?:");        scanf("%f",&emp.salary);<br>
+     <br>
+    /*print employee details*/<br>
+    printf("\nEntered detail is:");<br>
+    printf("Name: %s"   ,emp.name);<br>
+    printf("Id: %d"     ,emp.empId);<br>
+    printf("Salary: %f\n",emp.salary);<br>
+    return 0;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Enter details :<br>
+Name ?:Mike<br>
+ID ?:1120<br>
+Salary ?:76543<br><br>
+
+Entered detail is:<br>
+Name: Mike<br>
+Id: 1120<br>
+Salary: 76543.000000<br>
+
+
+</fieldset>
+</body>
+</html>

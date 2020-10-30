@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SORT AN ARRAY USING POINTER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{<br>
+   int *a,i,j,tmp,n;<br>
+ 	printf("\n\n Pointer : Sort an array using pointer :\n");<br> 
+	printf("--------------------------------------------\n");	<br>   
+   <br>
+   printf(" Input the number of elements to store in the array : ");<br>
+   scanf("%d",&n);<br><br>
+   
+   printf(" Input %d number of elements in the array : \n",n);<br>
+   for(i=0;i<n;i++)<br>
+      {<br>
+	  printf(" element - %d : ",i+1);<br>
+	  scanf("%d",a+i);<br>
+	  }   <br>
+   for(i=0;i<n;i++)<br>
+   {<br>
+    for(j=i+1;j<n;j++)<br>
+    {<br>
+       if( *(a+i) > *(a+j))<br>
+       {<br>
+      tmp = *(a+i);<br>
+      *(a+i) = *(a+j);<br>
+      *(a+j) = tmp;<br>
+       }<br>
+    }<br>
+   }<br>
+   printf("\n The elements in the array after sorting : \n");<br>
+   for(i=0;i<n;i++)<br>
+      {<br>
+	  printf(" element - %d : %d \n",i+1,*(a+i));<br>
+	  }         <br>
+printf("\n");<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Pointer : Sort an array using pointer :<br>                                                                      
+--------------------------------------------<br>                                                                  
+ Input the number of elements to store in the array : 5<br>                                                       
+ Input 5 number of elements in the array :                 <br>                                                   
+ element - 1 : 25<br>                                                                                             
+ element - 2 : 45    <br>                                                                                         
+ element - 3 : 89        <br>                                                                                     
+ element - 4 : 15            <br>                                                                                 
+ element - 5 : 82                <br><br>                                                                             
+                                                                                                              
+ The elements in the array after sorting :<br>                                                                    
+ element - 1 : 15<br>                                                                                             
+ element - 2 : 25    <br>                                                                                         
+ element - 3 : 45        <br>                                                                                     
+ element - 4 : 82            <br>                                                                                 
+ element - 5 : 89<br>
+</fieldset>
+</body>
+</html>

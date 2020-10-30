@@ -1,0 +1,51 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SHOW THE BASIC DECLARATION OF POINTER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main(void) <br>
+{ <br>
+int m=10,n,o; <br>
+int *z=&m ; <br>
+
+	printf("\n\n Pointer : Show the basic declaration of pointer :\n"); <br>
+	printf("-------------------------------------------------------\n");  <br>
+	printf(" Here is m=10, n and o are two integer variable and *z is an integer"); <br>	
+	printf("\n\n z stores the address of m  = %p\n",  z); // z is a pointer so %p would print the address <br>
+	printf("\n *z stores the value of m = %i\n",   *z);  <br>
+	printf("\n &m is the address of m = %p\n",   &m); // &m gives the address of the integer variable m <br> 
+                             // so %p is the specifier for that address <br>
+	printf("\n &n stores the address of n = %p\n",   &n); <br>
+	printf("\n &o  stores the address of o = %p\n",   &o); <br>
+	printf("\n &z stores the address of z = %p\n\n", &z); // &z gives the address, where the pointer z is <br> 
+                             // stored -> still an address -> %p is the right <br>
+                             // specifier         <br>
+} <br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Show the basic declaration of pointer :  <br>                                                           
+-------------------------------------------------------  <br>                                                      
+ Here is m=10, n and o are two integer variable and *z is an integer <br>                                          
+                                                                                                              
+ z stores the address of m  = 0x7ffd763082b4                              <br>                                     
+                                                                                                              
+ *z stores the value of m = 10                   <br>                                                              
+                                                                                                              
+ &m is the address of m = 0x7ffd763082b4              <br>                                                         
+                                                                                                              
+ &n stores the address of n = 0x7ffd763082b8  <br>                                                                 
+                                                                                                              
+ &o  stores the address of o = 0x7ffd763082bc      <br>                                                            
+                                                                                                              
+ &z stores the address of z = 0x7ffd763082c0    <br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>FACTORIAL OF GIVEN NUMBER USING POINTERS</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void findFact(int,int*);<br>
+int main()<br>
+{<br>
+         int fact;<br>
+         int num1;<br>
+		printf("\n\n Pointer : Find the factorial of a given number :\n");<br> 
+		printf("------------------------------------------------------\n");	<br>
+		printf(" Input a number : ");<br>
+		scanf("%d",&num1);		 <br>
+
+         findFact(num1,&fact);<br>
+         printf(" The Factorial of %d is : %d \n\n",num1,fact);<br>
+         return 0;<br>
+        }<br><br>
+
+void findFact(int n,int *f)<br>
+		{<br>
+        int i;<br>
+
+       *f =1;<br>
+       for(i=1;i<=n;i++)<br>
+       *f=*f*i;<br>
+       }<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Find the factorial of a given number :    <br>                                                         
+------------------------------------------------------   <br>                                                     
+ Input a number : 5                                          <br>                                                 
+ The Factorial of 5 is : 120<br>
+</fieldset>
+</body>
+</html>

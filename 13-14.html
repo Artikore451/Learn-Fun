@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>CONVERT NUMBER OF PANCTUATION CHARACTERS IN A STRING</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br><br>
+
+int main()<br>
+{<br>
+	int ctr1=0;<br>
+	int ctr2=0;<br>
+	char str[100]; <br>
+	printf("\n Count the number of punctuation characters exists in a string :\n");  <br>
+    printf("------------------------------------------------------------------\n");	<br>
+    printf(" Input a string : ");<br>
+	fgets(str, sizeof str, stdin);<br> 	
+	while (str[ctr1])<br>
+	{<br>
+		if (ispunct(str[ctr1])) ctr2++;<br>
+		ctr1++;<br>
+	}<br>
+	printf (" The punctuation characters exists in the string is : %d\n\n", ctr2);<br>
+  	return 0;<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Count the number of punctuation characters exists in a string :<br>
+------------------------------------------------------------------<br>
+ Input a string : The quick brown fox,jumps over the,lazy dog.<br>
+ The punctuation characters exists in the string is : 3<br>
+                                                                                                              
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>Problem 4</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void salaryhike(int *var, int b)<br>
+{<br>
+*var = *var+b;<br>
+}<br><br>
+int main()<br>
+{<br>
+int salary=0, bonus=0;<br>
+printf("Enter the employee current salary:");<br>
+scanf("%d", &salary);<br>
+printf("Enter bonus:");<br>
+scanf("%d", &bonus);<br>
+salaryhike(&salary, bonus);<br>
+printf("Final salary: %d", salary);<br>
+return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Enter the employee current salary:10000<br>
+Enter bonus:2000<br>
+Final salary: 12000<br>
+
+</fieldset>
+</body>
+</html>

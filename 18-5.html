@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DECLARE A STRUCTURE VARIABLE AS GLOBAL</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br><br>
+#include <<string.h>string.h><br><br>
+struct student 
+{<br>
+            int id;<br>
+            char name[20];<br>
+            float percentage;<br>
+};<br><br>
+struct student record; // Global declaration of structure<br>
+ 
+void structure_demo();<br>
+ <br>
+int main() <br>
+{<br>
+            record.id=1;<br>
+            strcpy(record.name, "Raju");<br>
+            record.percentage = 86.5;<br>
+ <br>
+            structure_demo();<br>
+            return 0;<br>
+}<br>
+ <br>
+void structure_demo()<br>
+{<br>
+            printf(" Id is: %d \n", record.id);<br>
+            printf(" Name is: %s \n", record.name);<br>
+            printf(" Percentage is: %f \n", record.percentage);<br>
+}ntf(" Percentage is: %f \n", record->percentage);<br>
+</fieldset>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Id is: 1<br>
+Name is: Raju<br>
+Percentage is: 86.500000<br>
+
+
+
+</fieldset>
+</body>
+</html>

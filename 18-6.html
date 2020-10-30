@@ -1,0 +1,71 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i></u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br><br>
+/* <br>
+structure is defined above all functions so it is global. <br>
+*/ <br> <br>
+
+struct company <br>
+{ <br>
+     char name[20];<br>
+    char ceo[20];<br>
+    float revenue; // in $
+<br>    float pps; // price per stock in $<br>
+};<br><br>
+
+void print_struct(const struct company str_arr[]);<br><br>
+
+int main()<br>
+{<br>
+<br>
+    struct company companies[3] = {<br>
+                           {"Country Books", "Tim Green", 999999999, 1300 },<br>
+                           {"Country Cooks", "Jim Green", 9999999, 700 },<br>
+                           {"Country Hooks", "Sim Green", 99999, 300 },<br>
+                   };<br>
+    print_struct(companies);<br>
+<br>
+    return 0;<br>
+}<br>
+<br>
+void print_struct(struct company str_arr[])<br>
+{<br>
+    int i;<br><br>
+
+    for(i= 0; i<3; i++)<br>
+    {<br>
+        printf("Name: %s\n", str_arr[i].name);<br>
+        printf("CEO: %d\n", str_arr[i].ceo);<br>
+        printf("Revenue: %.2f\n", str_arr[i].revenue);<br>
+        printf("Price per stock : %.2f\n", str_arr[i].pps);<br>
+        printf("\n");<br>
+    }<br>
+}<br>
+</fieldset>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Name: Country Books<br>
+CEO: 2686660<br>
+Revenue: 1000000000.00<br>
+Price per stock : 1300.00<br><br>
+
+Name: Country Cooks<br>
+CEO: 2686708<br>
+Revenue: 9999999.00<br>
+Price per stock : 700.00<br><br>
+
+Name: Country Hooks<br>
+CEO: 2686756<br>
+Revenue: 99999.00<br>
+Price per stock : 300.00<br>
+
+</fieldset>
+</body>
+</html>

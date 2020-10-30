@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DEMONSTRATE EXAMPLE OF NESTED STRUCTURE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+struct student<br>{<br>
+	char name[30];<br>
+	int rollNo;<br><br>
+	
+	struct dateOfBirth<br>{<br>
+		int dd;<br>
+		int mm;<br>
+		int yy;<br>
+	}DOB;	/*created structure varoable DOB*/<br>
+};<br><br>
+
+int main()<br>
+{<br>
+	struct student std;<br>
+
+	printf("Enter name: "); 		gets(std.name);<br>
+	printf("Enter roll number: ");	scanf("%d",&std.rollNo);<br>
+	printf("Enter Date of Birth [DD MM YY] format: ");<br>
+	scanf("%d%d%d",&std.DOB.dd,&std.DOB.mm,&std.DOB.yy);<br>
+	printf("\nName : %s \nRollNo : %d \nDate of birth : %02d/%02d/%02d\n",std.name,std.rollNo,std.DOB.dd,std.DOB.mm,std.DOB.yy);<br>
+	<br>
+	return 0;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Enter name: Mike <br>
+Enter roll number: 101<br> 
+Enter Date of Birth [DD MM YY] format: 14 03 92<br><br> 
+ 
+Name : Mike  <br>
+RollNo : 101  <br>
+Date of birth : 14/03/92<br><br> 
+
+
+</fieldset>
+</body>
+</html>

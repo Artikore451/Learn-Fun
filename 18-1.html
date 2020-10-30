@@ -1,0 +1,75 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DEMONSTRATE EXAMPLE STRUCTURE POINTER USING FUNCTION</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br><br>
+struct item<br>
+{<br>
+	char  itemName[30];<br>
+	int qty;<br>
+	float price;<br>
+	float amount;<br>
+};<br><br>
+
+/*readItem()- to read values of item and calculate total amount*/<br>
+void readItem(struct item *i)<br>
+{<br>
+	/*read values using pointer*/<br>
+	printf("Enter product name: ");<br>
+	gets(i->itemName);<br>
+	printf("Enter price:");<br>
+	scanf("%f",&i->price);<br>
+	printf("Enter quantity: ");<br>
+	scanf("%d",&i->qty);<br>
+	<br>
+	/*calculate total amount of all quantity*/<br>
+	i->amount =(float)i->qty * i->price;<br>
+}<br><br>
+
+/*printItem() - to print values of item*/<br>
+void printItem(struct item *i)<br>
+{<br>
+	/*print item details*/<br>
+	printf("\nName: %s",i->itemName);<br>
+	printf("\nPrice: %f",i->price);<br>
+	printf("\nQuantity: %d",i->qty);<br>
+	printf("\nTotal Amount: %f",i->amount);<br>
+<br>
+}<br>
+int main()<br>
+{<br>
+	
+	struct item itm;	/*declare variable of structure item*/<br>
+	struct item *pItem;	/*declare pointer of structure item*/<br>
+	
+	pItem = &itm;		/*pointer assignment - assigning address of itm to pItem*/<br>
+	/*read item*/<br>
+	readItem(pItem);<br>
+	/*print item*/<br>
+	printItem(pItem);<br>
+	<br>
+	
+	return 0;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Enter product name: Pen <br>
+Enter price:5.50 <br>
+Enter quantity: 15 <br><br>
+ 
+Name: Pen <br>
+Price: 5.500000<br> 
+Quantity: 15 <br>
+Total Amount: 82.500000<br>
+
+
+</fieldset>
+</body>
+</html>

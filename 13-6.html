@@ -1,0 +1,65 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>COUNT NUMBER OF ALPHABETS,DIGITS AND SPEACIAL CHARACTER IN STRING</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br><br>
+
+
+#define str_size 100 //Declare the maximum size of the string<br>
+
+void main()<br>
+{<br>
+    char str[str_size];<br>
+    int alp, digit, splch, i;<br>
+    alp = digit = splch = i = 0;<br>
+
+
+       printf("\n\nCount total number of alphabets, digits and special characters :\n");<br>
+       printf("--------------------------------------------------------------------\n"); <br>	
+       printf("Input the string : ");<br>
+       fgets(str, sizeof str, stdin);	<br>
+
+     /* Checks each character of string*/<br>
+
+    while(str[i]!='\0')<br>
+    {<br>
+        if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z'))<br>
+        {<br>
+            alp++;<br>
+        }<br>
+        else if(str[i]>='0' && str[i]<='9')<br>
+        {<br>
+            digit++;<br>
+        }<br>
+        else<br>
+        {<br>
+            splch++;<br>
+        }<br>
+
+        i++;<br>
+    }<br>
+
+    printf("Number of Alphabets in the string is : %d\n", alp);<br>
+    printf("Number of Digits in the string is : %d\n", digit);<br>
+    printf("Number of Special characters in the string is : %d\n\n", splch);<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Count total number of alphabets, digits and special characters :  <br>                                            
+--------------------------------------------------------------------  <br>                                        
+Input the string : Welcome to w3resource.com <br>                                                                 
+Number of Alphabets in the string is : 21    <br>                                                                 
+Number of Digits in the string is : 1            <br>                                                             
+Number of Special characters in the string is : 4 <br>
+</fieldset>
+</body>
+</html>

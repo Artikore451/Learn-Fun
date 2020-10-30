@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>Problem 1</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+ 
+int main() <br>
+{ <br>
+    int a;          //integer variable <br>
+    int *p1;            //pointer to an integer <br>
+    int **p2;           //pointer to an integer pointer <br> <br>
+     
+    p1=&a;          //assign address of a <br>
+    p2=&p1;         //assign address of p1 <br> <br>
+     
+    a=100;          //assign 100 to a <br>
+     
+    //access the value of a using p1 and p2 <br>
+    printf("\nValue of a (using p1): %d",*p1); <br>
+    printf("\nValue of a (using p2): %d",**p2); <br>
+      <br>
+    //change the value of a using p1 <br>
+    *p1=200; <br>
+    printf("\nValue of a: %d",*p1); <br>
+    //change the value of a using p2 <br>
+    **p2=200; <br>
+    printf("\nValue of a: %d",**p2); <br>
+      <br>
+    return 0; <br>
+} <br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+   Value of a (using p1): 100 <br>
+    Value of a (using p2): 100 <br>
+    Value of a: 200 <br>
+    Value of a: 200 <br>
+</fieldset>
+</body>
+</html>

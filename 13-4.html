@@ -1,0 +1,43 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PRINT INDIVIDUAL CHARACTER IN REVERSE ORDER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br><br>
+
+
+void main()<br>
+{<br>
+    char str[100]; /* Declares a string of size 100 */<br>
+    int l,i;<br><br>
+	
+       printf("\n\nPrint individual characters of string in reverse order :\n");<br>
+       printf("------------------------------------------------------\n"); 	<br>
+       printf("Input the string : ");<br>
+       fgets(str, sizeof str, stdin);<br>
+	   l=strlen(str);<br>
+	   printf("The characters of the string in reverse are : \n");<br>
+       for(i=l;i>=0;i--)<br>
+        {<br>
+          printf("%c  ", str[i]);<br>
+        }<br>
+    printf("\n");<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Separate the individual characters from a string : <br>                                                           
+------------------------------------------------------ <br>                                                       
+Input the string :progrmming  <br>                                                                          
+The characters of the string are :      <br>                                                                      
+g n i m m r g o r p <br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PASSING 2D ARRAY TO FUNCTION </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void displayNumbers(int num[2][2]);<br>
+int main()<br>
+{<br>
+    int num[2][2];<br>
+    printf("Enter 4 numbers:\n");<br>
+    for (int i = 0; i < 2; ++i)<br>
+        for (int j = 0; j < 2; ++j)<br>
+            scanf("%d", &num[i][j]);<br><br>
+
+    // passing multi-dimensional array to a function<br>
+    displayNumbers(num);<br>
+    return 0;<br>
+}<br>
+
+void displayNumbers(int num[2][2])<br>
+{<br>
+    printf("Displaying:\n");<br>
+    for (int i = 0; i < 2; ++i) <br>{<br>
+        for (int j = 0; j < 2; ++j) <br>{<br>
+           printf("%d\n", num[i][j]);<br>
+        }<br>
+    }<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Enter 4 numbers:<br>
+2<br>
+3<br>
+4<br>
+5<br>
+Displaying:<br>
+2<br>
+3<br>
+4<br>
+5<br>
+</fieldset>
+</body>
+</html>

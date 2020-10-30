@@ -1,0 +1,46 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>REMOVE CHARACTERS IN STRING EXCEPT ALPHABETS</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br><br>
+
+void main()<br>{<br>
+    char str[150];<br>
+    int i,j;<br><br>
+	
+       printf("\n\nRemove characters in String Except Alphabets :\n");<br>
+       printf("--------------------------------------------------\n");	<br>
+
+	printf("Input the string : ");<br>
+    fgets(str,sizeof str,stdin);	<br>
+    for(i=0; str[i]!='\0'; ++i)<br>
+    {<br>
+        while (!((str[i]>='a'&&str[i]<='z') || (str[i]>='A'&&str[i]<='Z' || str[i]=='\0')))<br>
+        {<br>
+            for(j=i;str[j]!='\0';++j)<br>
+            {<br>
+                str[j]=str[j+1];<br>
+            }<br>
+            str[j]='\0';<br>
+        }<br>
+    }<br>
+    printf("After removing the Output String : %s\n\n",str);<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Remove characters in String Except Alphabets : <br>                                                                               
+-------------------------------------------------- <br>                                                                           
+Input the string : W3resource.com                      <br>                                                                       
+After removing the Output String : Wresourcecom         <br>
+                                                                                                              
+</fieldset>
+</body>
+</html>

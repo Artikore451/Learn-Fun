@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PRINT A STRING INREVERSE USING A POINTER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+int main()<br>
+{<br>
+    char str1[50];<br>
+    char revstr[50];<br>
+    char *stptr = str1;<br>
+    char *rvptr = revstr;<br>
+    int i=-1;<br>
+ 	printf("\n\n Pointer : Print a string in reverse order :\n");<br> 
+	printf("------------------------------------------------\n");	<br>
+    printf(" Input a string : ");<br>
+    scanf("%s",str1);<br>
+    while(*stptr)<br>
+    {<br>
+     stptr++;<br>
+     i++;<br>
+    }<br>
+    while(i>=0)<br>
+    {<br>
+     stptr--;<br>
+     *rvptr = *stptr;<br>
+     rvptr++;<br>
+     --i;<br>
+    }<br>
+    *rvptr='\0';<br>
+    printf(" Reverse of the string is : %s\n\n",revstr);<br>
+    return 0;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Print a string in reverse order :<br>                                                                  
+------------------------------------------------<br>                                                              
+ Input a string : w3resource  <br>                                                                                
+ Reverse of the string is : ecruoser3w <br>
+</fieldset>
+</body>
+</html>

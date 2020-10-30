@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PASSING ARRAY ELEMENTS IN FUNCTION BY CALL BY REFERENCE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void disp( int *num)<br>
+{<br>
+    printf("%d ", *num);<br>
+}<br><br>
+
+int main()<br>
+{<br>
+     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};<br>
+     for (int i=0; i<10; i++)<br>
+     {<br>
+         /* Passing addresses of array elements*/<br>
+         disp (&arr[i]);<br>
+     }<br><br>
+
+     return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+1 2 3 4 5 6 7 8 9 0<br>
+</fieldset>
+</body>
+</html>

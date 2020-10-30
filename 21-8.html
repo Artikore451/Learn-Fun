@@ -1,0 +1,40 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i> DECLARING C UNION</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+#include <<string.h>string.h><br><br>
+ 
+union student <br>
+{<br>
+            char name[20];<br>
+            char subject[20];<br>
+            float percentage;<br>
+}record;<br><br>
+ 
+int main() <br>
+{<br>
+ 
+            strcpy(record.name, "Raju");<br>
+            strcpy(record.subject, "Maths");<br>
+            record.percentage = 86.50;<br><br>
+ 
+            printf(" Name       : %s \n", record.name);<br>
+            printf(" Subject    : %s \n", record.subject);<br>
+            printf(" Percentage : %f \n", record.percentage);<br>
+            return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Name :<br>
+Subject :<br>
+Percentage : 86.500000<br>
+</fieldset>
+</body>
+</html>

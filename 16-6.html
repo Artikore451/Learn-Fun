@@ -1,0 +1,64 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>Problem 6</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+/* function to generate and return random numbers. */<br>
+int * getRandom( ) <br>
+{<br>
+static int r[10];<br>
+int i;<br>
+/* set the seed */<br>
+srand( (unsigned)time( NULL ) );<br>
+for ( i = 0; i < 10; ++i)<br>
+{<br>
+r[i] = rand();<br>
+printf("%d\n", r[i] );<br>
+}<br>
+return r;<br>
+}<br>
+/* main function to call above defined function */<br>
+int main () <br>
+{<br>
+/* a pointer to an int */<br>
+int *p;<br>
+int i;<br>
+p = getRandom();<br>
+for ( i = 0; i < 10; i++ )<br> 
+{<br>
+printf("*(p + [%d]) : %d\n", i, *(p + i) );<br>
+}<br>
+return 0;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+1523198053<br>
+1187214107<br>
+1108300978<br>
+430494959<br>
+1421301276<br>
+930971084<br>
+123250484<br>
+106932140<br>
+1604461820<br>
+149169022<br><br>
+*(p + [0]) : 1523198053<br>
+*(p + [1]) : 1187214107<br>
+*(p + [2]) : 1108300978<br>
+*(p + [3]) : 430494959<br>
+*(p + [4]) : 1421301276<br>
+*(p + [5]) : 930971084<br>
+*(p + [6]) : 123250484<br>
+*(p + [7]) : 106932140<br>
+*(p + [8]) : 1604461820<br>
+*(p + [9]) : 149169022<br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DEMONSTRATES THE DIFFERENCE BETWEEN STRUCTURE AND POINTER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+/*<br>
+union is defined above all functions so it is global.<br>
+*/<br><br>
+
+struct s<br>
+{<br>
+    int var1;<br>
+    double var2;<br>
+    char var3;<br>
+};<br><br>
+
+union u<br>
+{<br>
+    int var1;<br>
+    double var2;<br>
+    char var3;<br>
+};<br>
+<br>
+int main()<br>
+{<br>
+    struct s a;<br>
+    union u b;<br><br>
+
+    printf("Information about structure variable \n\n");<br><br>
+
+    printf("Address variable of a = %u\n", &a);<br>
+    printf("Size of variable of a = %d\n", sizeof(a));<br><br>
+
+    printf("Address of 1st member i.e var1 = %u\n", &a.var1);<br>
+    printf("Address of 2nd member i.e var2 = %u\n", &a.var2);<br>
+    printf("Address of 3rd member i.e var3 = %u\n", &a.var3);<br><br>
+
+    printf("\n");<br>
+
+    printf("Information about union variable \n\n");<br>
+
+    printf("Address of variable of b = %u\n", &b);<br>
+    printf("Size of variable of b = %d\n", sizeof(b));<br>
+<br>
+    printf("Address of 1st member i.e var1 = %u\n", &b.var1);<br>
+    printf("Address of 2nd member i.e var2 = %u\n", &b.var2);<br>
+    printf("Address of 3rd member i.e var3 = %u\n", &b.var3);<br>
+    printf("\n\n");<br><br>
+
+    return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Address variable of a = 2686728<br>
+Size of variable of a = 24<br>
+Address of 1st member i.e var1 = 2686728<br>
+Address of 2nd member i.e var2 = 2686736<br>
+Address of 3rd member i.e var3 = 2686744<br>
+<br>
+Information about union variable<br>
+<br>
+Address of variable of b = 2686720<br>
+Size of variable of b = 8<br>
+Address of 1st member i.e var1 = 2686720<br>
+Address of 2nd member i.e var2 = 2686720<br>
+Address of 3rd member i.e var3 = 2686720<br>
+
+</fieldset>
+</body>
+</html>

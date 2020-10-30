@@ -1,0 +1,65 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>WRITE MULTIPLE LINES IN A TEXT FILE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+int main ()<br>
+{<br>
+  FILE * fptr;<br>
+  int i,n;<br>
+  char str[100];<br>
+  char fname[20]="test.txt";<br>
+  char str1;<br><br>
+  
+    printf("\n\n Write multiple lines in a text file and read the file :\n");<br>
+	printf("------------------------------------------------------------\n");<br>   
+	printf(" Input the number of lines to be written : ");<br>
+	scanf("%d", &n);<br>
+	printf("\n :: The lines are ::\n");<br>
+	fptr = fopen (fname,"w"); <br>
+	for(i = 0; i < n+1;i++)<br>
+		{<br>
+		fgets(str, sizeof str, stdin);<br>
+		fputs(str, fptr);<br>
+		}<br>
+  fclose (fptr);<br>
+/*-------------- read the file -------------------------------------*/<br>
+	fptr = fopen (fname, "r");  <br>
+	printf("\n The content of the file %s is  :\n",fname);<br>
+	str1 = fgetc(fptr);<br>
+	while (str1 != EOF)<br>
+		{<br>
+			printf ("%c", str1);<br>
+			str1 = fgetc(fptr);<br>
+		}<br>
+    printf("\n\n");<br>
+    fclose (fptr);<br>
+    return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Write multiple lines in a text file and read the file : <br>                                                     
+------------------------------------------------------------ <br>                                                 
+ Input the number of lines to be written : 4                     <br><br>                                             
+                                                                                                              
+ :: The lines are ::  <br>                                                                                        
+test line 1               <br>                                                                                    
+test line 2                   <br>                                                                                
+test line 3                       <br>                                                                            
+test line 4                           <br><br>                                                                        
+                                                                                                              
+ The content of the file test.txt is  :       <br>                                                                
+                                                                                                              
+test line 1                                       <br>                                                            
+test line 2    <br>                                                                                               
+test line 3        <br>                                                                                           
+test line 4<br>
+</fieldset>
+</body>
+</html>

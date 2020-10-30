@@ -1,0 +1,61 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DEMONSTRATE EXAPMLE OF STRUCTURE POINTER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+struct item<br>
+{<br>
+	char itemName[30];<br>
+	int qty;<br>
+	float price;<br>
+	float amount;<br>
+};<br><br>
+
+int main()<br>
+{<br>
+	
+	struct item itm;	/*declare variable of structure item*/<br>
+	struct item *pItem;	/*declare pointer of structure item*/<br><br>
+	
+	pItem = &itm;		/*pointer assignment - assigning address of itm to pItem*/<br>
+	<br>
+	/*read values using pointer*/<br>
+	printf("Enter product name: ");<br>
+	gets(pItem->itemName);<br>
+	printf("Enter price:");<br>
+	scanf("%f",&pItem->price);<br>
+	printf("Enter quantity: ");<br>
+	scanf("%d",&pItem->qty);<br>
+	<br>
+	/*calculate total amount of all quantity*/<br>
+	pItem->amount =(float)pItem->qty * pItem->price;<br>
+	
+	/*print item details*/<br>
+	printf("\nName: %s",pItem->itemName);<br>
+	printf("\nPrice: %f",pItem->price);<br>
+	printf("\nQuantity: %d",pItem->qty);<br>
+	printf("\nTotal Amount: %f",pItem->amount);<br>
+	<br>
+	return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Enter product name: Pen <br>
+Enter price:5.50 <br>
+Enter quantity: 15 <br><br>
+ 
+Name: Pen <br>
+Price: 5.500000<br> 
+Quantity: 15 <br>
+Total Amount: 82.500000<br>
+
+
+</fieldset>
+</body>
+</html>

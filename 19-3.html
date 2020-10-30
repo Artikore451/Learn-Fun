@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PROGRAM FOR REALLOC() AND FREE() FUNCTIONS</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<string.h>string.h><br>
+#include <<stdlib.h>stdlib.h><br><br>
+ int main()<br>
+{<br>
+    char *mem_allocation;<br>
+    /* memory is allocated dynamically */<br>
+    mem_allocation = malloc( 20 * sizeof(char) );<br>
+    if( mem_allocation == NULL )<br>
+    {<br>
+        printf("Couldn't able to allocate requested memory\n");<br>
+    }<br>
+    else<br>
+    {<br>
+       strcpy( mem_allocation,"artikore451.com");<br>
+    }<br>
+    printf("Dynamically allocated memory content  : " \
+           "%s\n", mem_allocation );<br>
+    mem_allocation=realloc(mem_allocation,100*sizeof(char));<br>
+    if( mem_allocation == NULL )<br>
+    {<br>
+        printf("Couldn't able to allocate requested memory\n");
+    }<br>
+    else<br>
+    {<br>
+        strcpy( mem_allocation,"space is extended upto " \
+                               "100 characters");<br>
+    }<br><br>
+    printf("R<br>esized memory : %s\n", mem_allocation );<br>
+    free(mem_allocation);<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+
+Dynamically allocated memory content :artikore451.com<br>
+Resized memory : space is extended upto 100 characters<br>
+</fieldset>
+</body>
+</html>

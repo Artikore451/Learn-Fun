@@ -1,0 +1,51 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>READ AN EXISTING FILE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br>
+  
+
+void main()<br>
+{<br>
+	FILE *fptr;<br>
+	char fname[20];<br>
+	char str;<br>
+    printf("\n\n Read an existing file :\n");<br>
+	printf("------------------------------\n");<br> 
+	printf(" Input the filename to be opened : ");<br>
+	scanf("%s",fname);<br>
+	fptr = fopen (fname, "r");<br>  
+	if (fptr == NULL)<br>
+	{<br>
+		printf(" File does not exist or cannot be opened.\n");<br>
+		exit(0);<br>
+	}<br>
+	printf("\n The content of the file %s is  :\n",fname);<br>
+	str = fgetc(fptr);<br>
+	while (str != EOF)<br>
+		{<br>
+			printf ("%c", str);<br>
+			str = fgetc(fptr);<br>
+		}<br>
+	fclose(fptr);<br>
+    printf("\n\n");<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Read and existing file :     <br>                                                                                
+------------------------------    <br>                                                                            
+ Input the filename to be opened : test.txt<br><br>                                                                   
+                                                                                                              
+ The content of the file test.txt is  :            <br>                                                           
+This is the content of the file test.txt <br>
+</fieldset>
+</body>
+</html>

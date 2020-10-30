@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>Problem 5</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void swapnum(int *num1, int *num2)<br>
+{<br>
+int tempnum;<br>
+tempnum = *num1;<br>
+*num1 = *num2;<br>
+*num2 = tempnum;<br>
+}<br><br>
+int main( )<br>
+{<br>
+int v1 = 11, v2 = 77 ;<br>
+printf("Before swapping:");<br>
+printf("\nValue of v1 is: %d", v1);<br>
+printf("\nValue of v2 is: %d", v2);<br>
+/*calling swap function*/<br>
+swapnum( &v1, &v2 );<br>
+printf("\nAfter swapping:");<br>
+printf("\nValue of v1 is: %d", v1);<br>
+printf("\nValue of v2 is: %d", v2);<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Before swapping:<br>
+Value of v1 is: 11<br>
+Value of v2 is: 77<br><br>
+After swapping:<br>
+Value of v1 is: 77<br>
+Value of v2 is: 11<br>
+
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>CALCULATE PARTY EXPENSES USING STRUCTURE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#define MAX 50 //maximum items entry<br><br>
+
+//structure definition<br>
+typedef struct item_details<br>{<br>
+	char itemName[30];	//item name<br>
+	int quantity;	//item quantity<br>
+	float price;	//per item price<br>
+	float totalAmount; //total amount = quantity*price<br>
+}item;<br><br>
+
+int main()<br>{<br>
+	item thing[MAX]; //structure variable<br>
+	int i,choice;<br>
+	int count=0;<br>
+	float expenses=0.0f;<br><br>
+	
+	i=0;<br>
+	//infinite loop<br>
+	do<br>{<br>
+		printf("Enter item details [%2d]:\n",i+1);<br>
+		
+		printf("Item?  ");	<br>	
+		fgets(thing[i].itemName,30,stdin);<br>
+		
+		printf("Price? ");<br>
+		scanf("%f",&thing[i].price);<br>
+		
+		printf("Quantity?  ");<br>
+		scanf("%d",&thing[i].quantity);<br>
+		
+		thing[i].totalAmount=(float)thing[i].quantity*thing[i].price;<br>
+		expenses += thing[i].totalAmount;<br>
+
+		i++;	//increase loop counter<br>
+		count++;//increase record counter<br>
+		
+		printf("\nWant to more items (press 1): ");<br>
+		scanf("%d",&choice);<br>
+		
+		getchar();<br>
+		
+	}<br>while(choice==1);<br>
+	
+	//print all items<br>
+	printf("All details are:\n");<br>
+	for(i=0; i<count; i++)<br>
+	{<br>
+		printf("%-30s\t %.2f \t %3d \n %.2f\n",thing[i].itemName, thing[i].price, thing[i].quantity, thing[i].totalAmount);<br>
+	}<br>
+	printf("#### Total expense: %.2f\n",expenses);<br>
+	<br>
+	printf("Want to divide in friends (press 1 for yes): ");<br>
+	scanf("%d",&choice);<br>
+	if(choice==1)<br>
+	{<br>
+		printf("How many friends? ");<br>
+		scanf("%d",&i);<br>
+		printf("Each friend will have to pay: %.2f\n",(expenses/(float)i));<br>
+	}<br>
+	<br>
+	printf("~Thanks for using me... Enjoy your party!!!~\n");<br>
+	return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Enter item details [ 1]:<br>
+Item?  Beer (Kingfisher)<br>
+Price? 90.50<br>
+Quantity?  10<br><br>
+
+Want to more items (press 1): 1<br>
+Enter item details [ 2]:<br>
+Item?  RUM (Old Monk)<br>
+Price? 5   <br>
+Quantity?  186<br><br>
+
+Want to more items (press 1): 1<br>
+Enter item details [ 3]:<br>
+Item?  R.S. Whisky<br>
+Price? 250.50<br>
+Quantity?  2<br><br>
+
+Want to more items (press 1): 0<br>
+All details are:<br>
+Beer (Kingfisher)        90.50    10   905.00<br>
+RUM (Old Monk)           186.00    5   930.00<br>
+R.S. Whisky             250.50     2   501.00<br><br>
+
+#### Total expense: 2336.00    <br>
+Want to divide in friends (press 1 for yes): 1<br>
+How many friends? 6<br>
+Each friend will have to pay: 389.33
+<br><br>
+~Thanks for using me... Enjoy your party!!!~ <br>
+</fieldset>
+</body>
+</html>

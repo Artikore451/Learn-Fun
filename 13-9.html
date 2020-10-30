@@ -1,0 +1,67 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>MAXIMUM OCCURING CHARACTER IN A STRING</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br><br>
+
+#define str_size 100 //Declare the maximum size of the string<br>
+#define chr_no 255 //Maximum number of characters to be allowed<br>
+
+void main()<br>
+{<br>
+    char str[str_size];<br>
+	int ch_fre[chr_no];<br>
+    int i = 0, max;<br>
+    int ascii;<br><br>
+	
+       printf("\n\nFind maximum occurring character in a string :\n");<br>
+       printf("--------------------------------------------------\n"); 	<br>
+       printf("Input the string : ");<br>
+       fgets(str, sizeof str, stdin);<br>
+
+
+    for(i=0; i<chr_no; i++)  //Set frequency of all characters to 0<br>
+    {<br>
+        ch_fre[i] = 0;<br>
+    }<br>
+
+
+    /* Read for frequency of each characters */<br>
+    i=0;<br>
+    while(str[i] != '\0')<br>
+    {<br>
+        ascii = (int)str[i];<br>
+        ch_fre[ascii] += 1;<br><br>
+
+        i++;<br>
+    }<br><br>
+
+    max = 0;<br>
+    for(i=0; i<chr_no; i++)<br>
+    {<br>
+        if(i!=32)<br>
+        {<br>
+        if(ch_fre[i] > ch_fre[max])<br>
+            max = i;<br>
+        }<br>
+    }	<br>
+    printf("The Highest frequency of character '%c' appears number of times : %d \n\n", max, ch_fre[max]);<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Find maximum occurring character in a string :<br>                                                                
+--------------------------------------------------<br>                                                            
+Input the string : Welcome to w3resource              <br>                                                        
+The Highest frequency of character 'e' appears number of times : 4<br> 
+</fieldset>
+</body>
+</html>

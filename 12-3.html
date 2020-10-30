@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PASSING ENTIRE ARRAY TO FUNCTION AS AN ARGUMENT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void myfuncn( int *var1, int var2)<br>
+{<br>
+	/* The pointer var1 is pointing to the first element of<br>
+	 * the array and the var2 is the size of the array. In the<br>
+	 * loop we are incrementing pointer so that it points to<br>
+	 * the next element of the array on each increment.<br>
+	 *<br>
+	 */<br>
+    for(int x=0; x<var2; x++)<br>
+    {<br>
+        printf("Value of var_arr[%d] is: %d \n", x, *var1);<br>
+        /*increment pointer for next element fetch*/<br>
+        var1++;<br>
+    }<br>
+}<br><br>
+
+int main()<br>
+{<br>
+     int var_arr[] = {11, 22, 33, 44, 55, 66, 77};<br>
+     myfuncn(var_arr, 7);<br>
+     return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Value of var_arr[0] is: 11<br> 
+Value of var_arr[1] is: 22 <br>
+Value of var_arr[2] is: 33 <br>
+Value of var_arr[3] is: 44 <br>
+Value of var_arr[4] is: 55 <br>
+Value of var_arr[5] is: 66 <br>
+Value of var_arr[6] is: 77 <br>
+</fieldset>
+</body>
+</html>

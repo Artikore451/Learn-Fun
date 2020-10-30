@@ -1,0 +1,57 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>COUNT TOTAL NUMBER OF VOWEL OR CONSTANTS</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br><br>
+
+#define str_size 100 //Declare the maximum size of the string<br>
+
+void main()<br>
+{<br>
+    char str[str_size];<br>
+    int i, len, vowel, cons;<br>
+	
+       printf("\n\nCount total number of vowel or consonant :\n");<br>
+       printf("----------------------------------------------\n"); 	<br>
+       printf("Input the string : ");<br>
+       fgets(str, sizeof str, stdin);	<br>
+
+    vowel = 0;<br>
+    cons = 0;<br>
+    len = strlen(str);<br>
+
+    for(i=0; i<len; i++)<br>
+    {<br>
+
+        if(str[i] =='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' || str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U')<br>
+        {<br>
+            vowel++;<br>
+        }<br>
+        else if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z'))<br>
+        {<br>
+            cons++;<br>
+        }<br>
+    }<br>
+    printf("\nThe total number of vowel in the string is : %d\n", vowel);<br>
+    printf("The total number of consonant in the string is : %d\n\n", cons);<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Count total number of vowel or consonant : <br>                                                                   
+---------------------------------------------- <br>                                                               
+Input the string : Welcome to w3resource.com <br>                                                                 
+                                                                                                              
+The total number of vowel in the string is : 9 <br>                                                               
+The total number of consonant in the string is : 12<br> 
+</fieldset>
+</body>
+</html>

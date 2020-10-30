@@ -1,0 +1,60 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PROGRAM FOR C UNION</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+#include <<string.h>string.h><br><br>
+ 
+union student <br>
+{<br>
+            char name[20];<br>
+            char subject[20];<br>
+            float percentage;<br>
+};<br><br>
+ 
+int main() <br>
+{<br>
+    union student record1;<br>
+    union student record2;<br><br>
+ 
+    // assigning values to record1 union variable<br>
+       strcpy(record1.name, "Raju");<br>
+       strcpy(record1.subject, "Maths");<br>
+       record1.percentage = 86.50;<br><br>
+ 
+       printf("Union record1 values example\n");
+<br>       printf(" Name       : %s \n", record1.name);<br>
+       printf(" Subject    : %s \n", record1.subject);<br>
+       printf(" Percentage : %f \n\n", record1.percentage);<br><br>
+ 
+    // assigning values to record2 union variable<br>
+       printf("Union record2 values example\n");<br>
+       strcpy(record2.name, "Mani");<br>
+       printf(" Name       : %s \n", record2.name);<br><br>
+ 
+       strcpy(record2.subject, "Physics");<br>
+       printf(" Subject    : %s \n", record2.subject);<br><br>
+ 
+       record2.percentage = 99.50;<br>
+       printf(" Percentage : %f \n", record2.percentage);<br>
+       return 0;<br><br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Union record1 values example<br>
+Name :<br>
+Subject :<br>
+Percentage : 86.500000;<br>
+Union record2 values example<br>
+Name : Mani<br>
+Subject : Physics<br>
+Percentage : 99.500000<br>
+</fieldset>
+</body>
+</html>

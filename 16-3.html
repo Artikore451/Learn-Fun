@@ -1,0 +1,37 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>Problem 3</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void swap(int *n1, int *n2);<br>
+int main()<br>
+{<br>
+int num1 = 5, num2 = 10;<br>
+// address of num1 and num2 is passed<br>
+swap( &num1, &num2);<br>
+printf("num1 = %d\n", num1);<br>
+printf("num2 = %d", num2);<br>
+return 0;<br>
+}<br><br>
+
+void swap(int* n1, int* n2)<br>
+{<br>
+int temp;<br>
+temp = *n1;<br>
+*n1 = *n2;<br>
+*n2 = temp;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+num1 = 10<br>
+num2 = 5<br>
+</fieldset>
+</body>
+</html>

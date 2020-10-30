@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SORT A STRING ARRAY IN ASCENDING ORDER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br><br>
+
+void main()<br>
+{<br>
+  char str[100],ch;<br>
+  int i,j,l;<br>
+  
+       printf("\n\nSort a string array in ascending order :\n");<br>
+       printf("--------------------------------------------\n");  <br>
+       printf("Input the string : ");<br>
+       fgets(str, sizeof str, stdin);<br>
+  l=strlen(str);<br>
+  /* sorting process */<br>
+  for(i=1;i<l;i++)<br>
+    for(j=0;j<l-i;j++)<br>
+	if(str[j]>str[j+1])<br>
+	{<br>
+	  ch=str[j];<br>
+	  str[j] = str[j+1];<br>
+	  str[j+1]=ch;<br>
+	}<br>
+   printf("After sorting the string appears like : \n");<br>
+   printf("%s\n\n",str);<br>
+  }<br>
+  
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Sort a string array in ascending order :<br>                                                                      
+--------------------------------------------<br>                                                                  
+Input the string : w3resource                 <br>                                                                
+After sorting the string appears like :          <br>                                                             
+                                                                                                              
+3ceeorrsuw                                           <br>                     
+                                                                                                              
+3ceeorrsuw <br>
+</fieldset>
+</body>
+</html>

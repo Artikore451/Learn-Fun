@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PASSING ARRAY ELEMENTS IN FUNCTION </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void disp( char ch)<br>
+{<br>
+   printf("%c ", ch);<br>
+}<br>
+int main()<br>
+{<br>
+   char arr[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};<br>
+   for (int x=0; x<10; x++)<br>
+   {<br>
+       /* I’m passing each element one by one using subscript*/<br>
+       disp (arr[x]);<br>
+   }<br>
+
+   return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+a b c d e f g h i j<br>
+</fieldset>
+</body>
+</html>

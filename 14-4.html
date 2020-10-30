@@ -1,0 +1,56 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>LARGEST ELEMENT USING DYNAMIC MERORY ALLOCATION</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br>
+
+int main()<br>
+{<br>
+    int i,n;<br>
+    float *element;<br>
+	printf("\n\n Pointer : Find the largest element using Dynamic Memory Allocation :\n"); <br>
+	printf("-------------------------------------------------------------------------\n"); 	<br>
+    printf(" Input total number of elements(1 to 100): ");<br>
+    scanf("%d",&n);<br>
+    element=(float*)calloc(n,sizeof(float));  // Memory is allocated for 'n' elements <br>
+    if(element==NULL)<br>
+    {<br>
+        printf(" No memory is allocated.");<br>
+        exit(0);<br>
+    }<br>
+    printf("\n");<br>
+    for(i=0;i<n;++i) <br> 
+    {<br>
+       printf(" Number %d: ",i+1);<br>
+       scanf("%f",element+i);<br>
+    }<br>
+    for(i=1;i<n;++i)<br>  
+    {<br>
+       if(*element<*(element+i))<br> 
+           *element=*(element+i);<br>
+    }<br>
+    printf(" The Largest element is :  %.2f \n\n",*element);<br>
+    return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Find the largest element using Dynamic Memory Allocation : <br>                                        
+------------------------------------------------------------------------- <br>                                    
+ Input total number of elements(1 to 100): 5                                  <br>                                
+                                                                                                              
+ Number 1: 5 <br>                                                                                                 
+ Number 2: 7     <br>                                                                                             
+ Number 3: 2         <br>                                                                                         
+ Number 4: 9             <br>                                                                                     
+ Number 5: 8                 <br>                                                                                 
+ The Largest element is :  9.00 <br>
+</fieldset>
+</body>
+</html>

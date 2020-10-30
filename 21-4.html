@@ -1,0 +1,35 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>ACCESSING USNIO MEMBERS</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+union Job <br>{<br>
+   float salary;<br>
+   int workerNo;<br>
+} j;<br><br>
+
+int main() <br>{<br>
+   j.salary = 12.3;<br><br>
+
+   // when j.workerNo is assigned a value,<br>
+   // j.salary will no longer hold 12.3<br>
+   j.workerNo = 100;<br><br>
+
+   printf("Salary = %.1f\n", j.salary);<br>
+   printf("Number of workers = %d", j.workerNo);<br>
+   return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Salary = 0.0<br>
+Number of workers = 100<br>
+
+</fieldset>
+</body>
+</html>

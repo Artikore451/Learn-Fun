@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>STORE N ELEMENTS IN ARRAY AND PRINT THE ELEMENTS</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+int main()<br>
+{<br>
+   int arr1[25], i,n;<br>
+   printf("\n\n Pointer : Store and retrieve elements from an array :\n"); <br>
+   printf("------------------------------------------------------------\n");   <br> 
+   printf(" Input the number of elements to store in the array :");<br>
+   scanf("%d",&n);<br><br>
+   
+   printf(" Input %d number of elements in the array :\n",n);<br>
+   for(i=0;i<n;i++)<br>
+      {<br>
+	  printf(" element - %d : ",i);<br>
+	  scanf("%d",arr1+i);<br>
+	  }<br>
+   printf(" The elements you entered are : \n");<br>
+   for(i=0;i<n;i++)<br>
+      {<br>
+	  printf(" element - %d : %d \n",i,*(arr1+i));<br>
+	  }<br>
+	   return 0;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Store and retrieve elements from an array :                                                        <br>
+------------------------------------------------------------                                                  <br>
+ Input the number of elements to store in the array :5                                                        <br>
+ Input 5 number of elements in the array :                                                                    <br>
+ element - 0 : 5                                                                                             <br> 
+ element - 1 : 7      <br>                                                                                        
+ element - 2 : 2          <br>                                                                                    
+ element - 3 : 9              <br>                                                                                
+ element - 4 : 8                  <br>                                                                            
+ The elements you entered are :       <br>                                                                        
+ element - 0 : 5                          <br>                                                                    
+ element - 1 : 7                              <br>                                                                
+ element - 2 : 2                                  <br>                                                            
+ element - 3 : 9                                      <br>                                                        
+ element - 4 : 8<br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SHOW A POINTER TO UNION</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+union empAdd<br>
+{<br>
+char *ename;<br>
+char stname[20];<br>
+int pincode;<br>
+};<br><br>
+
+int main()<br>
+{<br>
+ 	printf("\n\n Pointer : Show a pointer to union :\n"); <br>
+	printf("----------------------------------------\n");<br>
+    union empAdd employee,*pt;<br>
+    employee.ename="Jhon Mc\0Donald";//assign  the string up to null character i.e. '\0'<br>
+<br>
+    pt=&employee;<br><br>
+
+    printf(" %s %s\n\n",pt->ename,(*pt).ename);<br>
+
+    return 0;<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Show a pointer to union :<br>                                                                          
+----------------------------------------<br>                                                                      
+ Jhon Mc Jhon Mc <br>
+</fieldset>
+</body>
+</html>

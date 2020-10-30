@@ -1,0 +1,63 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SWAP ELEMENTS USING CALL BY REFERENCE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br>
+
+void swapNumbers(int *x,int *y,int *z);<br>
+int main()<br>
+{<br>
+    int e1,e2,e3;<br>
+	printf("\n\n Pointer : Swap elements using call by reference :\n");<br> 
+	printf("------------------------------------------------------\n");	<br>
+    printf(" Input the value of 1st element : ");<br>
+    scanf("%d",&e1);<br>
+	printf(" Input the value of 2nd element : ");<br>
+    scanf("%d",&e2);<br>
+	printf(" Input the value of 3rd element : ");<br>
+    scanf("%d",&e3);<br><br>
+	
+	
+    printf("\n The value before swapping are :\n");<br>
+    printf(" element 1 = %d\n element 2 = %d\n element 3 = %d\n",e1,e2,e3);<br>
+    swapNumbers(&e1,&e2,&e3);<br>
+    printf("\n The value after swapping are :\n");<br>
+    printf(" element 1 = %d\n element 2 = %d\n element 3 = %d\n\n",e1,e2,e3);<br>
+    return 0;<br>
+}<br><br>
+void swapNumbers(int *x,int *y,int *z)<br>
+{<br>
+    int tmp;<br>
+    tmp=*y;<br>
+    *y=*x;<br>
+    *x=*z;<br>
+    *z=tmp;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Swap elements using call by reference :<br>                                                            
+------------------------------------------------------<br>                                                        
+ Input the value of 1st element : 5                       <br>                                                    
+ Input the value of 2nd element : 6                           <br>                                                
+ Input the value of 3rd element : 7                               <br>                                            
+                                                                                                              
+ The value before swapping are :  <br>                                                                            
+ element 1 = 5                        <br>                                                                        
+ element 2 = 6                            <br>                                                                    
+ element 3 = 7                                <br>                                                                
+                                                                                                              
+ The value after swapping are :    <br>                                                                           
+ element 1 = 7     <br>                                                                                           
+ element 2 = 5         <br>                                                                                       
+ element 3 = 6<br>
+</fieldset>
+</body>
+</html>

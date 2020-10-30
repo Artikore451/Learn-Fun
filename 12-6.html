@@ -1,0 +1,38 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PASSING ARRAY TO FUNCTION </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+float calculateSum(float age[]);<br><br>
+
+int main()<br> {<br>
+    float result, age[] = {23.4, 55, 22.6, 3, 40.5, 18};<br>
+
+    // age array is passed to calculateSum()<br>
+    result = calculateSum(age); <br>
+    printf("Result = %.2f", result);<br>
+    return 0;<br>
+}<br>
+
+float calculateSum(float age[]) <br>{<br>
+
+  float sum = 0.0;<br>
+
+  for (int i = 0; i < 6; ++i) <br>{<br>
+		sum += age[i];<br>
+  }<br>
+
+  return sum;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Result = 162.50<br>
+</fieldset>
+</body>
+</html>

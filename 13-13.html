@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>CONVERT A STRING TO UPPERCASE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br><br>
+#include<<ctype.h>ctype.h><br><br>
+
+int main()<br>
+{<br>
+	int ctr=0;<br>
+	char str_char;<br>
+	char str[100]; <br><br>
+    
+	printf("\n Convert a string to uppercase. :\n");  <br>
+    printf("-----------------------------------");      <br>
+    printf("\n Input a string in lowercase : ");<br>
+    fgets(str, sizeof str, stdin);  <br>
+    printf(" Here is the above string in UPPERCASE :\n ");<br>
+	while (str[ctr])<br>
+	{<br>
+		str_char=str[ctr];<br>
+		putchar (toupper(str_char));<br>
+		ctr++;<br>
+	}<br>
+	printf("\n\n");<br>
+	return 0;<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Convert a string to uppercase. :<br>
+-----------------------------------<br>
+ Input a string in lowercase : the quick brown fox jumps over the lazy dog.<br>
+ Here is the above string in UPPERCASE :<br>
+ THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.<br>
+                                                                                                              
+</fieldset>
+</body>
+</html>

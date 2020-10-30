@@ -1,0 +1,46 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PRINT ALL THE ALPHABATES</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+int main()<br>
+{<br>
+    char alph[27];<br>
+    int x;<br>
+    char *ptr;<br>
+ 	printf("\n\n Pointer : Print all the alphabets:\n");<br> 
+	printf("----------------------------------------\n");<br>
+    ptr = alph;     <br><br>
+
+    for(x=0;x<26;x++)<br>
+    {<br>
+        *ptr=x+'A';<br>
+        ptr++;<br>
+    }<br>
+    ptr = alph;<br><br>
+
+printf(" The Alphabets are : \n");<br>
+    for(x=0;x<26;x++)<br>
+    {<br>
+       printf(" %c ", *ptr);<br>
+        ptr++;<br>
+    }<br>
+    printf("\n\n");<br>
+    return(0);<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Print all the alphabates:    <br>                                                                      
+----------------------------------------    <br>                                                                  
+ The Alphabates are :                           <br>                                                              
+ A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z <br>
+</fieldset>
+</body>
+</html>

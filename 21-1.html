@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DEMONSTRATES HOW TO USE A UNION</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+/*<br>
+union is defined above all functions so it is global.<br>
+*/<br>
+<br>
+union data<br>
+{<br>
+    int var1;<br>
+    double var2;<br>
+    char var3;<br>
+};<br>
+
+int main()<br>
+{<br>
+    union data t;<br><br>
+
+    t.var1 = 10;<br>
+    printf("t.var1 = %d\n", t.var1);<br><br>
+
+    t.var2 = 20.34;<br>
+    printf("t.var2 = %f\n", t.var2);<br><br>
+
+    t.var3 = 'a';<br>
+    printf("t.var3 = %c\n", t.var3);<br><br>
+
+    printf("\nSize of structure: %d", sizeof(t));<br>
+
+    return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+t.var1 = 10<br>
+t.var2 = 20.340000<br>
+t.var3 = a<br>
+<br>
+Size of structure: 8<br>
+
+</fieldset>
+</body>
+</html>

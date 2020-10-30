@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DEMONSTRATES HOW WE CAN USE A UNION AS STRUCTURE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+/*<br>
+union is defined above all functions so it is global.<br>
+*/<br><br>
+
+union quantity<br>
+{<br>
+    int count;<br>
+    float weight;<br>
+    float volume;<br>
+};
+<br><br>
+struct goods<br>
+{<br>
+    char name[20];<br>
+    union quantity q;<br>
+};<br><br>
+
+int main()
+<br>{<br>
+    struct goods g1 = { "apple", {.weight=2.5} };<br>
+    struct goods g2 = { "balls", {.count=100} };<br><br>
+
+    printf("Goods name: %s\n", g1.name);<br>
+    printf("Goods quantity: %.2f\n\n", g1.q.weight);<br><br>
+
+    printf("Goods name: %s\n", g2.name);<br>
+    printf("Goods quantity: %d\n\n", g2.q.count);<br><br>
+
+    return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Goods name: apple<br>
+Goods quantity: 2.50<br><br>
+
+Goods name: balls<br>
+Goods quantity: 100<br>
+
+</fieldset>
+</body>
+</html>

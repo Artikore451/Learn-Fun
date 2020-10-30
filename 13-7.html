@@ -1,0 +1,55 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>COPY A STRING TO ANOTHER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br><br>
+
+
+void main()<br>
+{<br>
+    char str1[100], str2[100];<br>
+    int  i;<br><br>
+
+       printf("\n\nCopy one string into another string :\n");<br>
+       printf("-----------------------------------------\n"); 	<br>
+       printf("Input the string : ");<br>
+       fgets(str1, sizeof str1, stdin);<br><br>
+	   
+    /* Copies string1 to string2 character by character */<br>
+    i=0;<br>
+    while(str1[i]!='\0')<br>
+    {<br>
+        str2[i] = str1[i];<br>
+        i++;<br>
+    }<br>
+
+    //Makes sure that the string is NULL terminated<br>
+    str2[i] = '\0';<br>
+
+    printf("\nThe First string is : %s\n", str1);<br>
+    printf("The Second string is : %s\n", str2);<br>
+    printf("Number of characters copied : %d\n\n", i);<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Copy one string into another string :  <br>                                                                       
+-----------------------------------------  <br>                                                                   
+Input the string : This is a string to be copied.<br>                                                             
+                                                                                                              
+The First string is : This is a string to be copied. <br>                                                         
+                                                                                                              
+The Second string is : This is a string to be copied.    <br>                                                     
+                                                                                                              
+Number of characters copied : 31 <br>
+</fieldset>
+</body>
+</html>

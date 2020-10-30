@@ -1,0 +1,31 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PASSING AN ARRAY TO FUNCTION THAT CONTAIN MARKS OBTAINED BY STUDENT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+int total_marks(int a[]); 
+int main()
+{
+   int total = 0, marks[]={40,80,75,90,88}; 
+   printf("Total marks = %d",total_marks(marks));
+   return 0; 
+} 
+int total_marks(int a[])
+{
+   int sum=0,i;
+   for (i=0;i<5;i++)
+       sum=sum+a[i];
+   return sum;
+}  
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Total marks = 373<br>
+</fieldset>
+</body>
+</html>

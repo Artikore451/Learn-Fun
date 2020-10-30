@@ -1,0 +1,60 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PASSING STRUCTURE AS FUNCTION ARGUMENTS</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br><br>
+//Lets create a structure first<br>
+struct FirstStruct<br>
+{<br>
+	int Num1;<br>
+	int Num2;<br>
+}FirstStruct_IP;<br><br>
+
+//function declarations<br>
+struct FirstStruct TakeUserInput(void);<br>
+void DisplayOutput(struct FirstStruct Input);<br><br>
+
+//structure object declaration<br>
+struct FirstStruct inputStruct;<br><br>
+
+int main()<br>
+{<br>
+    //create a structure to get a return from TakeUserInput function<br>
+    //Now use the DisplayOutput to print the input<br>
+    DisplayOutput(TakeUserInput());<br>
+	<br>
+	return 0;<br>
+}<br>
+<br>
+//This function returns a structure after storing the user input into it<br>
+struct FirstStruct TakeUserInput(void)<br>
+{<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d",&inputStruct.Num1);<br>
+    printf("Enter a number again: ");<br>
+    scanf("%d",&inputStruct.Num2);<br>
+<br>
+    return inputStruct;<br>
+}<br>
+//Function taking Structure as argument<br>
+void DisplayOutput(struct FirstStruct Input)<br>
+{<br>
+    printf("%d\n",((Input.Num1)+(Input.Num2)));<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Enter a number: 10<br>
+Enter a number again: 20<br>
+30<br>
+
+
+</fieldset>
+</body>
+</html>

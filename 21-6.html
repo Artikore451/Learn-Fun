@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>EXTRACT INDIVIDUAL BYTES FROM AN UNSIGNED INT USING UNION</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+union tagname<br>
+{<br>
+	unsigned int a;<br>
+	unsigned char s[4];<br>
+};<br><br>
+
+union tagname object;<br><br>
+
+int main()<br>
+{<br>
+	char i; //for loop counter<br><br>
+
+	//assign an integer number<br>
+	object.a=0xAABBCCDD;<br><br>
+
+	printf("Integer number: %ld, hex: %X\n",object.a,object.a);<br>
+<br>
+	printf("Indivisual bytes: ");<br>
+	for(i=3;i>=0;i--)<br>
+		printf("%02X ",object.s[i]);<br><br>
+
+	printf("\n");<br>
+	return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Integer number: 2864434397, hex: AABBCCDD<br>
+Indivisual bytes: AA BB CC DD<br>
+</fieldset>
+</body>
+</html>

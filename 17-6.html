@@ -1,0 +1,59 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DEMONSTRATE EXAMPLE OF STRUCTURE OF ARRAY</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+struct student<br>
+{<br>
+	char name [30];<br>
+	int  marks[ 5];<br>
+	int  total;<br>
+	float perc;<br>
+};<br><br>
+
+int main()<br>
+{<br>
+	struct student std;<br>
+	int i;<br><br>
+	
+	printf("Enter name: ");<br>
+	gets(std.name);<br>
+
+	printf("Enter marks:\n");<br>
+	std.total=0;<br>
+	for(i=0;i< 5;i++)<br>{<br>
+		printf("Marks in subject %d ?: ",i+1);<br>
+		scanf("%d",&std.marks[i]);<br>
+		std.total+=std.marks[i];<br>
+	}<br>
+	std.perc=(float)((float)std.total/(float)500)*100;<br>
+<br>
+	printf("\nName: %s \nTotal: %d \nPercentage: %.2f",std.name,std.total,std.perc);<br>
+	
+	return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Enter name: Mike<br>
+Enter marks:<br>
+Marks in subject 1? : 88<br>
+Marks in subject 2? : 98<br>
+Marks in subject 3? : 98<br>
+Marks in subject 4? : 78<br>
+Marks in subject 5? : 99<br><br>
+
+Name: Mike <br>
+Total: 461 <br>
+Percentage: 92.20<br>
+
+
+</fieldset>
+</body>
+</html>

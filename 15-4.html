@@ -1,0 +1,56 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>COMPUTE SUM OF ALL ELEMENTS IN AN ARRAY  USING POINTER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main() <br>
+{<br>
+   int arr1[10];<br>
+   int i,n, sum = 0;<br>
+   int *pt;<br><br>
+   
+ 	printf("\n\n Pointer : Sum of all elements in an array :\n"); <br>
+	printf("------------------------------------------------\n"); <br><br>
+	
+   printf(" Input the number of elements to store in the array (max 10) : ");<br>
+   scanf("%d",&n);<br><br>
+   
+   printf(" Input %d number of elements in the array : \n",n);<br>
+   for(i=0;i<n;i++)<br>
+      {<br>
+	  printf(" element - %d : ",i+1);<br>
+	  scanf("%d",&arr1[i]);<br>
+	  } 	<br><br>
+
+   pt = arr1; // pt store the base address of array arr1<br>
+ 
+   for (i = 0; i < n; i++) <br>{<br>
+      sum = sum + *pt;<br>
+      pt++;<br>
+   }<br><br>
+ 
+   printf(" The sum of array is : %d\n\n", sum);<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Sum of all elements in an array :<br>                                                                  
+------------------------------------------------<br>                                                              
+ Input the number of elements to store in the array (max 10) : 5<br>                                              
+ Input 5 number of elements in the array :<br>                                                                    
+ element - 1 : 2     <br>                                                                                         
+ element - 2 : 3         <br>                                                                                     
+ element - 3 : 4             <br>                                                                                 
+ element - 4 : 5                 <br>                                                                             
+ element - 5 : 6                     <br>                                                                         
+ The sum of array is : 20<br>
+</fieldset>
+</body>
+</html>

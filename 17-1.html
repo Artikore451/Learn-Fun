@@ -1,0 +1,38 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>CREATE, DECLARE AND INITIALIZE STRUCTURE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+/*structure declaration*/<br>
+struct employee<br>{<br>
+	char name[30];<br>
+	int empId;<br>
+	float salary;<br>
+};<br><br>
+
+int main()<br>
+{<br>
+	/*declare and initialization of structure variable*/<br>
+	struct employee emp={"Mike",1120,76909.00f};<br><br>
+	
+	printf("\n Name: %s"	,emp.name);<br>
+	printf("\n Id: %d"		,emp.empId);<br>
+	printf("\n Salary: %f\n",emp.salary);<br>
+	return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Name: Mike <br>
+ Id: 1120 <br>
+ Salary: 76909.000000<br>
+
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PASSING 2D ARRAY TO FUNCTION </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br>
+
+void main()<br>
+{<br>
+    char str[100]; /* Declares a string of size 100 */<br>
+    int l= 0;<br><br>
+	
+       printf("\n\nFind the length of a string :\n");<br>
+       printf("---------------------------------\n"); 	<br>
+       printf("Input the string : ");<br>
+       fgets(str, sizeof str, stdin);<br>
+    while(str[l]!='\0')<br>
+    {<br>
+        l++;<br>
+    }<br>
+    printf("Length of the string is : %d\n\n", l-1);<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Find the length of a string :   <br>                                                                              
+---------------------------------   <br>                                                                          
+Input the string : w3resource.com <br>                                                                            
+Length of the string is : 15 <br>
+</fieldset>
+</body>
+</html>

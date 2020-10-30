@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>ADDITION OF TWO NUMBERS</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+int main()<br>
+{<br>
+   int fno, sno, *ptr, *qtr, sum;<br>
+   
+   printf("\n\n Pointer : Add two numbers :\n"); <br>
+   printf("--------------------------------\n");   <br>
+ 
+   printf(" Input the first number : ");<br>
+   scanf("%d", &fno);<br>
+   printf(" Input the second  number : ");<br>
+   scanf("%d", &sno);   <br><br>
+ 
+   ptr = &fno;<br>
+   qtr = &sno;<br>
+ 
+   sum = *ptr + *qtr;<br>
+ 
+   printf(" The sum of the entered numbers is : %d\n\n",sum);<br>
+ 
+   return 0;<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Add two numbers :     <br>                                                                             
+--------------------------------     <br>                                                                         
+ Input the first number : 5              <br>                                                                     
+ Input the second  number : 6                <br>                                                                 
+ The sum of the entered numbers is : 11<br>
+</fieldset>
+</body>
+</html>

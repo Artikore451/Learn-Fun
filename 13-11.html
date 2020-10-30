@@ -1,0 +1,67 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>CHECK WHETHER A SUBSTRING IS PRESENT IN THE GIVEN STRING</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br><br>
+void main()<br>
+{<br>
+	char str[80],search[20];	<br>
+	int c1=0,c2=0,i,j,flg;<br><br>
+	
+       printf("\n\nCheck whether a given  substring is present in the given string :\n");<br>
+       printf("-------------------------------------------------------------------\n");	<br><br>
+	
+
+        printf("Input the string : ");<br>
+        fgets(str, sizeof str, stdin);<br><br>
+
+	printf("Input the substring to be search : ");<br>
+	fgets(search, sizeof search, stdin);<br><br>
+
+	while (str[c1]!='\0')<br>
+		c1++;<br>
+                c1--;<br>
+
+	while (search[c2]!='\0')<br>
+		c2++;<br>
+                c2--;<br>
+
+
+	for(i=0;i<=c1-c2;i++)<br>
+	{ <br>
+		for(j=i;j<i+c2;j++)<br>
+		{<br>
+			flg=1;<br>
+			if (str[j]!=search[j-i])<br>
+			{<br>
+				flg=0;<br>
+			   break;<br>
+			}<br>
+		}<br>
+		if (flg==1)<br>
+			break;<br>
+	}<br>
+	if (flg==1)<br>
+		printf("The substring exists in the string.\n\n");<br>
+	else<br>
+		printf("The substring is not exists in the string. \n\n");<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Check whether a given  substring is present in the given string :<br>                                              
+-------------------------------------------------------------------  <br>                                         
+Input the string : This is a test string.<br>                                                                     
+Input the substring to be search : search    <br>                                                                 
+The substring is not exists in the string.       <br>             
+                                                                                                              
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>ADD TWO DISTANCES IN FEET AND INCHES</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+struct distance <br>{ <br>
+    int feet; <br>
+    int inch; <br>
+}; <br> <br>
+
+void addDistance(struct distance d1,struct distance d2){ <br>
+    struct distance d3; <br>
+    d3.feet= d1.feet + d2.feet; <br>
+    d3.inch= d1.inch + d2.inch; <br> <br>
+    
+    d3.feet= d3.feet + d3.inch/12; //1 feet has 12 inches <br>
+    d3.inch= d3.inch%12; <br> <br>
+    
+    printf("\nTotal distance- Feet: %d, Inches: %d",d3.feet,d3.inch); <br>
+} <br> <br>
+
+int main() <br>
+{ <br>
+    struct distance d1,d2; <br>
+    printf("Enter first distance in feet & inches:"); <br>
+    scanf("%d%d",&d1.feet, &d1.inch); <br>
+     <br>
+    printf("Enter second distance in feet & inches:"); <br>
+    scanf("%d%d",&d2.feet, &d2.inch); <br>
+    /*add two distances*/ <br>
+    addDistance(d1,d2); <br>
+    return 0; <br>
+} <br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Enter first distance in feet & inches: 10 8 <br>
+Enter second distance in feet & inches: 5 7 <br>
+Total distance- Feet: 16, Inches: 3 <br>
+
+
+</fieldset>
+</body>
+</html>

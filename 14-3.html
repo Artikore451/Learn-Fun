@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>MAXIMUM NUMBER BETWEEN TWO NUMBER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br>
+void main()<br>
+{<br>
+ int fno,sno,*ptr1=&fno,*ptr2=&sno;<br>
+ 
+   printf("\n\n Pointer : Find the maximum number between two numbers :\n"); <br>
+   printf("------------------------------------------------------------\n");   <br>
+ 
+   printf(" Input the first number : ");<br>
+   scanf("%d", ptr1);<br>
+   printf(" Input the second  number : ");<br>
+   scanf("%d", ptr2); <br><br>
+
+
+ if(*ptr1>*ptr2)<br>
+ {<br>
+  printf("\n\n %d is the maximum number.\n\n",*ptr1);<br>
+ }<br>
+ else<br>
+ {<br>
+  printf("\n\n %d is the maximum number.\n\n",*ptr2);<br>
+ }<br>
+
+}<br>
+
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Find the maximum number between two numbers :<br>                                                      
+------------------------------------------------------------<br>                                                  
+ Input the first number : 5                                     <br>                                              
+ Input the second  number : 6                                       <br>                                          
+                                                                                                          
+ 6 is the maximum number. <br>
+</fieldset>
+</body>
+</html>

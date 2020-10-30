@@ -1,0 +1,63 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>Problem 2</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+int main()<br>
+{<br>
+int num=123;<br>
+//A normal pointer pr2<br>
+int *pr2;<br>
+//This pointer pr2 is a double pointer<br>
+int **pr1;<br>
+/* Assigning the address of variable num to the<br>
+* pointer pr2<br>
+*/<br>
+pr2 = #<br>
+/* Assigning the address of pointer pr2 to the<br>
+* pointer-to-pointer pr1<br>
+*/<br>
+pr1 = &pr2;<br>
+/* Possible ways to find value of variable num*/<br>
+printf("\n Value of num is: %d", num);<br>
+printf("\n Value of num using pr2 is: %d", *pr2);<br>
+printf("\n Value of num using pr1 is: %d", **pr1);<br>
+/*Possible ways to find address of num*/<br>
+printf("\n Address of num is: %p", &num);<br>
+printf("\n Address of num using pr2 is: %p", pr2);<br>
+printf("\n Address of num using pr1 is: %p", *pr1);<br>
+/*Find value of pointer*/<br>
+printf("\n Value of Pointer pr2 is: %p", pr2);<br>
+printf("\n Value of Pointer pr2 using pr1 is: %p", *pr1);<br>
+/*Ways to find address of pointer*/<br>
+printf("\n Address of Pointer pr2 is:%p",&pr2);<br>
+printf("\n Address of Pointer pr2 using pr1 is:%p",pr1);<br>
+/*Double pointer value and address*/<br>
+printf("\n Value of Pointer pr1 is:%p",pr1);<br>
+printf("\n Address of Pointer pr1 is:%p",&pr1);<br>
+return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Value of num is: 123<br>
+Value of num using pr2 is: 123<br>
+Value of num using pr1 is: 123<br>
+Address of num is: XX771230<br>
+Address of num using pr2 is: XX771230<br>
+Address of num using pr1 is: XX771230<br>
+Value of Pointer pr2 is: XX771230<br>
+Value of Pointer pr2 using pr1 is: XX771230<br>
+Address of Pointer pr2 is: 66X123X1<br>
+Address of Pointer pr2 using pr1 is: 66X123X1<br>
+Value of Pointer pr1 is: 66X123X1<br>
+Address of Pointer pr1 is: XX661111<br>
+</fieldset>
+</body>
+</html>

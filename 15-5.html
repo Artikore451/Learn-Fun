@@ -1,0 +1,63 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PRINT THE ELEMENTS OF AN ARRAY IN REVERSE ORDER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void main() <br>
+{<br>
+   int n, i, arr1[15];<br>
+   int *pt;<br>
+ 	printf("\n\n Pointer : Print the elements of an array in reverse order :\n");<br> 
+	printf("----------------------------------------------------------------\n");<br>
+	<br>
+   printf(" Input the number of elements to store in the array (max 15) : ");<br>
+   scanf("%d",&n);<br>
+   pt = &arr1[0];  // pt stores the address of base array arr1<br> 
+   printf(" Input %d number of elements in the array : \n",n);<br>
+   for(i=0;i<n;i++)<br>
+      {<br>
+	  printf(" element - %d : ",i+1);<br>
+	  scanf("%d",pt);//accept the address of the value<br>
+	  pt++;<br>
+	  } 	<br>
+	<br>
+   pt = &arr1[n - 1];<br><br>
+
+   printf("\n The elements of array in reverse order are :");<br>
+
+   for (i = n; i > 0; i--) <br>
+   {<br>
+      printf("\n element - %d : %d  ", i, *pt);<br>
+      pt--;<br>
+   }<br>
+printf("\n\n");<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Pointer : Print the elements of an array in reverse order :<br>                                                  
+----------------------------------------------------------------<br>                                              
+ Input the number of elements to store in the array (max 15) : 5    <br>                                          
+ Input 5 number of elements in the array : <br>                                                                   
+ element - 1 : 2<br>                                                                                              
+ element - 2 : 3    <br>                                                                                          
+ element - 3 : 4        <br>                                                                                      
+ element - 4 : 5            <br>                                                                                  
+ element - 5 : 6                <br><br>                                                                              
+                                                                                                              
+ The elements of array in reverse order are :<br>                                                                 
+ element - 5 : 6<br>                                                                                              
+ element - 4 : 5    <br>                                                                                          
+ element - 3 : 4        <br>                                                                                      
+ element - 2 : 3      <br>                                                                                  
+ element - 1 : 2 <br>
+</fieldset>
+</body>
+</html>
