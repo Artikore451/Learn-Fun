@@ -1,0 +1,65 @@
+
+#divmain{
+height:25px;background-color:black;
+}
+
+.nav
+{
+height:25px;width=100%;float:left;
+}
+
+.nav a
+{
+test-decoration:none;color:red;font-size:20px;margin-left:25px;
+}
+
+.nav a :hover
+{
+background-color:red;color:white;
+}
+
+
+
+
+#divnext{
+height:25px;background-color:black;
+}
+
+.nav1
+{
+height:25px;width=100%;float:right;
+}
+
+.nav1 a
+{
+test-decoration:none;color:red;font-size:20px;margin-right:25px;
+}
+
+.nav1 a :hover
+{
+background-color:red;color:white;
+}
+
+
+
+#divterms{
+height:25px;background-color:black;
+}
+
+.nav2
+{
+<center>height:25px;width=100%</center>;
+}
+
+.nav2 a
+{
+<center>test-decoration:none;color:red;font-size:20px;</center>;
+}
+
+.nav2 a :hover
+{
+background-color:red;color:white;
+}
+
+
+
