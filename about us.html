@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>About Us</title>
+<link href="about.css" rel="stylesheet" >
+<style>
+
+body.loding{
+    background: #000 url('l2.gif') no-repeat 50% 50%;
+   -webkit-transition:background-color 0;
+   opacity:0;
+   -webkit-transition:opacity 0;
+   transition:0;
+}
+ 
+
+
+#img{
+   position: relative;
+   background-image: url("abt.png");
+  background-size: cover;
+font-familt:Arial;
+}
+
+
+
+#img1{
+   position: relative;
+   background-image: url("st2.png");
+  background-size: cover;
+}
+ 
+
+#img2{
+   position: relative;
+   background-image: url("st4.png");
+  background-size: cover;
+}
+ 
+
+#img3{
+   position: relative;
+   background-image: url("str3.png");
+  background-size: cover;
+}
+     
+
+
+ul{
+margin:0px;
+padding:0px;
+list-style:none;
+
+}
+ul li{
+float:left;
+width:200px;
+height:40px;
+background-color:Royal Blue;
+opacity:.8;
+line-height:40px;
+text-align:center;
+font-size:20px;
+margin-right:2px;
+}
+ul li a{
+text-decoration:none;
+color:white;
+display:block;
+transition:0.6s ease;
+
+}
+ul li a:hover{
+background-color:white;
+color:#000;
+}
+ul li ul li{
+display:none;
+}
+ul li:hover ul li{
+display:block;
+}
+
+
+
+.logo img{
+float:right;
+width:50px;
+height:auto;
+margin:10px 10 0 0px; 
+
+}
+
+#img .title{
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+}
+
+#img .title h1{
+color:#fff;
+font-size:90px;
+}
+
+</style>
+</head>
+<body>
+
+<body class="loding">
+
+   <script type="text/javascript">
+     var body=document.getElementsByTagName('body')[0];
+     var removeLoding=function(){
+   setTimeout(function(){
+body.className=body.className.replace(/loding/,' ');
+},2000);
+};
+
+removeLoding();
+</script>
+
+<div id="img" style="height:95%;width:100%;">
+
+<div style="height:90%;width:100%;float:left;">
+<div class="logo">
+<img src="user icon.png">
+</div>
+<ul>
+   <li><a href="webpage1.html">Home</a></li>
+   <li><a href="webpage1.html">Courses</a>
+      <ul>
+         <li><a href="webpage1.html">C programming</a></li>
+            <li><a href="#">C++ </a></li>
+           <li><a href="#">Data structure</a></li>
+       </ul>  
+   </li>
+   <li><a href="about us.html">About us</a>
+       <ul>
+         <li><a href="about us.html">Our mission</a></li>
+            <li><a href="about us.html">Resources</a></li>
+       </ul>  
+   </li>
+   <li><a href="contact.html">Contact us</a>
+        <ul>
+            <li><a href="contact.html">Details</a></li>
+           <li><a href="contact.html#">Location</a></li>
+       </ul>  
+   </li>
+   <li><a href="feedback.html">Feedback</a></li>
+</ul><br><br><br><br><br><br><br><br><br><br><br><br>br><br>
+
+<div class="title">
+<h1><font face="Comic sans MS">ABOUT US 😍 </font></h1>
+
+
+</div>
+</div>
+</div>
+
+<div id="img1" style="height:190px;width:33.3%;float:left;">
+<center><h2><b><u>INTRODUCTION</u></b></h2>
+<p><i><h3>Hi My Name is Arti Kore.  I am an hard working engineering sudent. Currently persuing my <br>
+betch degree in Annasaheb dange college of<br> engineering and tech ashta
+in CSE department. </h3><p></center>
+</div>
+
+ <div id="img2" style="height:187px;width:33.3%;float:left;">
+<center><h2><b><u>PURPOSE OF MAKING THIS </u><b></h2>
+<i><h3>i have designed this website to shows my<br> passion and dedication towards coding and <br>desigining.
+ and this is the educational website<br> which will surely provide you with all the knowlege<br> one should have in c language  </h3></center>
+</div>
+
+<div id="img3" style="height:187px;width:33.3%;float:left;">
+<center><h2><b><u>OUR MISSION</b></u></h2>
+<i><h3>Our mission is to -<br>
+1) help users learn programming more easily.<br>
+2) to improve the learning expetience of our users.</h3><br></center>
+</div>
+
+
+
+
+</body>
+</html>
