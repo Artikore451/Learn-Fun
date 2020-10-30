@@ -1,0 +1,666 @@
+<html>
+<head>
+<title> c programming </title>
+<link rel="stylesheet" href="style.css">
+ <meta name="viewport"
+        content="width=device-width, initial-scale=1"> 
+      
+    <link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  
+    <style> 
+
+
+
+        .nav{
+position:sticky;
+top:1px;
+background-color:#000080;
+height:50;
+width:100%;
+margin:2px 10px 0 0;
+
+}
+          
+        /* styling navlist */ 
+   .nav	 #navlist { 
+            background-color:#000080 ; 
+            position: absolute; 
+            width: 100%; 
+
+
+        } 
+          
+        /* styling navlist anchor element */ 
+        #navlist a { 
+background-color:#000080;
+            float:left; 
+            display: block; 
+            color: #f2f2f2; 
+            text-align: center; 
+            padding: 12px; 
+            text-decoration: none; 
+            font-size: 15px; 
+
+        } 
+        .navlist-right{ 
+            float:right; 
+        } 
+  
+        /* hover effect of navlist anchor element */ 
+        #navlist a:hover { 
+            background-color:#ddd; 
+            color: black; 
+        } 
+          
+        #search{
+                position:relative;
+                margin-top:1px;
+                padding:5px 10px 5px 20px;
+                width:190;
+                height:30px;
+                border-bottom:2px solid #3498db;
+                font-size:15px;
+                color:#3498db;
+                border-radius:50px;
+                align-items:center;
+                float:right;
+                z-index:0;
+                transform:translate(-30%,10%);
+            }
+            #submit{
+                position:relative;
+                left:-40px;
+                margin-top:1px;
+                width:40px;
+                height:30px;
+                font-size:20px;
+                border-radius:50px;
+                float:right;
+                background-color:#3498db;
+                color:white;
+                cursor:pointer;
+                z-index:1;
+                transform:translate(1889%,-30%);
+
+            }
+            #btn{
+                display:none;
+            }
+
+
+footer {
+  text-align: center;
+  padding: 3px;
+    background-color:#191970;
+  color: white;
+    line-height: 1.7;
+}
+
+  
+    </style> 
+</head> 
+  
+<body> 
+
+
+    <div class="nav">  
+    <!-- Navbar items -->
+    <div id="navlist" > 
+        <a href="index.html">Home</a> 
+              <a href="index.html">Courses</a>
+        <a href="about us.html">About us</a> 
+        <a href="contact.html">Contact us</a> 
+        <a href="feedback.html">Feedback</a> 
+          
+          
+        <a href="" id="hp" onclick="searchit()">  <input type="submit" value="Q" id="submit"></input></a>
+        <input type="search" name="" id="search" placeholder="search engine">
+  <script>
+    function searchit()
+  {
+    document.getElementById("hp").href=
+    (("https://www.google.com/search?q=")+
+    (document.getElementById("search").value));
+  }
+    </script>
+
+    </div> 
+</div>
+      <br><br><br>
+<style="margin:0px;">
+    <table style="width:100%; border-collapse:collapse; font:14px Arial,sans-serif;">
+
+
+
+
+<style>
+    .div-1 {
+        background-color:#000;
+    }
+</style>
+
+<div class="div-1" 
+ style="height:115px">
+<div style="height:100px;width:15%;float:left">
+  <img src="user icon.png"style="height:100px;width:70%;margin:5px 0 0 30px;background-color:black"></div>
+
+<div style="height:115px;width:85%;background-color:black;float:left">
+<img src="galaxy7.jpg"style="height:115px;width:100%;">
+<h1 style="color:white;font-size:35px;margin:-75px 0 0 260px">POINTER TO POINTER IN C</h1>
+</div>
+</div>
+
+
+<tr style="height:170px;">
+            <td style="width:80%; padding:20px; vertical-align: top;"><br><br><br>
+                <font face = "Comic sans MS" size =" 6"> <b>opointer to pointer (Double Pointer) </b> <br></font><br />
+
+
+We already know that a pointer holds the address of another variable of same type. When a pointer holds the address of another pointer then such 
+type of pointer is known as pointer-to-pointer or double pointer. In this guide, we will learn what is a double pointer, how to declare them and
+ how to use them in C programming. To understand this concept, you should know the basics of pointers.<br>
+How to declare a Pointer to Pointer (Double Pointer) in C?<br><br>
+
+<fieldset style="background-color:#E6E6FA;">
+int **pr;<br>
+</fieldset><br>
+Here pr is a double pointer. There must be two *’s in the declaration of double pointer.<br><br><br>
+
+
+ <font face = "Bedrock" size = "4"><b>Example of double Pointer</b></font><br /></br>
+
+Lets write a C program based on the diagram that we have seen above.<br><br>
+<fieldset style="background-color:#E6E6FA;">
+
+
+#include <<stdio.h>stdio.h><br>
+int main()<br>
+{<br>
+     int num=123;<br>
+
+     //A normal pointer pr2<br>
+     int *pr2;<br>
+
+     //This pointer pr2 is a double pointer<br>
+     int **pr1;<br>
+
+     /* Assigning the address of variable num to the<br>
+      * pointer pr2<br>
+      */<br>
+     pr2 = #<br>
+
+     /* Assigning the address of pointer pr2 to the<br>
+      * pointer-to-pointer pr1<br>
+      */<br>
+     pr1 = &pr2;<br>
+
+     /* Possible ways to find value of variable num*/<br>
+     printf("\n Value of num is: %d", num);<br>
+     printf("\n Value of num using pr2 is: %d", *pr2);<br>
+     printf("\n Value of num using pr1 is: %d", **pr1);<br>
+
+     /*Possible ways to find address of num*/<br>
+     printf("\n Address of num is: %p", &num);<br>
+     printf("\n Address of num using pr2 is: %p", pr2);<br>
+     printf("\n Address of num using pr1 is: %p", *pr1);<br>
+
+     /*Find value of pointer*/<br>
+     printf("\n Value of Pointer pr2 is: %p", pr2);<br>
+     printf("\n Value of Pointer pr2 using pr1 is: %p", *pr1);<br>
+
+     /*Ways to find address of pointer*/<br>
+     printf("\n Address of Pointer pr2 is:%p",&pr2);<br>
+     printf("\n Address of Pointer pr2 using pr1 is:%p",pr1);<br>
+
+     /*Double pointer value and address*/<br>
+     printf("\n Value of Pointer pr1 is:%p",pr1);<br>
+     printf("\n Address of Pointer pr1 is:%p",&pr1);<br>
+
+     return 0;<br>
+}<br>
+</fieldset><br>
+ <font face = "Bedrock" size = "4"><b>Output</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+Value of num is: 123<br>
+Value of num using pr2 is: 123<br>
+Value of num using pr1 is: 123<br>
+Address of num is: XX771230<br>
+Address of num using pr2 is: XX771230<br>
+Address of num using pr1 is: XX771230<br>
+Value of Pointer pr2 is: XX771230<br>
+Value of Pointer pr2 using pr1 is: XX771230<br>
+Address of Pointer pr2 is: 66X123X1<br>
+Address of Pointer pr2 using pr1 is: 66X123X1<br>
+Value of Pointer pr1 is:  66X123X1<br>
+Address of Pointer pr1 is: XX661111<br>
+</fieldset><br>
+There are some confusions regarding the output of this program, when you run this program you would see the address similar to this:
+ 0x7fff54da7c58.<br> The reason we have given the address in different format is because we want you to relate this program with the diagram above. <br><br>
+
+<fieldset style="background-color:#E6E6FA;">
+num == *pr2 == **pr1<br>
+&num == pr2 == *pr1<br>
+&pr2 == pr1<br>
+</fieldset><br><br><br><br>
+
+
+
+
+
+<font face="Comic sans MS" , size=5 , color=Blue> Passing pointer to a function in C </font><br><br>
+
+
+In this tutorial, you will learn how to pass a pointer to a function as an argument. To understand this concept you must have a basic idea of Pointers 
+and functions in C programming.<br>
+Just like any other argument, pointers can also be passed to a function as an argument. Lets take an example to understand how this is done.<br><br><br>
+
+
+ <font face = "Bedrock" size = "4"><b>Example: Pass Addresses to Functions</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+void swap(int *n1, int *n2);<br>
+
+int main()<br>
+{<br>
+    int num1 = 5, num2 = 10;<br>
+
+    // address of num1 and num2 is passed<br>
+    swap( &num1, &num2);<br>
+
+    printf("num1 = %d\n", num1);<br>
+    printf("num2 = %d", num2);<br>
+    return 0;<br>
+}<br><br>
+
+void swap(int* n1, int* n2)<br>
+{<br>
+    int temp;<br>
+    temp = *n1;<br>
+    *n1 = *n2;<br>
+    *n2 = temp;<br>
+}<br>
+</fieldset><br>
+When you run the program, the output will be:<br><br>
+
+<fieldset style="background-color:#E6E6FA;">
+num1 = 10<br>
+num2 = 5<br>
+</fieldset><br>
+The address of num1 and num2 are passed to the swap() function using swap(&num1, &num2);<br>
+Pointers n1 and n2 accept these arguments in the function definition.<br><br>
+
+<fieldset style="background-color:#E6E6FA;">
+void swap(int* n1, int* n2) <br>{<br>
+    ... ..<br>
+}<br>
+</fieldset><br><br<
+When *n1 and *n2 are changed inside the swap() function, num1 and num2 inside the main() function are also changed.<br>
+Inside the swap() function, *n1 and *n2 swapped. Hence, num1 and num2 are also swapped.<br><br><br>
+ <font face = "Bedrock" size = "5"><mark><b>Note:</b></mark></font><br /></br>
+that swap() is not returning anything; its return type is void.<br><br><br><br><br>
+
+ <font face = "Bedrock" size = "4"><b>Example: Passing Pointer to a Function in C Programming</b></font><br /></br>
+
+
+In this example, we are passing a pointer to a function. When we pass a pointer as an argument instead of a variable then the address of the 
+variable is passed instead of the value. So any change made by the function using the pointer is permanently made at the address of passed variable. 
+This technique is known as call by reference in C.<br><br>
+Try this same program without pointer, you would find that the bonus amount will not reflect in the salary, this is because the change made by the
+ function would be done to the local variables of the function. When we use pointers, the value is changed at the address of variable<br><br><br>
+
+
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+void salaryhike(int  *var, int b)<br>
+{<br>
+    *var = *var+b;<br>
+}<br>
+int main()<br>
+{<br>
+    int salary=0, bonus=0;<br>
+    printf("Enter the employee current salary:");<br> 
+    scanf("%d", &salary);<br>
+    printf("Enter bonus:");<br>
+    scanf("%d", &bonus);<br>
+    salaryhike(&salary, bonus);<br>
+    printf("Final salary: %d", salary);<br>
+    return 0;<br>
+}<br>
+</fieldset><br>
+ <font face = "Bedrock" size = "4"><b>Output</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+Enter the employee current salary:10000<br>
+Enter bonus:2000<br>
+Final salary: 12000<br>
+</fieldset><br><br>
+
+
+ <font face = "Bedrock" size = "4"><b>Example 2</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+
+void addOne(int* ptr) <br>{<br>
+  (*ptr)++; // adding 1 to *ptr<br>
+}<br><br>
+
+int main()<br>
+{<br>
+  int* p, i = 10;<br>
+  p = &i;<br>
+  addOne(p);<br>
+
+  printf("%d", *p); // 11<br>
+  return 0;<br>
+}<br>
+</fieldset><br>
+Here, the value stored at p, *p, is 10 initially.<br>
+We then passed the pointer p to the addOne() function. The ptr pointer gets this address in the addOne() function.<br>
+Inside the function, we increased the value stored at ptr by 1 using (*ptr)++;. Since ptr and p pointers both have the same address, *p inside main() is also 11.<br><br><br>
+
+
+ <font face = "Bedrock" size = "4"><b>Example:Swapping two numbers using Pointers</b></font><br /></br>
+
+
+This is one of the most popular example that shows how to swap numbers using call by reference.<br><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+void swapnum(int *num1, int *num2)<br>
+{<br>
+   int tempnum;<br>
+
+   tempnum = *num1;<br>
+   *num1 = *num2;<br>
+   *num2 = tempnum;<br>
+}<br>
+int main( )<br>
+{<br>
+   int v1 = 11, v2 = 77 ;<br>
+   printf("Before swapping:");<br>
+   printf("\nValue of v1 is: %d", v1);<br>
+   printf("\nValue of v2 is: %d", v2);<br>
+
+   /*calling swap function*/<br>
+   swapnum( &v1, &v2 );<br>
+
+   printf("\nAfter swapping:");<br>
+   printf("\nValue of v1 is: %d", v1);<br>
+   printf("\nValue of v2 is: %d", v2);<br>
+}<br>
+</fieldset><br><br>
+ <font face = "Bedrock" size = "4"><b>Output</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+Before swapping:<br>
+Value of v1 is: 11<br>
+Value of v2 is: 77<br>
+After swapping:<br>
+Value of v1 is: 77<br>
+Value of v2 is: 11<br>
+</fieldset><br><br><br><br>
+
+
+
+<font face="Comic sans MS" , size=5 , color=Blue>Return pointer from functions in C </font><br><br>
+
+
+We have seen in the last chapter how C programming allows to return an array from a function. Similarly, C also allows to return a
+ pointer from a function. To do so, you would have to declare a function returning a pointer as in the following example −<br><br>
+
+<fieldset style="background-color:#E6E6FA;">
+int * myFunction() <br>{<br>
+   .<br>
+   .<br>
+   .<br>
+}<br>
+</fieldset><br>
+Second point to remember is that, it is not a good idea to return the address of a local variable outside the function, so you would have to
+ define the local variable as static variable.<br>
+Now, consider the following function which will generate 10 random numbers and return them using an array name which represents a pointer,
+ i.e., address of first array element.<br><br>
+
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+#include <time.h><br>
+ 
+/* function to generate and return random numbers. */<br>
+int * getRandom( ) <br>{<br>
+
+   static int  r[10];<br>
+   int i;<br>
+ 
+   /* set the seed */<br>
+   srand( (unsigned)time( NULL ) );<br>
+	
+   for ( i = 0; i < 10; ++i)<br> {<br>
+      r[i] = rand();<br>
+      printf("%d\n", r[i] );<br>
+   }<br>
+ 
+   return r;<br>
+}<br>
+ 
+/* main function to call above defined function */<br>
+int main () <br>{<br>
+
+   /* a pointer to an int */<br>
+   int *p;<br>
+   int i;<br>
+
+   p = getRandom();<br>
+	
+   for ( i = 0; i < 10; i++ ) <br>{<br>
+      printf("*(p + [%d]) : %d\n", i, *(p + i) );<br>
+   }<br>
+ 
+   return 0;<br>
+}<br>
+</fieldset><br>
+When the above code is compiled together and executed, it produces the following result −<br><br>
+
+<fieldset style="background-color:#E6E6FA;">
+1523198053<br>
+1187214107<br>
+1108300978<br>
+430494959<br>
+1421301276<br>
+930971084<br>
+123250484<br>
+106932140<br>
+1604461820<br>
+149169022<br>
+*(p + [0]) : 1523198053<br>
+*(p + [1]) : 1187214107<br>
+*(p + [2]) : 1108300978<br>
+*(p + [3]) : 430494959<br>
+*(p + [4]) : 1421301276<br>
+*(p + [5]) : 930971084<br>
+*(p + [6]) : 123250484<br>
+*(p + [7]) : 106932140<br>
+*(p + [8]) : 1604461820<br>
+*(p + [9]) : 149169022<br>
+</fieldset><br>
+
+
+
+ </td>
+          
+
+
+<!--right column -->
+ <td style="padding:5px; background-color:#43BFC7; vertical-align:top;">
+
+
+<br><br><hr><hr>
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b><br>C PROGRAMMING</b> <br></font><br /></marquee>
+<hr><hr><br><br>
+ <ul style="list-style:none; padding:0px; line-height:55px;">
+<li><a href="index.html" style="color:#333;">Learn C programming</a></li>
+ <li><a href="webpage2.html" style="color:#333;">Why c programming</a></li>
+ <li><a href="webpage3.html" style="color:#333;">Introduction to c programming</a></li>
+ <li><a href="webpage4.html" style="color:#333;">Operators in c</a></li>
+ <li><a href="webpage5.html" style="color:#333;">Decision control instruction</a></li>
+ <li><a href="webpage6.html" style="color:#333;">loop control instruction</a></li>
+ <li><a href="webpage7.html" style="color:#333;">Function</a></li>
+ <li><a href="webpage8.html" style="color:#333;">Recurtion</a></li>
+ <li><a href="webpage9.html" style="color:#333;">Array</a></li>
+ <li><a href="webpage10.html" style="color:#333;">Passing Array to function</a></li>
+ <li><a href="webpage11.html" style="color:#333;">String</a></li>
+ <li><a href="webpage12.html" style="color:#333;">Pointer</a></li>
+ <li><a href="webpage13.html" style="color:#333;">Array to pointer</a></li
+ <li><a href="webpage14.html" style="color:#333;">Pointer to Pointer</a></li>
+ <li><a href="webpage15.html" style="color:#333;">dynamic memory allocation</a></li>
+ <li><a href="webpage16.html" style="color:#333;">Structure</a></li>
+ <li><a href="webpage17.html" style="color:#333;">Union</a></li>
+ <li><a href="webpage18.html" style="color:#333;">File handling</a></li><br>
+<br><br><br>
+<hr><hr>
+
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b>EXAMPLES RELATED TO OPERATORS</b> </font></marquee>
+<hr><hr><br><br>
+
+                    <li><a href="frame 16.html" style="color:#333;">Example 1</a></li>
+                    <li><a href="frame 16.html" style="color:#333;">Example 2</a></li>
+                    <li><a href="frame 16.html" style="color:#333;">Example 3</a></li>
+ <li><a href="frame 16.html" style="color:#333;">Example 4</a></li>
+ <li><a href="frame 16.html" style="color:#333;">Example 5</a></li>
+ <li><a href="frame 16.html" style="color:#333;">Example 6</a></li>
+ <li><a href="frame 16.html" style="color:#333;">Example 7</a></li>
+ <li><a href="frame 16.html" style="color:#333;">Example 8</a></li>
+ <li><a href="frame 16.html" style="color:#333;">Example 9</a></li>
+<br><br><br>
+<hr><hr>
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b>CONTACT US ON</b></font></marquee>
+<hr><hr><br><br>
+
+<li><center> <a href="mailto:artikore451@gmai.com? subject="  "><img src="email.png"style="height:60px;width:40%;margin:10px 0 0 20px">
+</a></center><br><br><br><br><hr><hr></li>
+<a href="https://twitter.com/login?lang=en"<li><br><br><center><img src="teiter..png"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.instagram.com/_artikore_/"<li><br><br><center><img src="instagram.png"style="height:60px;width:40%;margin:5px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.youtube.com/?reload=9"<li><br><br><center><img src="youtube.jpg"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.facebook.com/"<li><br><br><center><img src="facebook.png"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://in.pinterest.com/"<li><br><br><center><img src="pin.png"style="height:80px;width70%;margin:10px 0 0 20px"</center></a><br><br><br></li></a>
+
+
+                </ul>
+                
+            </td>
+        </tr>
+       
+
+
+
+<!--  previous next home -->
+ <tr>
+            <td colspan="2" style="padding:5px">
+<br>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #4CAF50;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="webpage15.html" class="previous">&laquo; Previous</a>                   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp 
+<a href="webpage17.html" class="next">Next &raquo;</a>
+<br>
+            </td>
+        </tr>
+    </table>
+
+<div>
+<div style="height:100px">
+<div style="height:70px;width:9%;float:left"><a href="mailto:artikore451@gmai.com? subject="  ">
+<img src="email.gif"style="height:80px;width:90%;margin:10px 0 0 20px"></a>
+</div>
+
+<div style="height:100px">
+<div style="height:70px;width:7%;float:left"><a href="https://twitter.com/login?lang=en">
+<img src="teiter..gif"style="height:70px;width:70%;margin:10px 0 0 20px"></a>
+</div>
+
+<div style="height:100px">
+<div style="height:70px;width:7%;float:left"><a href="https://www.instagram.com/_artikore_/">
+<img src="instagram.gif"style="height:70px;width:70%;margin:5px 0 0 20px"></a>
+</div>
+
+<div style="height:70px">
+<div style="height:70px;width:40%;float:left">
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="index.html" class="previous"> HOME</a> 
+</div>
+
+
+
+<div style="height:100px">
+<div style="height:90px;width:13%;float:right"><a href="https://www.facebook.com/">
+<img src="facebook.gif"style="height:50px;width:70%;margin:10px 0 0 20px"></a>
+</div>
+<div style="height:100px">
+<div style="height:70px;width:7%;float:right"><a href="https://www.youtube.com/?reload=9">
+<img src="youtube.gif"style="height:70px;width:130%;margin:10px 0 0 20px"></a>
+</div>
+<div style="height:100px">
+<div style="height:0px;width:4%;float:right"><a href="https://in.pinterest.com/">
+<img src="pin.png"style="height:40px;width70%;margin:10px 0 0 20px"></a>
+</div>
+</div>
+
+<footer><marquee>&copy; Copyright 2020 C Programming. All Rights Reserved. </marquee></footer>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

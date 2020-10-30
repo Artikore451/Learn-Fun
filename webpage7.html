@@ -1,0 +1,1006 @@
+<html>
+<head>
+<title> c programming </title>
+<link rel="stylesheet" href="style.css">
+ <meta name="viewport"
+        content="width=device-width, initial-scale=1"> 
+      
+    <link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  
+    <style> 
+
+
+.nav{
+position:sticky;
+top:1px;
+background-color:#000080;
+height:50;
+width:100%;
+margin:2px 10px 0 0;
+
+}
+          
+        /* styling navlist */ 
+   .nav	 #navlist { 
+            background-color:#000080 ; 
+            position: absolute; 
+            width: 100%; 
+
+
+        } 
+          
+        /* styling navlist anchor element */ 
+        #navlist a { 
+background-color:#000080;
+            float:left; 
+            display: block; 
+            color: #f2f2f2; 
+            text-align: center; 
+            padding: 12px; 
+            text-decoration: none; 
+            font-size: 15px; 
+
+        } 
+        .navlist-right{ 
+            float:right; 
+        } 
+  
+        /* hover effect of navlist anchor element */ 
+        #navlist a:hover { 
+            background-color:#ddd; 
+            color: black; 
+        } 
+          
+        #search{
+                position:relative;
+                margin-top:1px;
+                padding:5px 10px 5px 20px;
+                width:190;
+                height:30px;
+                border-bottom:2px solid #3498db;
+                font-size:15px;
+                color:#3498db;
+                border-radius:50px;
+                align-items:center;
+                float:right;
+                z-index:0;
+                transform:translate(-30%,10%);
+            }
+            #submit{
+                position:relative;
+                left:-40px;
+                margin-top:1px;
+                width:40px;
+                height:30px;
+                font-size:20px;
+                border-radius:50px;
+                float:right;
+                background-color:#3498db;
+                color:white;
+                cursor:pointer;
+                z-index:1;
+                transform:translate(1889%,-30%);
+
+            }
+            #btn{
+                display:none;
+            }
+ 
+footer {
+  text-align: center;
+  padding: 3px;
+    background-color:#191970;
+  color: white;
+    line-height: 1.7;
+}
+
+  
+    </style> 
+</head> 
+  
+<body> 
+
+
+
+
+    <div class="nav">  
+    <!-- Navbar items -->
+    <div id="navlist" > 
+        <a href="index.html">Home</a> 
+              <a href="index.html">Courses</a>
+        <a href="about us.html">About us</a> 
+        <a href="contact.html">Contact us</a> 
+        <a href="feedback.html">Feedback</a> 
+          
+          
+        <a href="" id="hp" onclick="searchit()">  <input type="submit" value="Q" id="submit"></input></a>
+        <input type="search" name="" id="search" placeholder="search engine">
+  <script>
+    function searchit()
+  {
+    document.getElementById("hp").href=
+    (("https://www.google.com/search?q=")+
+    (document.getElementById("search").value));
+  }
+    </script>
+
+    </div> 
+</div>
+      <br><br><br>
+<style="margin:0px;">
+    <table style="width:100%; border-collapse:collapse; font:14px Arial,sans-serif;">
+
+
+
+
+
+
+<style>
+    .div-1 {
+        background-color:#000;
+    }
+</style>
+
+<div class="div-1" 
+ style="height:115px">
+<div style="height:100px;width:15%;float:left">
+    <img src="user icon.png"style="height:100px;width:70%;margin:5px 0 0 30px;background-color:black">
+</div>
+
+<div style="height:115px;width:85%;background-color:black;float:left">
+<img src="galaxy7.jpg"style="height:115px;width:100%;">
+<h1 style="color:white;font-size:35px;margin:-75px 0 0 260px">FUNCTIONS IN C</h1>
+</div>
+</div>
+
+
+<tr style="height:170px;">
+            <td style="width:80%; padding:20px; vertical-align: top;"><br><br><br>
+                <font face = "Comic sans MS" size =" 7"> <b>Function</b> <br></font><br />
+
+<p>A function is a group of statements that together perform a task. Every C program has at least one function, which is main(),
+ and all the most trivial programs can define additional functions.<br>
+You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the
+ division is such that each function performs a specific task. Dividing a complex problem into smaller chunks makes our program easy to understand and reuse.<br></p>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue> ||Types of Functions|| </font><br><br>
+
+<p>There are two types of function in C programming:<br>
+1)	Standard library functions<br>
+2)	User-defined functions<br><br></p>
+
+
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue> ||Standerd Library|| </font><br><br>
+<p>The standard library functions are built-in functions in C programming.
+These functions are defined in header files. <br>
+For example,<br>
+1)	The printf() is a standard library function to send formatted output to the screen (display output on the screen). This function is defined in the stdio.h header file.
+Hence, to use the printf()function, we need to include the stdio.h header file using #include <stdio.h>.<br>
+2)	The sqrt() function calculates the square root of a number. The function is defined in the math.h header file.<br>  <br></p>
+
+
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue> ||User Define Function|| </font><br><br>
+<p> In C programming user can write their own function for doing a specific task in the program. Such type of functions in C are called user-defined functions.<br><br><br>
+<font face = "Bedrock" size = "4"><b>Example </b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+
+#include<<stdio.h>stdio.h><br>
+return_type  function_name();      //function declaration<br>
+Int main()<br>
+{<br>
+Int a;<br>
+function_name();                               //function call<br>
+return0;<br>
+}<br>
+return_type  function_name()                         //function defination<br>
+{<br>
+Statement1;<br>
+Statement2;<br>
+-----<br>
+Statement n;<br>
+}<br>
+</fieldset><br></p>
+
+
+
+<h3>1)Defining a Function:</h3><br>
+
+<p>This part contains the exact set of instruction which are excluded during the function call.
+When a function is called from main(),the main function call asleep and get temporarily suspended. During this time the function is being called .
+ when the function body is done executing main() resumes.<br><br>
+
+<font face = "Bedrock" size = "4"><mark><b>Syntax:</b></mark></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+
+Return_type function_name( parameter list )<br> {<br>
+   body of the function<br>
+}<br>
+</fieldset><br><br>
+
+<font face = "Bedrock" size = "4"><b>Explanation:</b></font><br /></br><br>
+A function definition in C programming consists of a function header and a function body.<br> Here are all the parts of a function −<br>
+1)	Return Type − A function may return a value. The return_type is the data type of the value the function returns. Some functions perform 
+the desired operations without returning a value. In this case, the return_type is the keyword void.<br>
+2)	Function Name − This is the actual name of the function. The function name and the parameter list together constitute the function signature.<br>
+3)	Parameters − A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter.<br>
+ This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function.
+ Parameters are optional; that is, a function may contain no parameters.<br>
+4)	Function Body − The function body contains a collection of statements that define what the function does.<br><br><br>
+
+
+<font face = "Bedrock" size = "4"><b>Example</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+int max(int num1, int num2)<br> {<br>
+
+   /* local variable declaration */<br>
+   int result;<br>
+ 
+   if (num1 > num2)<br>
+      result = num1;<br>
+   else<br>
+      result = num2;<br>
+ 
+   return result;<br> 
+}<br>
+</fieldset></p><br><br>
+
+
+
+
+<h3>2)Function Declarations</h3>
+<p>A function declaration tells the compiler about a function name and how to call the function. The actual body of the function can be defined separately.<br>
+A function declaration has the following parts −<br>
+1) return_type function_name( parameter list );<br>
+For the above defined function max(), the function declaration is as follows −<br><br>
+2) int max(int num1, int num2);<br>
+Parameter names are not important in function declaration only their type is required, so the following is also a valid declaration −<br><br>
+3)int max(int, int);<br>
+Function declaration is required when you define a function in one source file and you call that function in another file. <br>
+In such case, you should declare the function at the top of the file calling the function.<br></p><br>
+
+
+
+
+<h3>3)Calling a Function</h3>
+<p>While creating a C function, you give a definition of what the function has to do. To use a function, you will have to call that function
+ to perform the defined task.<br>
+When a program calls a function, the program control is transferred to the called function. A called function performs a defined task and when
+ its return statement is executed or when its function-ending closing brace is reached, it returns the program control back to the main program.<br><br>
+
+<font face = "Bedrock" size = "4"><b>Example</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+
+#include <<stdio.h>stdio.h><br>
+ 
+/* function declaration */<br>
+int max(int num1, int num2);<br>
+ 
+int main ()<br> {<br>
+
+   /* local variable definition */<br>
+   int a = 100;<br>
+   int b = 200;<br>
+   int ret;<br>
+ 
+   /* calling a function to get max value */<br>
+   ret = max(a, b);<br>
+ 
+   printf( "Max value is : %d\n", ret );<br>
+ 
+   return 0;<br>
+}<br>
+
+ 
+/* function returning the max between two numbers */<br>
+int max(int num1, int num2)<br> {<br>
+
+   /* local variable declaration */<br>
+   int result;<br>
+ 
+   if (num1 > num2)<br>
+      result = num1;<br>
+   else<br>
+      result = num2;<br>
+ 
+   return result; <br>
+}<br>
+</fieldset><br>
+
+<font face = "Bedrock" size = "4"><b>Output:</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+Max value is : 20<br>
+</fieldset><br></p><br>
+
+
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue> ||Return Statement In C|| </font><br><br>
+<p>The return statement terminates the execution of a function and returns a value to the calling function. The program control is 
+transferred to the calling function after the return statement.<br><br>
+<img src="function sum.jpg"width="400",height="400"><br><br>
+<font face = "Bedrock" size = "4"><mark><b>Syntax:</b></mark></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+return (expression);  <br>   
+</fieldset><br>
+
+<font face = "Bedrock" size = "4"><b>Example</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+return a;<br>
+return (a+b);<br>
+</fieldset><br>
+The type of value returned from the function and the return type specified in the function prototype and function definition must match.<br></p><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue> ||Types of User Define Function|| </font><br><br>
+<p>In this tutorial, you will learn about different approaches you can take to solve the same problem using functions.
+These 4 programs below check whether the integer entered by the user is a prime number or not.
+The output of all these programs below is the same, and we have created a user-defined function in each example. However,
+ the approach we have taken in each example is different.<br></p><br><br>
+
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue> 1: No arguments passed and no return value </font><br>
+<p>Function with no argument means the called function does not receive any data from calling function and Function with no
+ return value means calling function does not receive any data from the called function. So there is no data transfer between calling and called function.<br>
+
+<fieldset style="background-color:#E6E6FA;">
+#include <stdio.h><br>
+
+void checkPrimeNumber();<br>
+
+int main()<br>
+{<br>
+    checkPrimeNumber();    // argument is not passed<br>
+    return 0;<br>
+}<br>
+
+// return type is void meaning doesn't return any value<br>
+void checkPrimeNumber()<br>
+{<br>
+    int n, i, flag = 0;<br>
+
+    printf("Enter a positive integer: ");<br>
+    scanf("%d",&n);<br>
+
+    for(i=2; i <= n/2; ++i)<br>
+    {<br>
+        if(n%i == 0)<br>
+        {<br>
+            flag = 1;<br>
+        }<br>
+    }<br>
+    if (flag == 1)<br>
+        printf("%d is not a prime number.", n);<br>
+    else<br>
+        printf("%d is a prime number.", n);<br>
+}<br>
+</fieldset><br>
+The checkPrimeNumber() function takes input from the user, checks whether it is a prime number or not and displays it on the screen.
+The empty parentheses in checkPrimeNumber(); statement inside the main() function indicates that no argument is passed to the function.
+The return type of the function is void. Hence, no value is returned from the function.<br><br>
+
+ <font face="Comic sans MS" , size=5 , color=Blue>2: No arguments passed but a return value</font><br><br>
+
+As said earlier function with no arguments means called function does not receive any data from calling function and function with one 
+return value means one result will be sent back to the caller from the function.<br><br>
+
+<font face = "Bedrock" size = "4"><b>Example </b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+int getInteger();<br>
+
+int main()<br>
+{<br>
+    int n, i, flag = 0;<br>
+
+   // no argument is passed<br>
+    n = getInteger();<br>    
+
+    for(i=2; i<=n/2; ++i)<br>
+    {<br>
+        if(n%i==0)<br>{<br>
+            flag = 1;<br>
+            break;<br>
+        }<br>
+    }<br>
+
+    if (flag == 1)<br>
+        printf("%d is not a prime number.", n);<br>
+    else<br>
+        printf("%d is a prime number.", n);<br>
+
+    return 0;<br>
+}<br>
+
+// returns integer entered by the user<br>
+int getInteger()  <br>     
+{<br>
+    int n;<br>
+
+    printf("Enter a positive integer: ");<br>
+    scanf("%d",&n);<br>
+
+    return n;<br>
+}<br>
+</fieldset><br>
+<p>The empty parentheses in the n = getInteger(); statement indicates that no argument is passed to the function. And, the value returned
+ from the function is assigned to n.
+Here, the getInteger() function takes input from the user and returns it. The code to check whether a number 
+is prime or not is inside the main() function.</p><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue> 3: Argument passed but no return value</font><br><br>
+
+<p>Here function will accept data from the calling function as there are arguments, however, since there is no return type
+ nothing will be returned to the calling program. So it’s a one-way type communication</p>
+
+<font face = "Bedrock" size = "4"><b>Example</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+void checkPrimeAndDisplay(int n);<br>
+
+int main()<br>
+{<br>
+    int n;<br>
+
+    printf("Enter a positive integer: ");<br>
+    scanf("%d",&n);<br>
+
+    // n is passed to the function<br>
+    checkPrimeAndDisplay(n);<br>
+
+    return 0;<br>
+}<br>
+
+// return type is void meaning doesn't return any value<br>
+void checkPrimeAndDisplay(int n)<br> 
+{<br>
+    int i, flag = 0;<br>
+
+    for(i=2; i <= n/2; ++i)<br>
+    {<br>
+        if(n%i == 0)<br>{<br>
+            flag = 1;<br>
+            break;<br>
+        }<br>
+    }<br>
+    if(flag == 1)<br>
+        printf("%d is not a prime number.",n);<br>
+    else<br>
+        printf("%d is a prime number.", n);<br>
+}<br>
+</fieldset><br>
+The integer value entered by the user is passed to the checkPrimeAndDisplay() function.
+Here, the checkPrimeAndDisplay() function checks whether the argument passed is a prime number or not and displays the appropriate message.<br></p>
+
+ <font face="Comic sans MS" , size=5 , color=Blue>  4: Argument passed and a return value</font><br><br>
+
+<p>Function with arguments and one return value means both the calling function and called function will receive data from each other. 
+It’s like a dual communication.
+So far we have used functions that return only one value because function normally returns a single value. However, we can use functions 
+which can return multiple values by using input parameters and output parameters. Those parameters which are used to receive data are called
+ input parameters and the parameters used to send data are called output parameters. This is achieved by using address operator(&) and
+ indirection operator(*). <br><br>
+
+<font face = "Bedrock" size = "4"><b>Example </b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+int checkPrimeNumber(int n);<br>
+
+int main()<br>
+{<br>
+    int n, flag;<br>
+
+    printf("Enter a positive integer: ");<br>
+    scanf("%d",&n);<br>
+
+    // n is passed to the checkPrimeNumber() function<br>
+    // the returned value is assigned to the flag variable<br>
+    flag = checkPrimeNumber(n);<br>
+
+    if(flag == 1)<br>
+        printf("%d is not a prime number",n);<br>
+    else<br>
+        printf("%d is a prime number",n);<br>
+
+    return 0;<br>
+}<br>
+// int is returned from the function<br>
+int checkPrimeNumber(int n)<br>
+{<br>
+    int i;<br>
+
+    for(i=2; i <= n/2; ++i)<br>
+    {<br>
+        if(n%i == 0)<br>
+            return 1;<br>
+    }<br>
+
+    return 0;<br>
+}<br>
+</fieldset><br>
+
+The input from the user is passed to the checkPrimeNumber() function.<br>
+The checkPrimeNumber() function checks whether the passed argument is prime or not.
+If the passed argument is a prime number, the function returns 0. If the passed argument is a non-prime number, the function returns 1.
+ The return value is assigned to the flag variable.
+Depending on whether flag is 0 or 1, an appropriate message is printed from the main() function.<br></p><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>  ||Function Arguments||</font><br><br>
+
+<p>If a function is to use arguments, it must declare variables that accept the values of the arguments. These variables are called the 
+formal parameters of the function.
+Formal parameters behave like other local variables inside the function and are created upon entry into the function and destroyed upon exit.<br>
+While calling a function, there are two ways in which arguments can be passed to a function −<br><br><br>
+<table border="1">
+<tr>
+<th>sr. no.</th>
+<th>call type and Description</th>
+</tr>
+<tr>
+<th>1</th>
+<th>1	<u>Call by value</u><br>
+This method copies the actual value of an argument<br> into the formal parameter of the function.<br> In this case, changes made to the 
+parameter inside <br>the function have no effect on the argument.
+</th>
+</tr>
+<tr>
+<th>2</th>
+<th><u>Call by reference</u><br>
+This method copies the address of an argument into the<br> formal parameter. Inside the function, <br>the address is used to access the actual
+ argument<br> used in the call. This means that changes<br> made to the parameter affect the argument.
+</th>
+</tr>
+</table>
+<br>
+By default, C uses call by value to pass arguments. In general, it means the code within a function cannot alter the arguments used to call the function.<br></p><br><br>
+
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>  ||Global and Local value||</font><br><br>
+
+<p>A scope in any programming is a region of the program where a defined variable can have its existence and beyond that variable it cannot 
+be accessed. There are three places where variables can be declared in C programming language −<br>
+1)	Inside a function or a block which is called local variables.<br>
+2)	Outside of all functions which is called global variables.<br>
+3)	In the definition of function parameters which are called formal parameters.<br>
+Let us understand what are local and global variables, and formal parameters.<br>
+
+
+
+<h3>1)Local Variables</h3><br>
+Variables that are declared inside a function or block are called local variables. They can be used only by statements
+ that are inside that function or block of code. Local variables are not known to functions outside their own.<br> <br>
+
+<font face = "Bedrock" size = "4"><b>Example</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+ 
+int main ()<br> {<br>
+
+  /* local variable declaration */<br>
+  int a, b;<br>
+  int c;<br>
+ 
+  /* actual initialization */<br>
+  a = 10;<br>
+  b = 20;<br>
+  c = a + b;<br>
+ 
+  printf ("value of a = %d, b = %d and c = %d\n", a, b, c);<br>
+ 
+  return 0;<br>
+}<br>
+</fieldset><br></p><br><br>
+
+
+
+<h3>Global Variables</h3>
+<p>Global variables are defined outside a function, usually on top of the program. Global variables hold their values throughout the
+ lifetime of your program and they can be accessed inside any of the functions defined for the program.
+A global variable can be accessed by any function. That is, a global variable is available for use throughout your entire program 
+after its declaration. The following program show how global variables are used in a program.<br><br>
+
+<font face = "Bedrock" size = "4"><b>Example</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+
+#include <<stdio.h>stdio.h><br>
+ 
+/* global variable declaration */<br>
+int g;<br>
+ 
+int main ()<br> {<br>
+
+  /* local variable declaration */<br>
+  int a, b;<br>
+ 
+  /* actual initialization */<br>
+  a = 10;<br>
+  b = 20;<br>
+  g = a + b;<br>
+ 
+  printf ("value of a = %d, b = %d and g = %d\n", a, b, g);<br>
+ 
+  return 0;<br>
+}<br>
+</fieldset><br>
+
+
+A program can have same name for local and global variables but the value of local variable inside a function will take preference.<br><br>
+
+<font face = "Bedrock" size = "4"><b>Example </b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+
+#include <<stdio.h>stdio.h><br>
+ 
+/* global variable declaration */<br>
+int g = 20;<br>
+ 
+int main ()<br> {<br>
+
+  /* local variable declaration */<br>
+  int g = 10;<br>
+ 
+  printf ("value of g = %d\n",  g);<br>
+ 
+  return 0;<br>
+}<br>
+</fieldset><br>
+
+<font face = "Bedrock" size = "4"><b>Output:</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+
+value of g = 10<br>
+</fieldset><br>
+Initializing Local and Global Variables
+When a local variable is defined, it is not initialized by the system, you must initialize it yourself. Global variables are initialized automatically by the system when you define them as follows −
+<table border="1">
+<tr>
+<th>data type</th>
+<th>intial default value</th>
+</tr>
+<tr>
+<th>int</th>
+<th>0</th>
+</tr>
+<tr>
+<th>char</th>
+<th>'\0'</th>
+</tr>
+<tr>
+<th>float</th>
+<th>0</th>
+</tr>
+<tr>
+<th>double</th>
+<th>0</th>
+</tr>
+<tr>
+<th>pointer</th>
+<th>NULL</th>
+</tr>
+</table><br>
+It is a good programming practice to initialize variables properly, otherwise your program may produce unexpected results, 
+because uninitialized variables will take some garbage value already available at their memory location.<br><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>  || Function Calling ||</font><br><br>
+
+
+<font face = "Bedrock" size = "4"><b>Example of Function</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+
+#include<<stdio.h>stdio.h><br>
+Void Italy();<br>
+Void brazil();<br>
+Void arguments();<br>
+main( ) <br>
+{<br>
+ printf ( "\nI am in main" ) ;<br>
+ italy( ) ;<br>
+ brazil( ) ;<br>
+ argentina( ) ;<br>
+ }<br>
+ italy( )<br>
+ {<br>
+ printf ( "\nI am in italy" ) ;<br>
+ }<br>
+ brazil( )<br>
+ {<br>
+ printf ( "\nI am in brazil" ) ;<br>
+ }<br>
+ argentina( )<br>
+ {<br>
+ printf ( "\nI am in argentina" ) ;<br>
+ }<br>
+</fieldset><br>
+
+<font face = "Bedrock" size = "4"><b>Output:</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+
+I am in main<br>
+ I am in italy <br>
+I am in brazil <br>
+I am in argentina<br>
+</fieldset><br><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>  ||Function Calling Another Function||</font><br><br>
+<font face = "Bedrock" size = "4"><b>Example </b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+#include<<stdio.h>stdio.h><br>
+Void Italy();<br>
+Void brazil();<br>
+Void argentina();<br>
+main( ) <br>
+{<br>
+ printf ( "\nI am in main" ) ;<br>
+ italy( ) ;<br>
+ printf ( "\nI am finally back in main" ) ;<br>
+ }<br>
+ italy( ) <br>
+{<br>
+ printf ( "\nI am in italy" ) ;<br>
+ brazil( ) ; <br>
+printf ( "\nI am back in italy" ) ;<br>
+ }<br>
+ brazil( ) <br>
+{<br>
+ printf ( "\nI am in brazil" ) ;<br>
+ argentina( ) ; <br>
+}<br>
+ argentina( )<br>
+ {<br>
+ printf ( "\nI am in argentina" ) ;<br>
+ }<br>
+</fieldset><br>
+
+<font face = "Bedrock" size = "4"><b>Output</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+I am in main<br>
+ I am in italy <br>
+I am in brazil <br>
+I am in argentina<br>
+ I am back in Italy<br>
+ I am finally back in main<br>
+</fieldset><br><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>  ||Actual And Formal Parameters||</font><br><br>
+Actual parameter or arguments : if is actual value of the parameter that get post to the function.<br>
+Formal parameter or parameter : it is variable which is declared in definition of the function. <br><br>
+<font face = "Bedrock" size = "4"><b>Example</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+#include<<stdio.h>stdio.h><br>
+ 
+int main()<br> 
+{<br>
+   int a, b, res;<br>
+ 
+   printf("\nEnter the two numbers : ");<br>
+   scanf("%d %d", &a, &b);<br>
+ 
+   //Call Function Sum With Two Parameters<br>
+   res = sum(a, b);<br>
+ 
+   printf("nAddition of two number is : ");<br>
+   return (0);<br>
+}<br>
+ 
+int sum(int num1, int num2)<br> {<br>
+   int num3;<br>
+   num3 = num1 + num2;<br>
+   return (num3);<br>
+}<br>
+</fieldset>
+<br>
+
+<font face = "Bedrock" size = "4"><b>Output</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+
+Enter the two numbers : 12 15<br>
+Addition of two number is : 27<br>
+</fieldset><br>
+Here, a and b both are actual parameters and num1,num2 is formal parameter.<br><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>  ||Advantage of Function||</font><br><br>
+1.The length of  a source program can be reduced by using functions at appropriate places. This factor is particularly critical 
+with microcomputers where memory space is limited.<br>
+2.It is easy to locate and isolate a faulty function for further investigations.<br>
+3.A function may be used by many other programs. This means that a C programmer can build on what others have already done, instead 
+of starting all over again from scratch.<br>
+4.It facilitates top-down modular programming. In this programming style, the high level logic of the overall problem is solved first
+ while the details of each lower-level function are addressed later.<br>
+5.Its interface to the rest of the program is clean and narrow.<br><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>  ||Disadvantage of Function||</font><br><br>
+
+1.While adding a user function can speed up code that is best written in C rather than a scripting language, it is not always the 
+best choice for implementation:<br>
+2.It requires the programmer to be well versed in C, including pointers, function pointers, dynamic memory allocation, and debugging.
+ Often the headaches C causes, especially for the neophyte, far outweigh any run-time savings. Bugs in the code might not manifest themselves
+ until well after the C function ends, making debugging a nightmare.<br>
+3.There may not be any speed advantage. Vortex is pretty fast at most operations; for small functions it may be just as fast - and much easier
+ - to write the function in Vortex. Since Vortex already has powerful data processing functions, and the ability to execute external programs, 
+it may be faster to <EXEC> the C code in a separate program and parse it in Vortex, especially as a quick prototype.<br>
+4.It's less portable. A C function means a new Vortex executable must be made if the hardware platform changes. Other Vortex users won't 
+have the custom function in their taxis executable.<br>
+
+
+ </td>
+          
+
+
+<!--right column -->
+ <td style="padding:5px; background-color:#43BFC7; vertical-align:top;">
+
+
+<br><br><hr><hr>
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b><br>C PROGRAMMING</b> <br></font><br /></marquee>
+<hr><hr><br><br>
+ <ul style="list-style:none; padding:0px; line-height:65px;">
+ <li><a href="index.html" style="color:#333;">Learn C programming</a></li>
+ <li><a href="webpage2.html" style="color:#333;">Why c programming</a></li>
+ <li><a href="webpage3.html" style="color:#333;">Introduction to c programming</a></li>
+ <li><a href="webpage4.html" style="color:#333;">Operators in c</a></li>
+ <li><a href="webpage5.html" style="color:#333;">Decision control instruction</a></li>
+ <li><a href="webpage6.html" style="color:#333;">loop control instruction</a></li>
+ <li><a href="webpage7.html" style="color:#333;">Function</a></li>
+ <li><a href="webpage8.html" style="color:#333;">Recurtion</a></li>
+ <li><a href="webpage9.html" style="color:#333;">Array</a></li>
+ <li><a href="webpage10.html" style="color:#333;">Passing Array to function</a></li>
+ <li><a href="webpage11.html" style="color:#333;">String</a></li>
+ <li><a href="webpage12.html" style="color:#333;">Pointer</a></li>
+ <li><a href="webpage13.html" style="color:#333;">Array to pointer</a></li
+ <li><a href="webpage14.html" style="color:#333;">Pointer to Pointer</a></li>
+ <li><a href="webpage15.html" style="color:#333;">dynamic memory allocation</a></li>
+ <li><a href="webpage16.html" style="color:#333;">Structure</a></li>
+ <li><a href="webpage17.html" style="color:#333;">Union</a></li>
+ <li><a href="webpage18.html" style="color:#333;">File handling</a></li><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><hr>
+
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b>EXAMPLES RELATED TO OPERATORS</b> </font></marquee>
+<hr><hr><br><br>
+
+                    <li><a href="frame 7.html" style="color:#333;">Example 1</a></li>
+                    <li><a href="frame 7.html" style="color:#333;">Example 2</a></li>
+                    <li><a href="frame 7.html" style="color:#333;">Example 3</a></li>
+ <li><a href="frame 7.html" style="color:#333;">Example 4</a></li>
+ <li><a href="frame 7.html" style="color:#333;">Example 5</a></li>
+ <li><a href="frame 7.html" style="color:#333;">Example 6</a></li>
+ <li><a href="frame 7.html" style="color:#333;">Example 7</a></li>
+ <li><a href="frame 7.html" style="color:#333;">Example 8</a></li>
+ <li><a href="frame 7.html" style="color:#333;">Example 9</a></li>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<hr><hr>
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b>CONTACT US ON</b></font></marquee>
+<hr><hr><br><br>
+
+<li><center> <a href="mailto:artikore451@gmai.com? subject="  "><img src="email.png"style="height:60px;width:40%;margin:10px 0 0 20px">
+</a></center><br><br><br><br><hr><hr></li>
+<a href="https://twitter.com/login?lang=en"<li><br><br><center><img src="teiter..png"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.instagram.com/_artikore_/"<li><br><br><center><img src="instagram.png"style="height:60px;width:40%;margin:5px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.youtube.com/?reload=9"<li><br><br><center><img src="youtube.jpg"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.facebook.com/"<li><br><br><center><img src="facebook.png"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://in.pinterest.com/"<li><br><br><center><img src="pin.png"style="height:80px;width70%;margin:10px 0 0 20px"</center></a><br><br><br></li></a>
+
+
+                </ul>
+                
+            </td>
+        </tr>
+       
+
+
+
+<!--  previous next home -->
+ <tr>
+            <td colspan="2" style="padding:5px">
+<br>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #4CAF50;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="webpage6.html" class="previous">&laquo; Previous</a>                   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp 
+<a href="webpage8.html" class="next">Next &raquo;</a>
+<br>
+            </td>
+        </tr>
+    </table>
+<div>
+<div style="height:100px">
+<div style="height:70px;width:9%;float:left"><a href="mailto:artikore451@gmai.com? subject="  ">
+<img src="email.gif"style="height:80px;width:90%;margin:10px 0 0 20px"></a>
+</div>
+
+<div style="height:100px">
+<div style="height:70px;width:7%;float:left"><a href="https://twitter.com/login?lang=en">
+<img src="teiter..gif"style="height:70px;width:70%;margin:10px 0 0 20px"></a>
+</div>
+
+<div style="height:100px">
+<div style="height:70px;width:7%;float:left"><a href="https://www.instagram.com/_artikore_/">
+<img src="instagram.gif"style="height:70px;width:70%;margin:5px 0 0 20px"></a>
+</div>
+
+<div style="height:70px">
+<div style="height:70px;width:40%;float:left">
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="index.html" class="previous"> HOME</a> 
+</div>
+
+
+
+<div style="height:100px">
+<div style="height:90px;width:13%;float:right"><a href="https://www.facebook.com/">
+<img src="facebook.gif"style="height:50px;width:70%;margin:10px 0 0 20px"></a>
+</div>
+<div style="height:100px">
+<div style="height:70px;width:7%;float:right"><a href="https://www.youtube.com/?reload=9">
+<img src="youtube.gif"style="height:70px;width:130%;margin:10px 0 0 20px"></a>
+</div>
+<div style="height:100px">
+<div style="height:0px;width:4%;float:right"><a href="https://in.pinterest.com/">
+<img src="pin.png"style="height:40px;width70%;margin:10px 0 0 20px"></a>
+</div>
+</div>
+
+<footer><marquee>&copy; Copyright 2020 C Programming. All Rights Reserved. </marquee></footer>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,745 @@
+<html>
+<head>
+<title> c programming </title>
+<link rel="stylesheet" href="style.css">
+ <meta name="viewport"
+        content="width=device-width, initial-scale=1"> 
+      
+    <link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  
+    <style> 
+   
+.nav{
+position:sticky;
+top:1px;
+background-color:#000080;
+height:50;
+width:100%;
+margin:2px 10px 0 0;
+
+}
+          
+        /* styling navlist */ 
+   .nav	 #navlist { 
+            background-color:#000080 ; 
+            position: absolute; 
+            width: 100%; 
+
+
+        } 
+          
+        /* styling navlist anchor element */ 
+        #navlist a { 
+background-color:#000080;
+            float:left; 
+            display: block; 
+            color: #f2f2f2; 
+            text-align: center; 
+            padding: 12px; 
+            text-decoration: none; 
+            font-size: 15px; 
+
+        } 
+        .navlist-right{ 
+            float:right; 
+        } 
+  
+        /* hover effect of navlist anchor element */ 
+        #navlist a:hover { 
+            background-color:#ddd; 
+            color: black; 
+        } 
+          
+        #search{
+                position:relative;
+                margin-top:1px;
+                padding:5px 10px 5px 20px;
+                width:190;
+                height:30px;
+                border-bottom:2px solid #3498db;
+                font-size:15px;
+                color:#3498db;
+                border-radius:50px;
+                align-items:center;
+                float:right;
+                z-index:0;
+                transform:translate(-30%,10%);
+            }
+            #submit{
+                position:relative;
+                left:-40px;
+                margin-top:1px;
+                width:40px;
+                height:30px;
+                font-size:20px;
+                border-radius:50px;
+                float:right;
+                background-color:#3498db;
+                color:white;
+                cursor:pointer;
+                z-index:1;
+                transform:translate(1889%,-30%);
+
+            }
+            #btn{
+                display:none;
+            }
+ 
+
+
+footer {
+  text-align: center;
+  padding: 3px;
+    background-color:#191970;
+  color: white;
+    line-height: 1.7;
+}
+
+  
+    </style> 
+</head> 
+  
+<body> 
+
+
+
+    <div class="nav">  
+    <!-- Navbar items -->
+    <div id="navlist" > 
+        <a href="index.html">Home</a> 
+              <a href="index.html">Courses</a>
+        <a href="about us.html">About us</a> 
+        <a href="contact.html">Contact us</a> 
+        <a href="feedback.html">Feedback</a> 
+          
+          
+        <a href="" id="hp" onclick="searchit()">  <input type="submit" value="Q" id="submit"></input></a>
+        <input type="search" name="" id="search" placeholder="search engine">
+  <script>
+    function searchit()
+  {
+    document.getElementById("hp").href=
+    (("https://www.google.com/search?q=")+
+    (document.getElementById("search").value));
+  }
+    </script>
+
+    </div> 
+</div>
+      <br><br><br>
+<style="margin:0px;">
+    <table style="width:100%; border-collapse:collapse; font:14px Arial,sans-serif;">
+
+
+
+<style>
+    .div-1 {
+        background-color:#000;
+    }
+</style>
+
+<div class="div-1" 
+ style="height:115px">
+<div style="height:100px;width:15%;float:left">
+  <img src="user icon.png"style="height:100px;width:70%;margin:5px 0 0 30px;background-color:black"></div>
+
+<div style="height:115px;width:85%;background-color:black;float:left">
+<img src="galaxy7.jpg"style="height:115px;width:100%;">
+<h1 style="color:white;font-size:35px;margin:-75px 0 0 260px">POINTER IN C</h1>
+</div>
+</div>
+
+
+<tr style="height:170px;">
+            <td style="width:80%; padding:20px; vertical-align: top;"><br><br>
+                <font face = "Comic sans MS" size =" 6"> <b>Pointers</b> <br></font><br />
+
+Consider the declaration,<br>
+ int i = 3 ;<br>
+ This declaration tells the C compiler to:<br>
+ (a) Reserve space in memory to hold the integer value. <br>
+(b) Associate the name i with this memory location.<br>
+ (c) Store the value 3 at this location. We may represent i’s location in memory by the following memory map<br><br>
+
+Pointers (pointer variables) are special variables that are used to store addresses rather than values.<br><br>
+
+  <font face = "Bedrock" size = "4"><mark><b>Syntax:</b></mark></font><br /></br>
+
+Here is how we can declare pointers.<br><br>
+<fieldset style="background-color:#E6E6FA;">
+int* p;<br>
+</fieldset><br>
+Here, we have declared a pointer p of int type.<br><br>
+You can also declare pointers in these ways.<br><br>
+<fieldset style="background-color:#E6E6FA;">
+int *p1;<br>
+int * p2;<br>
+</fieldset><br>
+
+Let's take another example of declaring pointers.<br><br>
+<fieldset style="background-color:#E6E6FA;">
+int* p1, p2;<br>
+</fieldset><br>
+Here, we have declared a pointer p1 and a normal variable p2.<br><br><br>
+
+ <font face="Comic sans MS" , size=5 , color=Blue>||Assigning addresses to Pointers|| </font><br><br>
+
+<font face = "Bedrock" size = "4"><b>Example </b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+int* pc, c;<br>
+c = 5;<br>
+pc = &c;<br>
+</fieldset><br>
+Here, 5 is assigned to the c variable. And, the address of c is assigned to the pc pointer.<br><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>||operators that are used in pointer|| </font><br><br>
+
+
+Lets discuss the operators & and * that are used with Pointers in C.<br><br>
+<b>“Address of”(&) Operator</b><br><br>
+We have already seen in the first example that we can display the address of a variable using ampersand sign.
+ I have used &num to access
+the address of variable num.  <br><br>The <b>& operator</b> is also known as<b> “Address of”</b> Operator.<br><br>
+<fieldset style="background-color:#E6E6FA;"> 
+printf("Address of var is: %p",&num);<br>
+</fieldset><br>
+
+  <font face = "Bedrock" size = "5"><mark><b>Note:</b></mark></font><br /></br>
+
+ %p is a format specifier which is used for displaying the address in hex format.<br>
+Now that you know how to get the address of a variable but how to store that address in some other variable? That’s where pointers comes into picture. As mentioned in the beginning of this guide, pointers in C programming are used for holding the address of another variables.
+Pointer is just like another variable, the main difference is that it stores address of another variable rather than 
+a value.<br><br><br><br><br>
+ <font face="Comic sans MS" , size=5 , color=Blue>||“Value at Address”(*) Operator|| </font><br><br>
+
+The * Operator is also known as Value at address operator.<br><br><br>
+
+
+  <font face = "Bedrock" size = "4"><b>How to decide a pointer</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+int *p1  &nbsp&nbsp&nbsp&nbsp/*Pointer to an integer variable*/<br>
+double *p2 &nbsp&nbsp&nbsp&nbsp /*Pointer to a variable of data type double*/<br>
+char *p3 &nbsp&nbsp&nbsp&nbsp  /*Pointer to a character variable*/<br>
+float *p4 &nbsp&nbsp&nbsp&nbsp  /*pointer to a float variable*/<br>
+</fieldset><br>
+The above are the few examples of pointer declarations. If you need a pointer to store the address of integer variable then the data type of 
+the pointer should be int. Same case is with the other data types.<br><br>
+By using * operator we can access the value of a variable through a pointer.<br><br>
+
+  <font face = "Bedrock" size = "4"><b>Example </b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+double a = 10;<br>
+double *p;<br>
+p = &a;<br>
+</fieldset><br>
+*p would give us the value of the variable a. The following statement would display 10 as output.<br><br>
+
+<fieldset style="background-color:#E6E6FA;">
+printf("%d", *p);<br>
+</fieldset><br>
+Similarly if we assign a value to *pointer like this:<br>
+<fieldeset><br>
+*p = 200;<br>
+</fieldset><br>
+It would change the value of variable a. The statement above will change the value of a from 10 to 200.<br><br><br><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>||Get Value by using Pointer|| </font><br><br>
+
+To get the value of the thing pointed by the pointers, we use the * operator. <br><br>
+
+  <font face = "Bedrock" size = "4"><b>Examples</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+int* pc, c;<br>
+c = 5;<br>
+pc = &c;<br>
+printf("%d", *pc); <br>
+</fieldset>  <br>
+
+  <font face = "Bedrock" size = "4"><b>Output</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+ 5<br>
+</fieldset><br>
+Here, the address of c is assigned to the pc pointer. To get the value stored in that address, we used *pc.<br><br>
+
+  <font face = "Bedrock" size = "5"><mark><b>Note:</b></mark></font><br /></br>
+
+In the above example, pc is a pointer, not *pc. You cannot and should not do something like *pc = &c;
+By the way, * is called the dereference operator (when working with pointers). It operates on a pointer and gives the 
+value stored in that pointer.<br><br><br>
+
+ <font face="Comic sans MS" , size=5 , color=Blue>||Changing Value by using Pointers|| </font><br><br>
+
+
+  <font face = "Bedrock" size = "4"><b>Example</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+int* pc, c;<br>
+c = 5;<br>
+pc = &c;<br>
+c = 1;<br>
+printf("%d", c);    // Output: 1<br>
+printf("%d", *pc);  // Ouptut: 1<br>
+</fieldset><br>
+We have assigned the address of c to the pc pointer.<br>
+Then, we changed the value of c to 1. Since pc and the address of c is the same, *pc gives us 1.<br><br>
+
+
+  <font face = "Bedrock" size = "4"><b>Example </b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+int* pc, c;<br>
+c = 5;<br>
+pc = &c;<br>
+*pc = 1;<br>
+printf("%d", *pc);  // Ouptut: 1<br>
+printf("%d", c);    // Output: 1<br>
+</fieldset><br>
+We have assigned the address of c to the pc pointer.<br>
+Then, we changed *pc to 1 using *pc = 1;. Since pc and the address of c is the same, c will be equal to 1.<br><br>
+
+
+  <font face = "Bedrock" size = "4"><b>Example</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+int* pc, c, d;<br>
+c = 5;<br>
+d = -15;<br><br>
+
+pc = &c; printf("%d", *pc); // Output: 5<br>
+pc = &d; printf("%d", *pc); // Ouptut: -15<br>
+</fieldset><br><br><br><br>
+
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>||Example of Pointer demonstrating the use of & and *|| </font><br><br>
+
+
+  <font face = "Bedrock" size = "4"><b>Example 1</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+int main()<br>
+{<br>
+   /* Pointer of integer type, this can hold the<br>
+    * address of a integer type variable.<br>
+    */<br>
+   int *p;<br>
+
+   int var = 10;<br>
+  /* Assigning the address of variable var to the pointer<br>
+    * p. The p can hold the address of var because var is<br>
+    * an integer type variable.<br>
+    */<br>
+   p= &var;<br>
+
+   printf("Value of variable var is: %d", var);<br>
+   printf("\nValue of variable var is: %d", *p);<br>
+   printf("\nAddress of variable var is: %p", &var);<br>
+   printf("\nAddress of variable var is: %p", p);<br>
+   printf("\nAddress of pointer p is: %p", &p);<br>
+   return 0;<br>
+}<br>
+</fieldset><br>
+
+  <font face = "Bedrock" size = "4"><b>Output</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+Value of variable var is: 10<br>
+Value of variable var is: 10<br>
+Address of variable var is: 0x7fff5ed98c4c<br>
+Address of variable var is: 0x7fff5ed98c4c<br>
+Address of pointer p is: 0x7fff5ed98c50<br>
+</fieldset><br>
+
+
+  <font face = "Bedrock" size = "4"><b>Example 2</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+int main()<br>
+{<br>
+    int var =10;<br>
+    int *p;<br>
+    p= &var;<br>
+
+    printf ( "Address of var is: %p", &var);<br>
+    printf ( "\nAddress of var is: %p", p);<br>
+
+    printf ( "\nValue of var is: %d", var);<br>
+    printf ( "\nValue of var is: %d", *p);<br>
+    printf ( "\nValue of var is: %d", *( &var));<br>
+
+    /* Note I have used %p for p's value as it represents an address*/<br>
+    printf( "\nValue of pointer p is: %p", p);<br>
+    printf ( "\nAddress of pointer p is: %p", &p);<br>
+
+    return 0;<br>
+}<br>
+</fieldset><br><br>
+  <font face = "Bedrock" size = "4"><b>Output</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+Address of var is: 0x7fff5d027c58<br>
+Address of var is: 0x7fff5d027c58<br>
+Value of var is: 10<br>
+Value of var is: 10<br>
+Value of var is: 10<br>
+Value of pointer p is: 0x7fff5d027c58<br>
+Address of pointer p is: 0x7fff5d027c50<br>
+</fieldset><br><br><br>
+
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>||NULL Pointers|| </font><br><br>
+It is always a good practice to assign a NULL value to a pointer variable in case you do not have an exact address to be assigned. This is done
+ at the time of variable declaration. A pointer that is assigned NULL is called a null pointer.<br>
+The NULL pointer is a constant with a value of zero defined in several standard libraries. Consider the following program −<br><br>
+
+
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+
+int main () <br>{<br>
+
+   int  *ptr = NULL;<br>
+
+   printf("The value of ptr is : %x\n", ptr  );<br>
+ 
+   return 0;<br>
+}<br>
+</fieldset><br>
+When the above code is compiled and executed, it produces the following result −<br><br>
+
+  
+<fieldset style="background-color:#E6E6FA;">
+The value of ptr is 0<br>
+</fieldset><br>
+In most of the operating systems, programs are not permitted to access memory at address 0 because that memory is reserved by the operating 
+system. However, the memory address 0 has special significance; it signals that the pointer is not intended to point to an accessible memory location.
+ But by convention, if a pointer contains the null (zero) value, it is assumed to point to nothing.<br>
+To check for a null pointer, you can use an 'if' statement as follows −<br><br>
+
+
+<fieldset style="background-color:#E6E6FA;">
+if(ptr)     /* succeeds if p is not null */<br>
+if(!ptr)    /* succeeds if p is null */<br>
+</fieldset><br><nr><br><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>||pointer arithmetic|| </font><br><br>
+
+A pointer in c is an address, which is a numeric value. Therefore, you can perform arithmetic operations on a pointer just as you can on a 
+numeric value. There are four arithmetic operators that can be used on pointers: ++, --, +, and - <br>
+To understand pointer arithmetic, let us consider that ptr is an integer pointer which points to the address 1000. Assuming 32-bit integers, 
+let us perform the following arithmetic operation on the pointer − <br><br>
+
+<fieldset style="background-color:#E6E6FA;">
+ptr++ <br>
+</fieldset> <br>
+After the above operation, the ptr will point to the location 1004 because each time ptr is incremented, it will point to the next integer location 
+which is 4 bytes next to the current location. This operation will move the pointer to the next memory location without impacting the actual value 
+at the memory location. If ptr points to a character whose address is 1000, then the above operation will point to the location 1001 because the next
+ character will be available at 1001. <br><br><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>||Incrementing a Pointer|| </font><br><br>
+We prefer using a pointer in our program instead of an array because the variable pointer can be incremented, unlike the array name which cannot be
+ incremented because it is a constant pointer. The following program increments the variable pointer to access each succeeding element of the array − <br><br>
+
+
+<fieldset style="background-color:#E6E6FA;">#include <<stdio.h>stdio.h> <br>
+
+const int MAX = 3; <br>
+
+int main ()  <br>{ <br>
+
+   int  var[] = {10, 100, 200}; <br>
+   int  i, *ptr; <br>
+
+   /* let us have array address in pointer */ <br>
+   ptr = var; <br>
+	
+   for ( i = 0; i < MAX; i++) <br> { <br>
+
+      printf("Address of var[%d] = %x\n", i, ptr ); <br>
+      printf("Value of var[%d] = %d\n", i, *ptr ); <br>
+
+      /* move to the next location */ <br>
+      ptr++; <br>
+   } <br>
+	
+   return 0; <br>
+} <br>
+</fieldset> <br>
+
+When the above code is compiled and executed, it produces the following result − <br><br>
+
+ 
+<fieldset style="background-color:#E6E6FA;">
+Address of var[0] = bf882b30 <br>
+Value of var[0] = 10 <br>
+Address of var[1] = bf882b34 <br>
+Value of var[1] = 100 <br>
+Address of var[2] = bf882b38 <br>
+Value of var[2] = 200 <br>
+</fieldset> <br><br><br>
+
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>||Decrementing a Pointe|| </font><br><br>
+
+The same considerations apply to decrementing a pointer, which decreases its value by the number of bytes of its data type as shown below − <br><br>
+
+
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+const int MAX = 3; <br>
+
+int main () <br> { <br>
+
+   int  var[] = {10, 100, 200}; <br>
+   int  i, *ptr; <br>
+
+   /* let us have array address in pointer */ <br>
+   ptr = &var[MAX-1]; <br>
+	
+   for ( i = MAX; i > 0; i--)  <br>{ <br>
+
+      printf("Address of var[%d] = %x\n", i-1, ptr ); <br>
+      printf("Value of var[%d] = %d\n", i-1, *ptr ); <br>
+
+      /* move to the previous location */ <br>
+      ptr--; <br>
+   } <br>
+	
+   return 0; <br>
+} <br>
+</fieldset> <br>
+
+When the above code is compiled and executed, it produces the following result − <br><br>
+
+
+<fieldset style="background-color:#E6E6FA;">
+Address of var[2] = bfedbcd8 <br>
+Value of var[2] = 200 <br>
+Address of var[1] = bfedbcd4 <br>
+Value of var[1] = 100 <br>
+Address of var[0] = bfedbcd0 <br>
+Value of var[0] = 10 <br>
+</fieldset> <br><br><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>||Pointer Comparisons|| </font><br><br>
+Pointers may be compared by using relational operators, such as ==, <, and >. If p1 and p2 point to variables that are related to each other, 
+such as elements of the same array, then p1 and p2 can be meaningfully compared. <br>
+The following program modifies the previous example − one by incrementing the variable pointer so long as the address to which it points is
+ either less than or equal to the address of the last element of the array, which is &var[MAX - 1] − <br><br>
+
+
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+const int MAX = 3; <br>
+
+int main ()  <br>{ <br>
+
+   int  var[] = {10, 100, 200}; <br>
+   int  i, *ptr; <br>
+
+   /* let us have address of the first element in pointer */ <br>
+   ptr = var; <br>
+   i = 0; <br>
+	
+   while ( ptr <= &var[MAX - 1] ) <br> { <br>
+
+      printf("Address of var[%d] = %x\n", i, ptr ); <br>
+      printf("Value of var[%d] = %d\n", i, *ptr ); <br>
+
+      /* point to the next location */ <br>
+      ptr++; <br>
+      i++; <br>
+   } <br>
+	
+   return 0; <br>
+} <br>
+</fieldset> <br>
+When the above code is compiled and executed, it produces the following result − <br><br>
+
+ 
+<fieldset style="background-color:#E6E6FA;">
+Address of var[0] = bfdbcb20 <br>
+Value of var[0] = 10 <br>
+Address of var[1] = bfdbcb24 <br>
+Value of var[1] = 100 <br>
+Address of var[2] = bfdbcb28 <br>
+Value of var[2] = 200 <br>
+</fieldset> <br>
+
+
+ </td>
+          
+
+
+<!--right column -->
+ <td style="padding:5px; background-color:#43BFC7; vertical-align:top;">
+
+
+<br><br><hr><hr>
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b><br>C PROGRAMMING</b> <br></font><br /></marquee>
+<hr><hr><br><br>
+ <ul style="list-style:none; padding:0px; line-height:55px;">
+ <li><a href="index.html" style="color:#333;">Learn C programming</a></li>
+ <li><a href="webpage2.html" style="color:#333;">Why c programming</a></li>
+ <li><a href="webpage3.html" style="color:#333;">Introduction to c programming</a></li>
+ <li><a href="webpage4.html" style="color:#333;">Operators in c</a></li>
+ <li><a href="webpage5.html" style="color:#333;">Decision control instruction</a></li>
+ <li><a href="webpage6.html" style="color:#333;">loop control instruction</a></li>
+ <li><a href="webpage7.html" style="color:#333;">Function</a></li>
+ <li><a href="webpage8.html" style="color:#333;">Recurtion</a></li>
+ <li><a href="webpage9.html" style="color:#333;">Array</a></li>
+ <li><a href="webpage10.html" style="color:#333;">Passing Array to function</a></li>
+ <li><a href="webpage11.html" style="color:#333;">String</a></li>
+ <li><a href="webpage12.html" style="color:#333;">Pointer</a></li>
+ <li><a href="webpage13.html" style="color:#333;">Array to pointer</a></li
+ <li><a href="webpage14.html" style="color:#333;">Pointer to Pointer</a></li>
+ <li><a href="webpage15.html" style="color:#333;">dynamic memory allocation</a></li>
+ <li><a href="webpage16.html" style="color:#333;">Structure</a></li>
+ <li><a href="webpage17.html" style="color:#333;">Union</a></li>
+ <li><a href="webpage18.html" style="color:#333;">File handling</a></li><br>
+<br><br><br><br><br><br><br><br><br><br>
+<hr><hr>
+
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b>EXAMPLES RELATED TO OPERATORS</b> </font></marquee>
+<hr><hr><br><br>
+
+                    <li><a href="frame 14.html" style="color:#333;">Example 1</a></li>
+                    <li><a href="frame 14.html" style="color:#333;">Example 2</a></li>
+                    <li><a href="frame 14.html" style="color:#333;">Example 3</a></li>
+ <li><a href="frame 14.html" style="color:#333;">Example 4</a></li>
+ <li><a href="frame 14.html" style="color:#333;">Example 5</a></li>
+ <li><a href="frame 14.html" style="color:#333;">Example 6</a></li>
+ <li><a href="frame 14.html" style="color:#333;">Example 7</a></li>
+ <li><a href="frame 14.html" style="color:#333;">Example 8</a></li>
+ <li><a href="frame 14.html" style="color:#333;">Example 9</a></li>
+<br><br><br><br><br><br><br><br><br><br>
+
+<hr><hr>
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b>CONTACT US ON</b></font></marquee>
+<hr><hr><br><br>
+
+<li><center> <a href="mailto:artikore451@gmai.com? subject="  "><img src="email.png"style="height:60px;width:40%;margin:10px 0 0 20px">
+</a></center><br><br><br><br><hr><hr></li>
+<a href="https://twitter.com/login?lang=en"<li><br><br><center><img src="teiter..png"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.instagram.com/_artikore_/"<li><br><br><center><img src="instagram.png"style="height:60px;width:40%;margin:5px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.youtube.com/?reload=9"<li><br><br><center><img src="youtube.jpg"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.facebook.com/"<li><br><br><center><img src="facebook.png"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://in.pinterest.com/"<li><br><br><center><img src="pin.png"style="height:80px;width70%;margin:10px 0 0 20px"</center></a><br><br><br></li></a>
+
+
+                </ul>
+                
+            </td>
+        </tr>
+       
+
+
+
+<!--  previous next home -->
+ <tr>
+            <td colspan="2" style="padding:5px">
+<br>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #4CAF50;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="webpage13.html" class="previous">&laquo; Previous</a>                   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp 
+<a href="webpage15.html" class="next">Next &raquo;</a>
+<br>
+            </td>
+        </tr>
+    </table>
+
+<div>
+<div style="height:100px">
+<div style="height:70px;width:9%;float:left"><a href="mailto:artikore451@gmai.com? subject="  ">
+<img src="email.gif"style="height:80px;width:90%;margin:10px 0 0 20px"></a>
+</div>
+
+<div style="height:100px">
+<div style="height:70px;width:7%;float:left"><a href="https://twitter.com/login?lang=en">
+<img src="teiter..gif"style="height:70px;width:70%;margin:10px 0 0 20px"></a>
+</div>
+
+<div style="height:100px">
+<div style="height:70px;width:7%;float:left"><a href="https://www.instagram.com/_artikore_/">
+<img src="instagram.gif"style="height:70px;width:70%;margin:5px 0 0 20px"></a>
+</div>
+
+<div style="height:70px">
+<div style="height:70px;width:40%;float:left">
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="index.html" class="previous"> HOME</a> 
+</div>
+
+
+
+<div style="height:100px">
+<div style="height:90px;width:13%;float:right"><a href="https://www.facebook.com/">
+<img src="facebook.gif"style="height:50px;width:70%;margin:10px 0 0 20px"></a>
+</div>
+<div style="height:100px">
+<div style="height:70px;width:7%;float:right"><a href="https://www.youtube.com/?reload=9">
+<img src="youtube.gif"style="height:70px;width:130%;margin:10px 0 0 20px"></a>
+</div>
+<div style="height:100px">
+<div style="height:0px;width:4%;float:right"><a href="https://in.pinterest.com/">
+<img src="pin.png"style="height:40px;width70%;margin:10px 0 0 20px"></a>
+</div>
+</div>
+
+<footer><marquee>&copy; Copyright 2020 C Programming. All Rights Reserved. </marquee></footer>
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,680 @@
+<html>
+<head>
+<title> c programming </title>
+<link rel="stylesheet" href="style.css">
+ <meta name="viewport"
+        content="width=device-width, initial-scale=1"> 
+      
+    <link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  
+    <style> 
+
+
+        .nav{
+position:sticky;
+top:1px;
+background-color:#000080;
+height:50;
+width:100%;
+margin:2px 10px 0 0;
+
+}
+          
+        /* styling navlist */ 
+   .nav	 #navlist { 
+            background-color:#000080 ; 
+            position: absolute; 
+            width: 100%; 
+
+
+        } 
+          
+        /* styling navlist anchor element */ 
+        #navlist a { 
+background-color:#000080;
+            float:left; 
+            display: block; 
+            color: #f2f2f2; 
+            text-align: center; 
+            padding: 12px; 
+            text-decoration: none; 
+            font-size: 15px; 
+
+        } 
+        .navlist-right{ 
+            float:right; 
+        } 
+  
+        /* hover effect of navlist anchor element */ 
+        #navlist a:hover { 
+            background-color:#ddd; 
+            color: black; 
+        } 
+          
+        #search{
+                position:relative;
+                margin-top:1px;
+                padding:5px 10px 5px 20px;
+                width:190;
+                height:30px;
+                border-bottom:2px solid #3498db;
+                font-size:15px;
+                color:#3498db;
+                border-radius:50px;
+                align-items:center;
+                float:right;
+                z-index:0;
+                transform:translate(-30%,10%);
+            }
+            #submit{
+                position:relative;
+                left:-40px;
+                margin-top:1px;
+                width:40px;
+                height:30px;
+                font-size:20px;
+                border-radius:50px;
+                float:right;
+                background-color:#3498db;
+                color:white;
+                cursor:pointer;
+                z-index:1;
+                transform:translate(1889%,-30%);
+
+            }
+            #btn{
+                display:none;
+            }
+
+
+footer {
+  text-align: center;
+  padding: 3px;
+    background-color:#191970;
+  color: white;
+    line-height: 1.7;
+}
+
+  
+    </style> 
+</head> 
+  
+<body> 
+
+    <div class="nav">  
+    <!-- Navbar items -->
+    <div id="navlist" > 
+        <a href="index.html">Home</a> 
+              <a href="index.html">Courses</a>
+        <a href="about us.html">About us</a> 
+        <a href="contact.html">Contact us</a> 
+        <a href="feedback.html">Feedback</a> 
+          
+          
+        <a href="" id="hp" onclick="searchit()">  <input type="submit" value="Q" id="submit"></input></a>
+        <input type="search" name="" id="search" placeholder="search engine">
+  <script>
+    function searchit()
+  {
+    document.getElementById("hp").href=
+    (("https://www.google.com/search?q=")+
+    (document.getElementById("search").value));
+  }
+    </script>
+
+    </div> 
+</div>
+      <br><br><br>
+<style="margin:0px;">
+    <table style="width:100%; border-collapse:collapse; font:14px Arial,sans-serif;">
+
+
+
+
+
+<style>
+    .div-1 {
+        background-color:#000;
+    }
+</style>
+
+<div class="div-1" 
+ style="height:115px">
+<div style="height:100px;width:15%;float:left">
+    <img src="user icon.png"style="height:100px;width:70%;margin:5px 0 0 30px;background-color:black"></div>
+
+<div style="height:115px;width:85%;background-color:black;float:left">
+<img src="galaxy7.jpg"style="height:115px;width:100%;">
+<h1 style="color:white;font-size:35px;margin:-75px 0 0 260px">STRUCTURE IN C</h1>
+</div>
+</div>
+
+
+<tr style="height:170px;">
+            <td style="width:80%; padding:20px; vertical-align: top;"><br><br><br><br>
+                <font face = "Comic sans MS" size =" 6"> <b>Structure</b> <br></font><br />
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue> What is a Structure? </font><br><br>
+
+A structure is a user defined data type in C/C++. A structure creates a data type that can be used to group items of possibly different types into a 
+single type. Structure is a user-defined datatype in C language which allows us to combine data of different types together. Structure helps 
+to construct a complex data type which is more meaningful. It is somewhat similar to an Array, but an array holds data of similar type only. 
+But structure on the other hand, can store data of any type, which is practical more useful.<br><br><br>
+
+ <font face="Comic sans MS" , size=5 , color=Blue>Defining a Structure </font><br><br><br>
+To define a structure, you must use the struct statement. The struct statement defines a new data type, with more than one member. 
+The format of the struct statement is as follows −<br><br>
+
+  
+<fieldset style="background-color:#E6E6FA;">
+struct [structure tag]<br> {<br>
+
+   member definition;<br>
+   member definition;<br>
+   ...<br>
+   member definition;<br>
+} [one or more structure variables];  <br>
+</fieldset><br><br>
+The structure tag is optional and each member definition is a normal variable definition, such as int i; or float f; or
+ any other valid variable definition. At the end of the structure's definition, before the final semicolon, you can specify one 
+or more structure variables but it is optional.<br> Here is the way you would declare the Book structure −<br><br>
+
+
+<fieldset style="background-color:#E6E6FA;">
+struct Books {
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+} book;  
+</fieldset><br><br>
+
+ <font face="Comic sans MS" , size=5 , color=Blue>|| Accessing Structure Members|| </font><br><br>
+ 
+
+To access any member of a structure, we use the member access operator (.). The member access operator is coded as a period between
+ the structure variable name and the structure member that we wish to access. You would use the keyword struct to define variables of structure type.
+ The following example shows how to use a structure in a program −<br><br>
+
+
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+#include <<string.h>string.h><br>
+ 
+struct Books <br>{<br>
+   char  title[50];<br>
+   char  author[50];<br>
+   char  subject[100];<br>
+   int   book_id;<br>
+};<br><br>
+ 
+int main( ) <br>{<br>
+
+   struct Books Book1;        /* Declare Book1 of type Book */<br>
+   struct Books Book2;        /* Declare Book2 of type Book */<br>
+ 
+   /* book 1 specification */<br>
+   strcpy( Book1.title, "C Programming");<br>
+   strcpy( Book1.author, "Nuha Ali"); <br>
+   strcpy( Book1.subject, "C Programming Tutorial");<br>
+   Book1.book_id = 6495407;<br><br>
+
+   /* book 2 specification */<br>
+   strcpy( Book2.title, "Telecom Billing");<br>
+   strcpy( Book2.author, "Zara Ali");<br>
+   strcpy( Book2.subject, "Telecom Billing Tutorial");<br>
+   Book2.book_id = 6495700;<br><br>
+ 
+   /* print Book1 info */<br>
+   printf( "Book 1 title : %s\n", Book1.title);<br>
+   printf( "Book 1 author : %s\n", Book1.author);<br>
+   printf( "Book 1 subject : %s\n", Book1.subject);<br>
+   printf( "Book 1 book_id : %d\n", Book1.book_id);<br><br>
+
+   /* print Book2 info */<br>
+   printf( "Book 2 title : %s\n", Book2.title);<br>
+   printf( "Book 2 author : %s\n", Book2.author);<br>
+   printf( "Book 2 subject : %s\n", Book2.subject);<br>
+   printf( "Book 2 book_id : %d\n", Book2.book_id);<br><br>
+
+   return 0;<br>
+}<br>
+</fieldset><br><br>
+When the above code is compiled and executed, it produces the following result −<br><br>
+
+
+<fieldset style="background-color:#E6E6FA;">
+Book 1 title : C Programming<br>
+Book 1 author : Nuha Ali<br>
+Book 1 subject : C Programming Tutorial<br>
+Book 1 book_id : 6495407<br>
+Book 2 title : Telecom Billing<br>
+Book 2 author : Zara Ali<br>
+Book 2 subject : Telecom Billing Tutorial<br>
+Book 2 book_id : 6495700<br>
+</fieldset><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>how to declare structure variables? </font><br><br>
+ 
+
+A structure variable can either be declared with structure declaration or as a separate declaration like basic types.<br><br>
+<b>Declaring Structure Variables</b><br>
+It is possible to declare variables of a structure, either along with structure definition or after the structure is defined. 
+Structure variable declaration is similar to the declaration of any normal variable of any other datatype. Structure variables can
+ be declared in following two ways:<br><br>
+
+
+ <font face="Comic sans MS" , size=4 , color=Blue>1) Declaring Structure variables separately</font><br><br>
+<fieldset style="background-color:#E6E6FA;">
+struct Student<br>
+{<br>
+    char name[25];<br>
+    int age;<br>
+    char branch[10];<br>
+    //F for female and M for male<br>
+    char gender;<br>
+};<br>
+
+struct Student S1, S2;      //declaring variables of struct Student<br>
+</fieldset><br><br>
+ <font face="Comic sans MS" , size=4 , color=Blue>2) Declaring Structure variables with structure definition</font><br><br>
+<fieldset style="background-color:#E6E6FA;">
+
+struct Student<br>
+{<br>
+    char name[25];<br>
+    int age;<br>
+    char branch[10];<br>
+    //F for female and M for male<br>
+    char gender;<br>
+}S1, S2;<br><br>
+</fieldset><br><br><br>
+Here S1 and S2 are variables of structure Student. However this approach is not much recommended.<br><br>
+<fieldset style="background-color:#E6E6FA;">
+
+
+// A variable declaration with structure declaration. <br>
+struct Point <br>
+{ <br>
+   int x, y;<br> 
+} p1;  // The variable p1 is declared with 'Point'<br> 
+  
+  
+// A variable declaration like basic data types <br>
+struct Point <br>
+{ <br>
+   int x, y; <br>
+};  <br><br>
+  
+int main() <br>{<br>
+   struct Point p1;  // The variable p1 is declared like a normal variable <br>
+}<br>
+</fieldset><br><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>How to initialize structure members? </font><br><br>
+ 
+
+Structure members cannot be initialized with declaration. For example the following C program fails in compilation.<br><br>
+<fieldset style="background-color:#E6E6FA;">
+struct Point <br>
+{ <br>
+   int x = 0;  // COMPILER ERROR:  cannot initialize members here <br>
+   int y = 0;  // COMPILER ERROR:  cannot initialize members here <br>
+};  <br>
+</fieldset><br><br>
+The reason for above error is simple, when a datatype is declared, no memory is allocated for it. Memory is allocated only when variables are created.<br>
+Structure members can be initialized using curly braces ‘{}’. For example, following is a valid initialization.<br><br>
+<fieldset style="background-color:#E6E6FA;">
+struct Point <br>
+{ <br>
+   int x, y; <br>
+};  <br><br>
+  
+int main() <br>
+{ <br>
+// A valid initialization. member x gets value 0 and y <br>
+   // gets value 1.  The order of declaration is followed. <br>
+   struct Point p1 = {0, 1};  <br>
+}<br>
+</fieldset><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue>How to access structure elements?</font><br><br> 
+
+Structure members are accessed using dot (.) operator.
+<fieldset style="background-color:#E6E6FA;">
+#include<stdio.h> <br>
+  
+struct Point <br>
+{ <br>
+   int x, y; <br>
+}; <br><br>
+  
+int main() <br>
+{ <br>
+   struct Point p1 = {0, 1}; <br>
+  
+   // Accessing members of point p1 <br>
+p1.x = 20; <br>
+   printf ("x = %d, y = %d", p1.x, p1.y); <br><br>
+  
+   return 0; <br>
+}<br>
+</fieldset><br><br>
+<font face = "Bedrock" size = "4"><b>Output</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+x = 20, y = 1<br>
+</fieldset><br><br>
+
+
+ <font face="Comic sans MS" , size=5 , color=Blue> What is designated Initialization? </font><br><br>
+ 
+
+Designated Initialization allows structure members to be initialized in any order. This feature has been added in C99 standard<br><br>
+<fieldset style="background-color:#E6E6FA;">
+#include<stdio.h> <br>
+  
+struct Point <br>
+{ <br>
+   int x, y, z; <br>
+}; <br><br>
+  
+int main() <br>
+{ <br>
+   // Examples of initialization using designated initialization <br>
+   struct Point p1 = {.y = 0, .z = 1, .x = 2}; <br>
+   struct Point p2 = {.x = 20}; <br><br>
+  
+   printf ("x = %d, y = %d, z = %d\n", p1.x, p1.y, p1.z); <br>
+   printf ("x = %d", p2.x); <br>
+   return 0; <br>
+} <br>
+</fieldset><br><br>
+<font face = "Bedrock" size = "4"><b>Output</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+x = 2, y = 0, z = 1<br>
+x = 20<br>
+</fieldset><br><br>
+This feature is not available in C++ and works only in C.<br><br><br><br><br>
+ 
+
+ <font face="Comic sans MS" , size=5 , color=Blue>|| Array of Structure|| </font><br><br><br>
+ 
+
+We can also declare an array of structure variables. in which each element of the array will represent a structure variable.<br><br> 
+
+<b>Example :</b> struct employee emp[5];<br><br>
+The below program defines an array emp of size 5. Each element of the array emp is of type Employee.<br><br>
+
+<fieldset style="background-color:#E6E6FA;">
+#include<stdio.h><br>
+
+struct Employee<br>
+{<br>
+    char ename[10];<br>
+    int sal;<br>
+};<br><br>
+
+struct Employee emp[5];<br>
+int i, j;<br>
+void ask()<br>
+{<br>
+    for(i = 0; i < 3; i++)<br>
+    {<br>
+        printf("\nEnter %dst Employee record:\n", i+1);<br>
+        printf("\nEmployee name:\t");<br>
+        scanf("%s", emp[i].ename);<br>
+        printf("\nEnter Salary:\t");<br>
+        scanf("%d", &emp[i].sal);<br>
+    }<br>
+    printf("\nDisplaying Employee record:\n");<br>
+    for(i = 0; i < 3; i++)<br>
+    {<br>
+        printf("\nEmployee name is %s", emp[i].ename);<br>
+        printf("\nSlary is %d", emp[i].sal);<br>
+    }<br>
+}<br>
+void main()<br>
+{<br>
+    ask();<br>
+}<br>
+</fieldset><br><br>
+
+
+<font face = "Bedrock" size = "4"><b>Example</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+
+struct Point <br>
+{ <br>
+   int x, y; <br>
+};<br> <br>
+  
+int main() <br>
+{<br>
+   // Create an array of structures <br>
+   struct Point arr[10]; <br>
+  
+   // Access array members <br>
+   arr[0].x = 10; <br>
+   arr[0].y = 20; <br><br>
+  
+   printf("%d %d", arr[0].x, arr[0].y); <br>
+   return 0; <br>
+} <br>
+</fieldset><br><br>
+<font face = "Bedrock" size = "4"><b>Output</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+10 20<br><br><br>
+</fieldset><br><br><br><br>
+
+ <font face="Comic sans MS" , size=5 , color=Blue>|| Nested Structures|| </font><br><br>
+ 
+
+Nesting of structures, is also permitted in C language. Nested structures means, that one structure has another stucture as member variable.<br><br>
+<font face = "Bedrock" size = "4"><b>Example 1:</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+struct Student<br>
+{<br>
+    char[30] name;<br>
+    int age;<br>
+    /* here Address is a structure */<br>
+    struct Address<br>
+    {<br>
+         char[50] locality;<br>
+        char[50] city;<br>
+        int pincode;	<br>	
+    }addr;<br>
+};<br>
+</fieldset><br><br>
+<font face = "Bedrock" size = "4"><b>Example 2:</b></font><br /></br>
+<fieldset style="background-color:#E6E6FA;">
+struct complex<br>
+{<br>
+ int imag;<br>
+ float real;<br>
+};<br><br>
+
+struct number<br>
+{<br>
+   struct complex comp;<br>
+   int integers;<br>
+} num1, num2;<br>
+</fieldset><br><br>
+Suppose, you want to set imag of num2 variable to 11. Here's how you can do it:<br><br>
+<fieldset style="background-color:#E6E6FA;">
+num2.comp.imag = 11;<br>
+</fielsdet><br>
+ </td>
+          
+
+
+<!--right column -->
+ <td style="padding:5px; background-color:#43BFC7; vertical-align:top;">
+
+
+<br><br><hr><hr>
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b><br>C PROGRAMMING</b> <br></font><br /></marquee>
+<hr><hr><br><br>
+ <ul style="list-style:none; padding:0px; line-height:55px;">
+<li><a href="index.html" style="color:#333;">Learn C programming</a></li>
+ <li><a href="webpage2.html" style="color:#333;">Why c programming</a></li>
+ <li><a href="webpage3.html" style="color:#333;">Introduction to c programming</a></li>
+ <li><a href="webpage4.html" style="color:#333;">Operators in c</a></li>
+ <li><a href="webpage5.html" style="color:#333;">Decision control instruction</a></li>
+ <li><a href="webpage6.html" style="color:#333;">loop control instruction</a></li>
+ <li><a href="webpage7.html" style="color:#333;">Function</a></li>
+ <li><a href="webpage8.html" style="color:#333;">Recurtion</a></li>
+ <li><a href="webpage9.html" style="color:#333;">Array</a></li>
+ <li><a href="webpage10.html" style="color:#333;">Passing Array to function</a></li>
+ <li><a href="webpage11.html" style="color:#333;">String</a></li>
+ <li><a href="webpage12.html" style="color:#333;">Pointer</a></li>
+ <li><a href="webpage13.html" style="color:#333;">Array to pointer</a></li
+ <li><a href="webpage14.html" style="color:#333;">Pointer to Pointer</a></li>
+ <li><a href="webpage15.html" style="color:#333;">dynamic memory allocation</a></li>
+ <li><a href="webpage16.html" style="color:#333;">Structure</a></li>
+ <li><a href="webpage17.html" style="color:#333;">Union</a></li>
+ <li><a href="webpage18.html" style="color:#333;">File handling</a></li><br>
+<br><br><br><br><br><br><br><br><br><br>
+<hr><hr>
+
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b>EXAMPLES RELATED TO OPERATORS</b> </font></marquee>
+<hr><hr><br><br>
+
+                    <li><a href="frame 17.html" style="color:#333;">Example 1</a></li>
+                    <li><a href="frame 17.html" style="color:#333;">Example 2</a></li>
+                    <li><a href="frame 17.html" style="color:#333;">Example 3</a></li>
+ <li><a href="frame 17.html" style="color:#333;">Example 4</a></li>
+ <li><a href="frame 17.html" style="color:#333;">Example 5</a></li>
+ <li><a href="frame 17.html" style="color:#333;">Example 6</a></li>
+ <li><a href="frame 17.html" style="color:#333;">Example 7</a></li>
+ <li><a href="frame 17.html" style="color:#333;">Example 8</a></li>
+ <li><a href="frame 17.html" style="color:#333;">Example 9</a></li>
+<br><br><br><br><br><br><br><br><br><br>
+
+<hr><hr>
+<font color="red"><marquee bgcolor=yellow><font face = "Comic sans MS" size =" 4"> <b>CONTACT US ON</b></font></marquee>
+<hr><hr><br><br>
+
+<li><center> <a href="mailto:artikore451@gmai.com? subject="  "><img src="email.png"style="height:60px;width:40%;margin:10px 0 0 20px">
+</a></center><br><br><br><br><hr><hr></li>
+<a href="https://twitter.com/login?lang=en"<li><br><br><center><img src="teiter..png"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.instagram.com/_artikore_/"<li><br><br><center><img src="instagram.png"style="height:60px;width:40%;margin:5px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.youtube.com/?reload=9"<li><br><br><center><img src="youtube.jpg"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://www.facebook.com/"<li><br><br><center><img src="facebook.png"style="height:60px;width:40%;margin:10px 0 0 20px"></center></a><br><br><br><hr><hr></li></a>
+<a href="https://in.pinterest.com/"<li><br><br><center><img src="pin.png"style="height:80px;width70%;margin:10px 0 0 20px"</center></a><br><br><br></li></a>
+
+
+                </ul>
+                
+            </td>
+        </tr>
+       
+
+
+
+<!--  previous next home -->
+ <tr>
+            <td colspan="2" style="padding:5px">
+<br>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #4CAF50;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="webpage16.html" class="previous">&laquo; Previous</a>                   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp 
+<a href="webpage18.html" class="next">Next &raquo;</a>
+<br>
+            </td>
+        </tr>
+    </table>
+<div>
+<div style="height:100px">
+<div style="height:70px;width:9%;float:left"><a href="mailto:artikore451@gmai.com? subject="  ">
+<img src="email.gif"style="height:80px;width:90%;margin:10px 0 0 20px"></a>
+</div>
+
+<div style="height:100px">
+<div style="height:70px;width:7%;float:left"><a href="https://twitter.com/login?lang=en">
+<img src="teiter..gif"style="height:70px;width:70%;margin:10px 0 0 20px"></a>
+</div>
+
+<div style="height:100px">
+<div style="height:70px;width:7%;float:left"><a href="https://www.instagram.com/_artikore_/">
+<img src="instagram.gif"style="height:70px;width:70%;margin:5px 0 0 20px"></a>
+</div>
+
+<div style="height:70px">
+<div style="height:70px;width:40%;float:left">
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="index.html" class="previous"> HOME</a> 
+</div>
+
+
+
+<div style="height:100px">
+<div style="height:90px;width:13%;float:right"><a href="https://www.facebook.com/">
+<img src="facebook.gif"style="height:50px;width:70%;margin:10px 0 0 20px"></a>
+</div>
+<div style="height:100px">
+<div style="height:70px;width:7%;float:right"><a href="https://www.youtube.com/?reload=9">
+<img src="youtube.gif"style="height:70px;width:130%;margin:10px 0 0 20px"></a>
+</div>
+<div style="height:100px">
+<div style="height:0px;width:4%;float:right"><a href="https://in.pinterest.com/">
+<img src="pin.png"style="height:40px;width70%;margin:10px 0 0 20px"></a>
+</div>
+</div>
+
+<footer><marquee>&copy; Copyright 2020 C Programming. All Rights Reserved. </marquee></footer>
+
+
+</body>
+</html>
+
+
+
+
