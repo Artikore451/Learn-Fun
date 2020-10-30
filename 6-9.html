@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DISPLAY PYRAMID WITH NUMBERS INCREASDE BY 1 </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void main()<br>
+{<br>
+   int i,j,spc,rows,k,t=1;<br>
+   printf("Input number of rows : ");<br>
+   scanf("%d",&rows);<br>
+   spc=rows+4-1;<br>
+   for(i=1;i<=rows;i++)<br>
+   {<br>
+         for(k=spc;k>=1;k--)<br>
+            {<br>
+              printf(" ");<br>
+            }<br>
+	   for(j=1;j<=i;j++)<br>
+	   printf("%d ",t++);<br>
+	printf("\n");<br>
+    spc--;<br>
+   }<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Input number of rows : 4  <br>                                                                                    
+&nbsp&nbsp&nbsp&nbsp&nbsp       1                      <br>                                                                                
+&nbsp&nbsp&nbsp&nbsp      2 3                         <br>                                                                            
+&nbsp&nbsp&nbsp     4 5 6                            <br>                                                                        
+&nbsp&nbsp    7 8 9 10                              <br>                                        
+&nbsp10101010101010101010 <br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>INSERT NEW VALUE IN ARRAY</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void main()<br>
+{<br>
+   int arr1[100],i,n,p,inval;<br>
+       printf("\n\nInsert New value in the sorted array :\n");<br>
+       printf("-----------------------------------------\n");<br><br>
+
+    printf("Input the size of array : ");<br>
+    scanf("%d", &n);<br>
+/* Stored values into the array*/<br>
+       printf("Input %d elements in the array in ascending order:\n",n);<br>
+       for(i=0;i<n;i++)<br>
+            {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr1[i]);<br>
+	    }<br>
+   printf("Input the value to be inserted : ");<br>
+   scanf("%d",&inval);<br>
+   printf("The exist array list is :\n ");<br>
+   for(i=0;i<n;i++)<br>
+      printf("% 5d",arr1[i]);<br>   
+   /* Determine the position where the new value will be insert.*/<br>
+   for(i=0;i<n;i++)<br>
+     if(inval<arr1[i])<br>
+     {<br>
+       p = i;<br>
+       break;<br>
+     }<br>
+   /* move all data at right side of the array */<br>
+   for(i=n;i>=p;i--)<br>
+      arr1[i]= arr1[i-1];<br>
+   /* insert value at the proper position */<br>
+      arr1[p]=inval;<br><br>
+   
+      printf("\n\nAfter Insert the list is :\n ");<br>
+   for(i=0;i<=n;i++)<br>
+      printf("% 5d",arr1[i]);<br>
+	  printf("\n");<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Insert New value in the sorted array :<br>                                                                        
+----------------------------------------- <br>                                                                    
+Input the size of array : 3                   <br>                                                                
+Input 3 elements in the array in ascending order: <br>                                                            
+element - 0 : 5      <br>                                                                                         
+element - 1 : 7          <br>                                                                                     
+element - 2 : 9              <br>                                                                                 
+Input the value to be inserted : 8<br>                                                                            
+The exist array list is :             <br>                                                                        
+     5    7    9                          <br><br>                                                                    
+                                                                                                              
+After Insert the list is :                        <br>                                                            
+     5    7    8    9 <br>
+</fieldset>
+</body>
+</html>

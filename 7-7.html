@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>NUMBER IS PRIME OR NOT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+int PrimeOrNot(int);<br>
+int main()<br>
+{<br>
+    int n1,prime;<br>
+	printf("\n\n Function : check whether a number is prime number or not :\n");<br>
+	printf("---------------------------------------------------------------\n");    <br>	
+
+    printf(" Input a positive number : ");<br>
+    scanf("%d",&n1);<br>
+    prime = PrimeOrNot(n1);<br>
+   if(prime==1)<br>
+        printf(" The number %d is a prime number.\n",n1);<br>
+   else<br>
+      printf(" The number %d is not a prime number.\n",n1);<br>
+   return 0;<br>
+}<br><br>
+int PrimeOrNot(int n1)<br>
+{<br>
+    int i=2;<br>
+    while(i<=n1/2)<br>
+    {<br>
+         if(n1%i==0)<br>
+             return 0;<br>
+         else<br>
+             i++;<br>
+    }<br>
+    return 1;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Function : check whether a number is prime number or not :<br>
+---------------------------------------------------------------<br>
+ Input a positive number : 5<br>
+ The number 5 is a prime number.<br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SORT ELEMENT OF ARRAY IN DESCENDING ORDER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{<br>
+    int arr1[100];<br>
+    int n, i, j, tmp;<br><br>
+	
+	
+       printf("\n\nsort elements of array in descending order :\n");<br>
+       printf("----------------------------------------------\n");<br>	
+
+    printf("Input the size of array : ");<br>
+    scanf("%d", &n);<br>
+
+       printf("Input %d elements in the array :\n",n);<br>
+       for(i=0;i<n;i++)<br>
+            {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr1[i]);<br>
+	    }<br>
+    for(i=0; i<n; i++)<br>
+    {<br>
+        for(j=i+1; j<n; j++)<br>
+        {<br>
+            if(arr1[i] < arr1[j])<br>
+            {<br>
+                tmp = arr1[i];<br>
+                arr1[i] = arr1[j];<br>
+                arr1[j] = tmp;<br>
+            }<br>
+        }<br>
+    }<br><br>
+
+     printf("\nElements of array is sorted in descending order:\n");<br>
+    for(i=0; i<n; i++)<br>
+    {<br>
+        printf("%d  ", arr1[i]);
+    }
+	        printf("\n\n");
+}
+
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+sort elements of array in descending order :  <br>                                                                
+---------------------------------------------- <br>                                                               
+Input the size of array : 3   <br>                                                                                
+Input 3 elements in the array : <br>                                                                              
+element - 0 : 5      <br>                                                                                         
+element - 1 : 9          <br>                                                                                     
+element - 2 : 1              <br><br>                                                                                 
+                                                                                                              
+Elements of array is sorted in descending order:<br>                                                              
+9  5  1<br>
+</fieldset>
+</body>
+</html>

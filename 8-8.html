@@ -1,0 +1,84 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>POWER OF ANY NUMBER </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h><br>
+ 
+// function to generate next number<br>
+   int getNextValue(int aNum)<br>
+   {<br>
+      int i = aNum;<br>
+      if (i % 2 == 0)<br>
+      {<br>
+         i = i/2;<br>
+      }<br>
+      else <br>
+      { <br>
+         i = 3 * i + 1;<br>
+      }<br>
+      return (i);// returning the value of next number to the called function<br>
+   }<br>
+// function to generate Hailstone number<br>
+   void getHailstone(int aNum)<br>
+   {<br>
+      int hlSe = aNum;  <br>
+      if (hlSe == 1)<br>
+      {<br>
+         printf("%i ", hlSe);<br>
+      }<br>
+      else<br>
+      {<br>
+         printf(" %i ", hlSe);<br>
+         getHailstone(getNextValue(hlSe));// calling the function itself recursively<br>
+      }<br>
+   }<br>
+// Function to count the length of the Hailstone sequence<br>
+   int countLength(int aNum)<br>
+   {<br>
+      int hlSe = aNum;  <br>
+      if(hlSe == 1)<br>
+      {<br>
+         return 1;<br>
+      }<br>
+      else<br>
+      {<br>
+         return 1+countLength(getNextValue(hlSe));// calling the function itself recursively<br>
+      }<br>
+
+   }<br><br>
+
+int main(int argu)<br>
+{<br>
+   int aNum;<br>
+    printf("\n\n Recursion : Hailstone Sequence of a given number upto 1 :\n");<br>
+	printf("--------------------------------------------------------------\n");<br>  
+   printf(" Input any number (positive) to start for Hailstone Sequence : ");<br>
+   scanf("%i", &aNum);<br>
+
+   printf("\n The hailstone sequence starting at %i is : \n", aNum);<br>
+   getHailstone(aNum);<br>
+   printf("\n\n");<br>
+   printf(" The length of the sequence is %i. \n\n", countLength(aNum));<br>
+      return 0;<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+ Recursion : Hailstone Sequence of a given number upto 1 :<br>                                                    
+--------------------------------------------------------------<br>                                                
+ Input any number (positive) to start for Hailstone Sequence : 13 <br>                                            
+                                                                                                              
+ The hailstone sequence starting at 13 is :                           <br>                                        
+ 13  40  20  10  5  16  8  4  2 1                                         <br>                                    
+                                                                              <br>                                
+ The length of the sequence is 10<br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>CHECK WHETHER A CHARACTER IS A ALPHABET,DIGITS OR SPECIAL CHARACTER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+int main()   <br>
+{   <br>
+    char sing_ch;   <br>
+
+    printf("Input a character: ");   <br>
+    scanf('%c', &sing_ch);   <br>
+  
+    /* Checks whether it is an alphabet */   <br>
+    if((sing_ch>='a' && sing_ch<='z') || (sing_ch>='A' && sing_ch<='Z')) <br>  
+    {   <br>
+        printf("This is an alphabet.\n");   <br>
+    }   <br>
+    else if(sing_ch>='0' && sing_ch<='9') /* whether it is digit */  <br> 
+    {   <br>
+        printf("This is a digit.\n");   <br>
+    }   <br>
+    else /* Else special character */  <br> 
+    {   <br>
+        printf("This is a special character.\n");  <br> 
+    }   <br>
+} <br>
+
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Input a character: @            <br>                                                                              
+This is a special character.<br>
+</fieldset>
+</body>
+</html>

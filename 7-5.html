@@ -1,0 +1,43 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SUM OF SERIES 1!/1+2!/2+3!/3+4!/4+5!/5</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+int fact(int);<br>
+void main()<br>
+{<br>
+    int sum;<br>
+    sum=fact(1)/1+fact(2)/2+fact(3)/3+fact(4)/4+fact(5)/5;<br>
+	printf("\n\n Function : find the sum of 1!/1+2!/2+3!/3+4!/4+5!/5 :\n");<br>
+	printf("----------------------------------------------------------\n");    <br>
+    printf("The sum of the series is : %d\n\n",sum);<br>
+}<br><br>
+
+int fact(int n)<br>
+    {<br>
+        int num=0,f=1;<br>
+        while(num<=n-1)<br>
+        {<br>
+            f =f+f*num;<br>
+            num++;<br>
+        }<br>
+    return f;<br>
+    }<br>
+
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+ Function : find the sum of 1!/1+2!/2+3!/3+4!/4+5!/5 :<br>
+----------------------------------------------------------<br>
+The sum of the series is : 34<br>
+</fieldset>
+</body>
+</html>

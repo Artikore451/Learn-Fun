@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SUM OF SERIES 1+11+111+1111.....N TERMS</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{<br>
+  int n,i;<br> 
+  long sum=0;<br>
+  long int t=1;<br>
+  printf("Input the number of terms : ");<br>
+  scanf("%d",&n);<br>
+  for(i=1;i<=n;i++)<br>
+  {<br>
+     printf("%ld  ",t);<br>
+      if (i<n)<br>
+      {<br>
+          printf("+ "); <br>
+          
+      }<br>
+     sum=sum+t;<br>
+     t=(t*10)+1;<br>
+  }<br>
+  printf("\nThe Sum is : %ld\n",sum);<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Input the number of terms : 5   <br>                                                                              
+1 + 11 + 111 + 1111 + 11111         <br>                                                                         
+The Sum is : 12345 <br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DISPLAY SUM OF SERIES [ 9 + 99 + 999 + 9999 ...]</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{  <br> long int n,i,t=9;<br>
+	int sum =0;<br>
+	printf("Input the number or terms :");<br>
+	scanf("%ld",&n);<br>
+	for (i=1;i<=n;i++)<br>
+	{ <br>sum +=t;<br>
+	  printf("%ld   ",t);<br>
+	  t=t*10+9;<br>
+	}<br>
+	printf("\nThe sum of the series = %d \n",sum);<br>
+} <br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Input the number or terms :5  <br>                                                                                
+9   99   999   9999   99999       <br>                                                                            
+The sum of the series = 111105  <br>
+</fieldset>
+</body>
+</html>

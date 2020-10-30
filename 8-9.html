@@ -1,0 +1,158 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>BINARY SEARCH USING RECURTION AND NON RECURTION FUNCTION </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+
+
+
+#include <<stdio.h>stdio.h><br>
+#define MAX_LEN 10<br><br>
+ 
+/* Non-Recursive function*/<br>
+void b_search_nonrecursive(int l[],int num,int ele)<br>
+{<br>
+   int l1,i,j, flag = 0;<br>
+   l1 = 0;<br>
+   i = num-1;<br>
+   while(l1 <= i)<br>
+   {<br>
+      j = (l1+i)/2;<br>
+      if( l[j] == ele)<br>
+      {<br>
+    printf("\nThe element %d is present at position %d in list\n",ele,j);<br>
+         flag =1;<br>
+         break;<br>
+      }<br>
+      else<br>
+        if(l[j] < ele)<br>
+           l1 = j+1;<br>
+        else<br>
+           i = j-1;<br>
+   }<br>
+   if( flag == 0)<br>
+   printf("\nThe element %d is not present in the list\n",ele);<br>
+}<br><br>
+ 
+/* Recursive function*/<br>
+int b_search_recursive(int l[],int arrayStart,int arrayEnd,int a)<br>
+{<br>
+  int m,pos;<br>
+  if (arrayStart<=arrayEnd)<br>
+  {<br>
+    m=(arrayStart+arrayEnd)/2;<br>
+    if (l[m]==a)<br>
+      return m;<br>
+    else if (a<l[m])<br>
+      return b_search_recursive(l,arrayStart,m-1,a);<br>
+    else<br>
+      return b_search_recursive(l,m+1,arrayEnd,a);<br>
+   }<br>
+   return -1;<br>
+}<br><br>
+ 
+void read_list(int l[],int n)<br>
+{<br>
+   int i;<br>
+   printf("\nEnter the elements:\n");<br>
+   for(i=0;i<n;i++)<br>
+       scanf("%d",&l[i]);<br>
+}<br><br>
+ 
+void print_list(int l[],int n)<br>
+{<br>
+    int i;<br>
+   for(i=0;i<n;i++)<br>
+       printf("%d\t",l[i]);<br>
+}<br><br>
+ 
+/*main function*/<br>
+main()<br>
+{<br>
+   int l[MAX_LEN], num, ele,f,l1,a;<br>
+   int ch,pos;<br><br>
+ 
+   //clrscr();<br><br>
+ 
+   printf("======================================================");<br>
+   printf("\n\t\t\tMENU");<br>
+   printf("\n=====================================================");<br>
+   printf("\n[1] Binary Search using Recursion method");<br>
+   printf("\n[2] Binary Search using Non-Recursion method");<br>
+   printf("\n\nEnter your Choice:");<br>
+   scanf("%d",&ch);<br><br>
+ 
+   if(ch<=2 & ch>0)<br>
+ {<br>
+     printf("\nEnter the number of elements : ");<br>
+     scanf("%d",&num);<br>
+     read_list(l,num);<br>
+     printf("\nElements present in the list are:\n\n");<br>
+     print_list(l,num);<br>
+     printf("\n\nEnter the element you want to search:\n\n");<br>
+     scanf("%d",&ele);<br><br>
+ 
+ 
+   switch(ch)<br>
+   {<br>
+     case 1:printf("\nRecursive method:\n");<br>
+        pos=b_search_recursive(l,0,num,ele);<br>
+        if(pos==-1)<br>
+        {<br>
+        printf("Element is not found");<br>
+        }<br>
+        else<br>
+        {<br>
+        printf("Element is found at %d position",pos);<br>
+        }<br>
+        //getch();<br>
+        break;<br><br>
+ 
+     case 2:printf("\nNon-Recursive method:\n");<br>
+        b_search_nonrecursive(l,num,ele);<br>
+        //getch();<br>
+        break;<br>
+     }<br>
+   }<br>
+//getch();<br>
+}<br><br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">    
+
+
+======================================================<br>
+                        MENU<br>
+=====================================================<br>
+[1] Binary Search using Recursion method<br>
+[2] Binary Search using Non-Recursion method<br>
+<br>
+Enter your Choice:1<br>
+
+Enter the number of elements : 5<br>
+
+Enter the elements:<br>
+12<br>
+22<br>
+32<br>
+42<br>
+52<br><br>
+
+Elements present in the list are:<br><br>
+
+12      22      32      42      52<br>
+<br>
+Enter the element you want to search:<br>
+
+42<br>
+
+Recursive method:<br>
+Element is found at 3 position<br>
+
+</fieldset>
+</body>
+</html>

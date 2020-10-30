@@ -1,0 +1,62 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>READ N NUMNBER IN ARRAY AND DISPLAY IN REVERSE ORDER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void main()<br>
+{<br>
+   int i,n,a[100];<br>
+   
+       printf("\n\nRead n number of values in an array and display it in reverse order:\n");<br>
+       printf("------------------------------------------------------------------------\n");<br>
+   
+   printf("Input the number of elements to store in the array :");<br>
+   scanf("%d",&n);<br>
+   
+   printf("Input %d number of elements in the array :\n",n);<br>
+   for(i=0;i<n;i++)<br>
+      {<br>
+	  printf("element - %d : ",i);<br>
+	  scanf("%d",&a[i]);<br>
+	  }<br><br>
+      
+   printf("\nThe values store into the array are : \n");<br>
+   for(i=0;i<n;i++)<br>
+     {<br>
+	   printf("% 5d",a[i]);<br>
+	 }<br><br>
+ 
+   printf("\n\nThe values store into the array in reverse are :\n");<br>
+   for(i=n-1;i>=0;i--)<br>
+      {<br>
+	   printf("% 5d",a[i]);<br>
+	  }<br>
+   printf("\n\n");<br>
+} <br>
+
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Read n number of values in an array and display it in reverse order:  <br>                                        
+------------------------------------------------------------------------  <br>                                    
+Input the number of elements to store in the array :3 <br>                                                        
+Input 3 number of elements in the array :    <br>                                                                 
+element - 0 : 2 <br>                                                                                              
+element - 1 : 5     <br>                                                                                          
+element - 2 : 7         <br><br>                                                                                      
+                                                                                                              
+The values store into the array are :<br>                                                                         
+    2    5    7                     <br><br>                                                                          
+                                                                                                              
+The values store into the array in reverse are :<br>                                                              
+    7    5    2<br><br>
+</fieldset>
+</body>
+</html>

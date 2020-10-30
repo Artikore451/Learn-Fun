@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SUM OF NUMBER FROM 1 TO N </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+int sumOfRange(int);<br>
+ 
+int main() <br>
+{<br>
+   int n1;<br>
+   int sum;<br>
+	printf("\n\n Recursion : calculate the sum of numbers from 1 to n :\n");<br>
+	printf("-----------------------------------------------------------\n");    <br>
+ 
+   printf(" Input the last number of the range starting from 1 : ");<br>
+   scanf("%d", &n1);<br>
+ 
+   sum = sumOfRange(n1); <br>
+   printf("\n The sum of numbers from 1 to %d : %d\n\n", n1, sum);<br>
+ 
+   return (0);<br>
+}<br><br>
+ 
+int sumOfRange(int n1) <br>
+{<br>
+   int res;<br>
+   if (n1 == 1)<br> 
+   {<br>
+      return (1);<br>
+   } <br>else<br> 
+   {<br>
+      res = n1 + sumOfRange(n1 - 1); //calling the function sumOfRange itself<br>
+   }<br>
+   return (res);<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Recursion : calculate the sum of numbers from 1 to n :  <br>                                                     
+----------------------------------------------------------- <br>                                                  
+ Input the last number of the range starting from 1 : 5         <br>                                              
+                                                                                                              
+ The sum of numbers from 1 to 5 : 15<br>
+</fieldset>
+</body>
+</html>

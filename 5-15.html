@@ -1,0 +1,51 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>READ ANY MONTH NO. AND DISPLAY NO. OF DAYS IN THAT MONTH</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void main()<br>
+{<br>
+   int monno;<br>
+   char monnm[15];<br>
+   printf("Input Month No : ");<br>
+   scanf("%d",&monno);<br>
+   switch(monno)<br>
+   {<br>
+	case 1:<br>
+	case 3:<br>
+	case 5:<br>
+	case 7:<br>
+	case 8:<br>
+	case 10:<br>
+	case 12:<br>
+	       printf("Month have 31 days. \n");<br>
+	       break;<br>
+	case 2:<br>
+	       printf("The 2nd month is a February and have 28 days. \n");<br>
+	       printf("in leap year The February month  Have 29 days.\n");<br>
+	       break;<br>
+	case 4:<br>
+	case 6:<br>
+	case 9:<br>
+	case 11:<br>
+	       printf("Month have 30 days. \n");<br>
+	       break;<br>
+default:<br>
+	       printf("invalid Month number.\nPlease try again ....\n");<br>
+	       break;<br>
+      }<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Input Month No : 7               <br>                                                                             
+Month have 31 days.<br>
+</fieldset>
+</body>
+</html>

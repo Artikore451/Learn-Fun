@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SWAPPING OF TWO NUMBERS</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void swap(int *,int *);<br>
+int main()<br>
+{<br>
+
+    int n1,n2;<br>
+	printf("\n\n Function : swap two numbers using function :\n");<br>
+	printf("------------------------------------------------\n");	  <br> 
+    printf("Input 1st number : ");<br>
+    scanf("%d",&n1);<br>
+    printf("Input 2nd number : ");<br>
+    scanf("%d",&n2);	<br><br>
+    printf("Before swapping: n1 = %d, n2 = %d ",n1,n2);<br>
+	//pass the address of both variables to the function.<br>
+    swap(&n1,&n2);<br>
+
+    printf("\nAfter swapping: n1 = %d, n2 = %d \n\n",n1,n2);<br>
+    return 0;<br>
+}<br><br>
+
+void swap(int *p,int *q)<br>
+{<br>
+	//p=&n1 so p store the address of n1, so *p store the value of n1<br>
+	//q=&n2 so q store the address of n2, so *q store the value of n2<br><br>
+
+    int tmp;<br>
+    tmp = *p; // tmp store the value of n1<br>
+    *p=*q;    // *p store the value of *q that is value of n2<br>
+    *q=tmp;   // *q store the value of tmp that is the value of n1<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+  Function : swap two numbers using function :<br>
+------------------------------------------------<br>
+Input 1st number : 2<br>
+Input 2nd number : 4<br>
+Before swapping: n1 = 2, n2 = 4<br>
+After swapping: n1 = 4, n2 = 2<br>
+</fieldset>
+</body>
+</html>

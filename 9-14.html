@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DELETE ELEMENT AT DESIRED POSITION </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void main()<br>{<br>
+  int arr1[50],i,pos,n;<br><br>
+  
+       printf("\n\nDelete an element at desired position from an array :\n");<br>
+       printf("---------------------------------------------------------\n");<br><br>  
+  
+       printf("Input the size of array : ");<br>
+       scanf("%d", &n);<br>
+    /* Stored values into the array*/<br>
+       printf("Input %d elements in the array in ascending order:\n",n);<br>
+       for(i=0;i<n;i++)<br>
+            {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr1[i]);<br>
+	    }<br><br>
+
+  printf("\nInput the position where to delete: ");<br>
+  scanf("%d",&pos);<br>
+/*---- locate the position of i in the array -------*/<br>
+  i=0;<br>
+  while(i!=pos-1)<br>
+            i++;<br>
+/*---- the position of i in the array will be replaced by the 
+       value of its right */<br>
+  while(i<n)<br>{<br>
+            arr1[i]=arr1[i+1];<br>
+            i++;<br>
+  }<br>
+  n--;<br>
+   printf("\nThe new list is : "); <br>
+  for(i=0;i<n;i++)<br>
+        {<br>
+		   printf("  %d",arr1[i]);<br>
+		}  <br>
+            printf("\n\n");<br>
+
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Delete an element at desired position from an array : <br>                                                        
+--------------------------------------------------------- <br>                                                    
+Input the size of array : 5                     <br>                                                              
+Input 5 elements in the array in ascending order:<br>                                                             
+element - 0 : 1        <br>                                                                                       
+element - 1 : 2       <br>                                                                                        
+element - 2 : 3        <br>                                                                                       
+element - 3 : 4          <br>                                                                                     
+element - 4 : 5              <br><br>                                                                                 
+                                                                                                              
+Input the position where to delete: 3<br>                                                                         
+                                                                                                              
+The new list is :   1  2  4  5 <br>
+</fieldset>
+</body>
+</html>

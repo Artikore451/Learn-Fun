@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PATTERN LIKE A DIAMOND</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void main()<br>
+{<br>
+   int i,j,r;<br>
+   printf("Input number of rows (half of the diamond) :");<br>
+   scanf("%d",&r);<br>
+   for(i=0;i<=r;i++)<br>
+   {<br>
+     for(j=1;j<=r-i;j++)<br>
+     printf(" ");<br>
+     for(j=1;j<=2*i-1;j++)<br>
+       printf("*");<br>
+     printf("\n");<br>
+   }<br><br>
+ 
+   for(i=r-1;i>=1;i--)<br>
+   {<br>
+     for(j=1;j<=r-i;j++)<br>
+     printf(" ");<br>
+     for(j=1;j<=2*i-1;j++)<br>
+       printf("*");<br>
+     printf("\n");<br>
+   }<br>
+ 
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Input number of rows (half of the diamond) :5<br>                                                                 
+                                                                                                              
+&nbsp&nbsp&nbsp&nbsp&nbsp    *                                            <br>                                                             
+&nbsp&nbsp&nbsp&nbsp   ***                                            <br>                                                            
+&nbsp&nbsp&nbsp  *****                                           <br>                                                            
+&nbsp&nbsp *******                                           <br>                                                           
+&nbsp*********                                      <br>                                                               
+&nbsp&nbsp *******                                          <br>                                                            
+&nbsp&nbsp&nbsp  *****                                               <br>                                                        
+&nbsp&nbsp&nbsp&nbsp   ***    <br>                                                                                                   
+&nbsp&nbsp&nbsp&nbsp&nbsp    * <br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SECOND SMALLEST ELEMENTS IN ARRAY </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{<br>
+  int arr1[50],n,i,j=0,sml,sml2nd;<br><br>
+  
+       printf("\n\nFind the second smallest element in an array :\n");<br>
+       printf("--------------------------------------------------\n");  <br>
+  
+       printf("Input the size of array : ");<br>
+       scanf("%d", &n);<br>
+    /* Stored values into the array*/<br>
+       printf("Input %d elements in the array (value must be <9999) :\n",n);<br>
+       for(i=0;i<n;i++)<br>
+            {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr1[i]);<br>
+	    }<br>
+/* find location of the smallest element in the array */<br>		
+   sml=arr1[0];<br>
+  for(i=0;i<n;i++)<br>
+  {<br>
+      if(sml>arr1[i])<br>
+	  {<br>
+           sml=arr1[i];<br>
+           j = i;<br>
+      }<br>
+  }<br><br>
+
+/* ignore the smallest element and find the 2nd smallest element in the array */<br>		
+   sml2nd=99999;<br>
+  for(i=0;i<n;i++)<br>
+  {<br>
+     if(i==j)<br>
+        {<br>
+          i++;  /* ignoring the smallest element */<br>
+		  i--;<br>
+        }<br>
+      else<br>
+        {<br>
+          if(sml2nd>arr1[i])<br>
+	     {<br>
+               sml2nd=arr1[i];<br>
+             }<br>
+        }<br>
+  }<br>
+
+  printf("The Second smallest element in the array is :  %d \n\n", sml2nd);<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Find the second smallest element in an array :<br>                                                                
+--------------------------------------------------<br>                                                            
+Input the size of array : 5                           <br>                                                        
+Input 5 elements in the array (value must be <9999) :     <br>                                                    
+element - 0 : 0          <br>                                                                                     
+element - 1 : 9      <br>                                                                                         
+element - 2 : 4              <br>                                                                                 
+element - 3 : 6                  <br>                                                                             
+element - 4 : 5                      <br>                                                                         
+The Second smallest element in the array is :  4 <br>
+</fieldset>
+</body>
+</html>

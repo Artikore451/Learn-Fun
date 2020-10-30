@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>UNARY ARITHMETIC OPERATORS </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+int main()  <br>
+{  <br>
+    int a = 10, b = 4, res;  <br>
+  
+    // post-increment example:  <br>
+    // res is assigned 10 only, a is not updated yet <br> 
+    res = a++;  <br>
+    printf("a is %d and res is %d\n", a, res); // a becomes 11 now <br> <br> 
+  
+    // post-decrement example:  <br>
+    // res is assigned 11 only, a is not updated yet  <br>
+    res = a--;  <br>
+    printf("a is %d and res is %d\n", a, res); // a becomes 10 now  <br> <br>
+  
+    // pre-increment example:  <br>
+    // res is assigned 11 now since a is updated here itself  <br>
+    res = ++a;  <br>
+    // a and res have same values = 11  <br>
+    printf("a is %d and res is %d\n", a, res);  <br> <br>
+  
+    // pre-decrement example:  <br>
+    // res is assigned 10 only since a is updated here itself <br> 
+    res = --a;  <br>
+    // a and res have same values = 10  <br>
+    printf("a is %d and res is %d\n", a, res); <br> <br> 
+  
+    return 0;  <br>
+}  <br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+a is 11 and res is 10<br>
+a is 10 and res is 11<br>
+a is 11 and res is 11<br>
+a is 10 and res is 10<br>
+</fieldset>
+</body>
+</html>

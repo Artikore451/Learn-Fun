@@ -1,0 +1,69 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SORT ELEMENT OF ARRAY IN ASCENDING ORDER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{<br>
+    int arr1[100];<br>
+    int n, i, j, tmp;<br><br>
+	
+	
+       printf("\n\nsort elements of array in ascending order :\n ");<br>
+       printf("----------------------------------------------\n");	<br>
+
+    printf("Input the size of array : ");<br>
+    scanf("%d", &n);<br>
+
+       printf("Input %d elements in the array :\n",n);<br>
+       for(i=0;i<n;i++)<br>
+            {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr1[i]);<br>
+	    }<br>
+
+    for(i=0; i<n; i++)<br>
+    {<br>
+        for(j=i+1; j<n; j++)<br>
+        {<br>
+            if(arr1[j] <arr1[i])<br>
+            {<br>
+                tmp = arr1[i];<br>
+                arr1[i] = arr1[j];<br>
+                arr1[j] = tmp;<br>
+            }<br>
+        }<br>
+    }<br>
+    printf("\nElements of array in sorted ascending order:\n");<br>
+    for(i=0; i<n; i++)<br>
+    {<br>
+        printf("%d  ", arr1[i]);<br>
+    }<br>
+	        printf("\n\n");<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+sort elements of array in ascending order : <br>                                                                  
+ ---------------------------------------------- <br>                                                              
+Input the size of array : 5     <br>                                                                              
+Input 5 elements in the array :     <br>                                                                          
+element - 0 : 2      <br>                                                                                         
+element - 1 : 7          <br>                                                                                     
+element - 2 : 4              <br>                                                                                 
+element - 3 : 5                  <br>                                                                             
+element - 4 : 9                      <br>                                                                         
+                                                                                                              
+Elements of array in sorted ascending order:<br>                                                                  
+2  4  5  7  9 <br>
+</fieldset>
+</body>
+</html>

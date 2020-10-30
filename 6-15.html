@@ -1,0 +1,56 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>LCM OF ANY TWO NUMBER USING HCF</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()  <br>
+{  <br>
+    int i, n1, n2, j, hcf=1,lcm;<br>  
+
+
+     printf("\n\n  LCM of two numbers:\n ");<br>
+     printf("----------------------\n");<br>
+
+
+    printf("Input 1st number for LCM: ");  <br>
+    scanf("%d", &n1);  <br>
+    printf("Input 2nd number for LCM: ");<br>  
+    scanf("%d", &n2); <br>
+  
+    j = (n1<n2) ? n1 : n2;  <br>
+  
+    for(i=1; i<=j; i++)  <br>
+    {  <br>
+
+        if(n1%i==0 && n2%i==0)  <br>
+        {  <br>
+            hcf = i;<br>  
+        }  <br>
+    }  <br>
+/* We know  the multiplication of HCF and LCM is equivalant<br>
+to the multiplication of these two numbers.*/<br>
+    lcm=(n1*n2)/hcf;<br>
+  
+    printf("\nThe LCM of %d and %d is : %d\n\n", n1, n2, lcm);  <br>
+
+}<br> 
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+LCM of two numbers:     <br>                                                                                    
+ ----------------------     <br>                                                                                  
+Input 1st number for LCM: 15    <br>                                                                              
+Input 2nd number for LCM: 20        <br>                                                                          
+                                                                                                              
+The LCM of 15 and 20 is : 60<br>
+</fieldset>
+</body>
+</html>

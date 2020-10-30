@@ -1,0 +1,41 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SIZE OF LONG VALRIABLES</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+int main() <br>{<br>
+      double first, second, temp;<br>
+      printf("Enter first number: ");<br>
+      scanf("%lf", &first);<br>
+      printf("Enter second number: ");<br>
+      scanf("%lf", &second);<br>
+
+      // Value of first is assigned to temp<br>
+      temp = first;<br>
+
+      // Value of second is assigned to first<br>
+      first = second;<br>
+
+      // Value of temp (initial value of first) is assigned to second<br>
+      second = temp;<br>
+
+      printf("\nAfter swapping, firstNumber = %.2lf\n", first);<br>
+      printf("After swapping, secondNumber = %.2lf", second);<br>
+      return 0;<br>
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Enter first number: 1.20<br>
+Enter second number: 2.45<br>
+
+After swapping, firstNumber = 2.45<br>
+After swapping, secondNumber = 1.20<br>
+</fieldset>
+</body>
+</html>

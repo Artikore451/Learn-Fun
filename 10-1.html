@@ -1,0 +1,64 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DISPLAY 2D ARRAY OF 3*3 MATRIX </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void main()<br>
+{<br>
+  int arr1[3][3],i,j;<br><br>
+  
+       printf("\n\nRead a 2D array of size 3x3 and print the matrix :\n");<br>
+       printf("------------------------------------------------------\n");  <br><br>
+  
+ 
+    /* Stored values into the array*/<br>
+       printf("Input elements in the matrix :\n");<br>
+  for(i=0;i<3;i++)<br>
+  {<br>
+      for(j=0;j<3;j++)<br>
+      {<br>
+	      printf("element - [%d],[%d] : ",i,j);<br>
+	      scanf("%d",&arr1[i][j]);<br>
+      }<br>
+  }  <br>
+ 
+ printf("\nThe matrix is : \n");<br>
+  for(i=0;i<3;i++)<br>
+  {<br>
+      printf("\n");<br>
+      for(j=0;j<3;j++)<br>
+           printf("%d\t",arr1[i][j]);<br>
+  }<br>
+ printf("\n\n");<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+                                                                          
+Read a 2D array of size 3x3 and print the matrix : <br>                                                           
+------------------------------------------------------ <br>                                                       
+Input elements in the matrix : <br>                                                                               
+element - [0],[0] : 1              <br>                                                                           
+element - [0],[1] : 2                  <br>                                                                       
+element - [0],[2] : 3                      <br>                                                                   
+element - [1],[0] : 4                          <br>                                                               
+element - [1],[1] : 5                              <br>                                                           
+element - [1],[2] : 6                                  <br>                                                       
+element - [2],[0] : 7                                      <br>                                                   
+element - [2],[1] : 8                                          <br>                                               
+element - [2],[2] : 9                                              <br>                                           
+                                                                                                              
+The matrix is :  <br>                                                                                             
+                                                                                                              
+1 &nbsp &nbsp      2 &nbsp &nbsp       3  <br>                                                                                           
+4 &nbsp &nbsp       5 &nbsp &nbsp       6      <br>                                                                                       
+7 &nbsp &nbsp       8 &nbsp &nbsp       9 <br>
+</fieldset>
+</body>
+</html>

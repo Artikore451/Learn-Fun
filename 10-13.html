@@ -1,0 +1,115 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>CHECK TWO MATRIX ARE EQUAL OR NOT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <<stdlib.h>stdlib.h><br>
+
+
+void main()<br>
+{<br>
+   int arr1[50][50], brr1[50][50];<br>
+   int i, j, r1, c1, r2, c2, flag =1;<br>
+   
+       printf("\n\nAccept two matrices and check whether they are equal :\n ");<br>
+       printf("-----------------------------------------------------------\n");   <br>
+  
+   printf("Input Rows and Columns of the 1st matrix :");<br>
+   scanf("%d %d", &r1, &c1);<br>
+
+   printf("Input Rows and Columns of the 2nd matrix :");<br>
+   scanf("%d %d", &r2,&c2);<br>
+	 printf("Input elements in the first matrix :\n");<br>
+       for(i=0;i<r1;i++)<br>
+        {<br>
+            for(j=0;j<c1;j++)<br>
+            {<br>
+	           printf("element - [%d],[%d] : ",i,j);<br>
+	           scanf("%d",&arr1[i][j]);<br>
+            }<br>
+        } <br>
+       printf("Input elements in the second matrix :\n");<br>
+       for(i=0;i<r2;i++)<br>
+        {<br>
+            for(j=0;j<c2;j++)<br>
+            {<br>
+	           printf("element - [%d],[%d] : ",i,j);<br>
+	           scanf("%d",&brr1[i][j]);<br>
+            }<br>
+        }   <br>
+ 	 printf("The first matrix is :\n");<br>
+	 for(i=0;i<r1;i++)<br>
+	 {<br>
+	   for(j=0;j<c1 ;j++)<br>
+	     printf("% 4d",arr1[i][j]);<br>
+	    printf("\n");<br>
+	 }<br>
+	 printf("The second matrix is :\n");<br>
+	 for(i=0;i<r2;i++)<br>
+	 {<br>
+	   for(j=0;j<c2 ;j++)<br>
+	     printf("% 4d",brr1[i][j]);<br>
+	    printf("\n");<br>
+	 }<br>
+   /* Comparing two matrices for equality */<br>
+
+   if(r1 == r2 && c1 == c2)<br>
+   {<br>
+    	printf("The Matrices can be compared : \n");<br>
+    	for(i=0; i<r1; i++)<br>
+    	{<br>
+     		for(j=0; j<c2; j++)<br>
+     		{<br>
+			if(arr1[i][j] != brr1[i][j])<br>
+			{<br>
+	   			flag = 0;<br>
+	   			break;<br>
+			}<br>
+     		}<br>
+   	   }<br>
+    }<br>
+    else<br>
+    {  <br>printf("The Matrices Cannot be compared :\n");<br>
+       exit(1);<br>
+    }<br>
+    if(flag == 1 )<br>
+	printf("Two matrices are equal.\n\n");<br>
+    else<br>
+	printf("But,two matrices are not equal\n\n");<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Accept two matrices and check whether they are equal : <br>                                                       
+ -----------------------------------------------------------<br>                                                  
+Input Rows and Columns of the 1st matrix :2 2 <br>                                                                
+Input Rows and Columns of the 2nd matrix :2 2 <br>                                                                
+Input elements in the first matrix :  <br>                                                                        
+element - [0],[0] : 1      <br>                                                                                   
+element - [0],[1] : 2          <br>                                                                               
+element - [1],[0] : 3              <br>                                                                           
+element - [1],[1] : 4                  <br>                                                                       
+Input elements in the second matrix :      <br>                                                                   
+element - [0],[0] : 1  <br>                                                                                       
+element - [0],[1] : 2      <br>                                                                                   
+element - [1],[0] : 3          <br>                                                                               
+element - [1],[1] : 4              <br>                                                                           
+The first matrix is :                  <br>                                                                       
+   1&nbsp&nbsp   2                                   <br>                                                                   
+   3&nbsp&nbsp   4                                       <br>                                                               
+The second matrix is :                             <br>                                                           
+   1&nbsp&nbsp   2                                               <br>                                                       
+   3&nbsp&nbsp   4  <br>
+The Matrices can be compared :  <br>                                                                              
+Two matrices are equal.             <br>                                                                 
+
+</fieldset>
+</body>
+</html>

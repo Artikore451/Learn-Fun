@@ -1,0 +1,51 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>CALCULATE ROOTS OF QUADRATIC EQUATION</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <math.h> <br>
+
+void main() <br>
+{ <br>
+   int a,b,c,d; <br>
+   float x1,x2; <br>
+ 
+   printf("Input the value of a,b & c : "); <br>
+   scanf("%d%d%d",&a,&b,&c); <br>
+   d=b*b-4*a*c; <br>
+   if(d==0) <br>
+   { <br>
+     printf("Both roots are equal.\n"); <br>
+     x1=-b/(2.0*a); <br>
+     x2=x1; <br>
+     printf("First  Root Root1= %f\n",x1); <br>
+     printf("Second Root Root2= %f\n",x2); <br>
+   } <br>
+   else if(d>0) <br>
+	{ <br>
+	   printf("Both roots are real and diff-2\n"); <br> 
+	   x1=(-b+sqrt(d))/(2*a); <br>
+	   x2=(-b-sqrt(d))/(2*a); <br>
+	   printf("First  Root Root1= %f\n",x1); <br>
+	   printf("Second Root root2= %f\n",x2); <br>
+	} <br>
+	else <br>
+	    printf("Root are imeainary;\nNo Solution. \n"); <br>
+} <br>
+
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Input the value of a,b & c : 1 5 7<br>                                                                            
+Root are imaginary;<br>                                                                                           
+No Solution. <br>
+</fieldset>
+</body>
+</html>

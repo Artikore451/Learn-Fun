@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>LARGER AMONG THREE NUMBERS</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+#include <stdio.h> <br>
+void main() <br>
+{ <br>
+    int num1, num2, num3; <br>
+ 
+    printf("Input the values of three numbers : "); <br>
+    scanf("%d %d %d", &num1, &num2, &num3); <br>
+    printf("1st Number = %d,\t2nd Number = %d,\t3rd Number = %d\n", num1, num2, num3); <br>
+    if (num1 > num2) <br>
+    { <br>
+        if (num1 > num3) <br>
+        { <br>
+            printf("The 1st Number is the greatest among three. \n"); <br>
+        } <br>
+        else <br>
+        { <br>
+            printf("The 3rd Number is the greatest among three. \n"); <br>
+        } <br>
+    } <br>
+    else if (num2 > num3) <br>
+        printf("The 2nd Number is the greatest among three \n"); <br>
+    else <br>
+        printf("The 3rd Number is the greatest among three \n"); <br>
+} <br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Input the values of three numbers : 12 25 52  <br>                                                                                
+1st Number = 12, <br>       2nd Number = 25,   <br>     3rd Number = 52 <br>                                                              
+The 3rd Number is the greatest among three<br> 
+</fieldset>
+</body>
+</html>

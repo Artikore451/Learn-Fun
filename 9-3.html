@@ -1,0 +1,54 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SUM OF ALL ELEMENTS IN ARRAY</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{<br>
+    int a[100];<br>
+    int i, n, sum=0;<br><br>
+	
+	
+       printf("\n\nFind sum of all elements of array:\n");<br>
+       printf("--------------------------------------\n");<br>	
+
+       printf("Input the number of elements to be stored in the array :");<br>
+       scanf("%d",&n);<br>
+   
+       printf("Input %d elements in the array :\n",n);<br>
+       for(i=0;i<n;i++)<br>
+        {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&a[i]);<br>
+	    }<br><br>
+
+    for(i=0; i<n; i++)<br>
+    {<br>
+        sum += a[i];<br>
+    }<br><br>
+
+    printf("Sum of all elements stored in the array is : %d\n\n", sum);<br>
+}<br>
+
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Find sum of all elements of array:<br>                                                                            
+--------------------------------------<br>                                                                        
+Input the number of elements to be stored in the array :3<br>                                                     
+Input 3 elements in the array : <br>                                                                              
+element - 0 : 2 <br>                                                                                              
+element - 1 : 5     <br>                                                                                          
+element - 2 : 8         <br>                                                                                      
+Sum of all elements stored in the array is : 15<br> 
+</fieldset>
+</body>
+</html>

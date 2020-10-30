@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>EVEN OR ODD</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+ 
+//if the least significant bit is 1 the number is odd and 0 the number is even <br> 
+int checkOddEven(int n1) <br>
+{    <br>
+    return (n1 & 1);//The & operator does a bitwise and, <br>
+} <br> <br>
+
+int main() <br>
+{ <br>
+    int n1; <br>
+	printf("\n\n Function : check the number is even or odd:\n"); <br>
+	printf("------------------------------------------------\n");	   <br>   
+    printf("Input any number : "); <br>
+    scanf("%d", &n1); <br> <br>
+
+    // If checkOddEven() function returns 1 then the number is odd  <br>
+    if(checkOddEven(n1)) <br>
+    { <br>
+        printf("The entered number is odd.\n\n"); <br>
+    } <br>
+    else <br>
+    { <br>
+        printf("The entered number is even.\n\n"); <br>
+    } <br>
+    return 0; <br>
+} <br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+  Function : check the number is even or odd:<br>
+------------------------------------------------<br>
+Input any number : 5<br>
+The entered number is odd.<br>
+</fieldset>
+</body>
+</html>

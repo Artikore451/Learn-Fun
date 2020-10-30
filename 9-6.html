@@ -1,0 +1,65 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>PRINT ALL THE UNIQUE ELEMENT IN ARRAY</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+int main()<br>
+{<br>
+    int arr1[100], n,ctr=0;<br>
+    int i, j, k;<br>
+       printf("\n\nPrint all unique elements of an array:\n");<br>
+       printf("------------------------------------------\n");	<br>
+       printf("Input the number of elements to be stored in the array: ");<br>
+       scanf("%d",&n);<br>
+       printf("Input %d elements in the array :\n",n);<br>
+       for(i=0;i<n;i++)<br>
+            {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr1[i]);<br>
+	    }<br>
+    printf("\nThe unique elements found in the array are: \n");<br>
+    for(i=0; i<n; i++)<br>
+    {<br>
+        ctr=0;<br>
+        for(j=0,k=n; j<k+1; j++)<br>
+        {<br>
+            /*Increment the counter when the seaarch value is duplicate.*/<br>
+            if (i!=j)<br>
+            {<br>
+		       if(arr1[i]==arr1[j])<br>
+              {<br>
+                 ctr++;<br>
+               }<br>
+             }<br>
+        }<br>
+       if(ctr==0)<br>
+        {<br>
+          printf("%d ",arr1[i]);<br>
+        }<br>
+    }<br>
+       printf("\n\n");<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Print all unique elements of an array:<br>
+------------------------------------------<br>
+Input the number of elements to be stored in the array: 4<br>
+Input 4 elements in the array :<br>
+element - 0 : 3<br>
+element - 1 : 2<br>
+element - 2 : 2<br>
+element - 3 : 5<br><br>
+
+The unique elements found in the array are:<br>
+3 5<br>
+</fieldset>
+</body>
+</html>

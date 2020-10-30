@@ -1,0 +1,96 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>ADDITION OF TWO MATRICES OF SAME SIZE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void main()<br>
+{<br>
+  int arr1[50][50],brr1[50][50],crr1[50][50],i,j,n;<br><br>
+  
+       printf("\n\nAddition of two Matrices :\n");<br>
+       printf("------------------------------\n");  <br>
+        printf("Input the size of the square matrix (less than 5): ");<br>
+       scanf("%d", &n); <br>
+  
+    /* Stored values into the array*/<br>
+       printf("Input elements in the first matrix :\n");<br>
+       for(i=0;i<n;i++)<br>
+        {<br>
+            for(j=0;j<n;j++)<br>
+            {<br>
+	           printf("element - [%d],[%d] : ",i,j);<br>
+	           scanf("%d",&arr1[i][j]);<br>
+            }<br>
+        }   <br><br>
+  
+       printf("Input elements in the second matrix :\n");<br>
+       for(i=0;i<n;i++)<br>
+        {<br>
+            for(j=0;j<n;j++)<br>
+            {<br>
+	           printf("element - [%d],[%d] : ",i,j);<br>
+	           scanf("%d",&brr1[i][j]);<br>
+            }<br>
+        }    <br>
+   printf("\nThe First matrix is :\n");<br>
+  for(i=0;i<n;i++)<br>
+    {<br>
+      printf("\n");<br>
+      for(j=0;j<n;j++)<br>
+           printf("%d\t",arr1[i][j]);<br>
+    }<br><br>
+  
+  printf("\nThe Second matrix is :\n");<br>
+  for(i=0;i<n;i++)<br>
+    {<br>
+      printf("\n");<br>
+      for(j=0;j<n;j++)<br>
+      printf("%d\t",brr1[i][j]);<br>
+    }<br>
+/* calculate the sum of the matrix */   <br>
+   for(i=0;i<n;i++)<br>
+       for(j=0;j<n;j++)<br>
+            crr1[i][j]=arr1[i][j]+brr1[i][j];<br>
+   printf("\nThe Addition of two matrix is : \n");<br>
+   for(i=0;i<n;i++)<br>{<br>
+       printf("\n");<br>
+       for(j=0;j<n;j++)<br>
+            printf("%d\t",crr1[i][j]);<br>
+   }<br>
+   printf("\n\n");<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Addition of two Matrices :        <br>                                                                            
+------------------------------        <br>                                                                        
+Input the size of the square matrix (less than 5): 2<br>                                                          
+Input elements in the first matrix :                    <br>                                                      
+element - [0],[0] : 1<br>                                                                                         
+element - [0],[1] : 2    <br>                                                                                     
+element - [1],[0] : 3        <br>                                                                                 
+element - [1],[1] : 4            <br><br>                                                                             
+Input elements in the second matrix :    <br>                                                                     
+element - [0],[0] : 5                        <br>                                                                 
+element - [0],[1] : 6                            <br>                                                             
+element - [1],[0] : 7                                <br>                                                         
+element - [1],[1] : 8  <br>                                  <br>                                                     
+                                                                                                              
+The First matrix is :      <br>                                                                                   
+1&nbsp&nbsp       2                      <br>                                                                               
+3&nbsp&nbsp       4                          <br>                                                                           
+The Second matrix is :                 <br>                                                                       
+5&nbsp&nbsp       6                                  <br>                                                                   
+7&nbsp&nbsp       8                                      <br>                                                               
+The Addition of two matrix is :                    <br>                                                                                                                                  
+6&nbsp&nbsp       8                                              <br>                                                       
+10 &nbsp&nbsp     12  <br>
+</fieldset>
+</body>
+</html>

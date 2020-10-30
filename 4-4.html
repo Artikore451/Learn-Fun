@@ -1,0 +1,38 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DIVISION AND MODULUS ON FLOAT TYPE </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+int main()<br>
+{<br>
+ int a = 7, b = 3;<br>
+ int integerdiv, modulus;<br>
+ float floatdiv;<br>
+ 
+ integerdiv = a / b; // dividing 7 by 3<br>
+ modulus = a % b; // calculation the remainder<br>
+ floatdiv = (float)a / b; // Converting int to float<br>
+ 
+ printf("Division of two numbers a, b is : %d\n", integerdiv);<br>
+ printf("Modulus of two numbers a, b is : %d\n", modulus);<br>
+
+ printf("---------Correct Results is------- \n");<br>
+ printf("Division of two numbers a, b is : %f\n", floatdiv);<br>
+
+}<br>
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Division of two numbers a, b is :2<br>
+Modulus of two numbers a, b is :1<br>
+---------Correct Results is------- <br>
+Division of two numbers a, b is :2.333333<br>
+</fieldset>
+</body>
+</html>

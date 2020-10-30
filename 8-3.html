@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>COUNT THE DIGITS OF GIVEN NUMBER </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+int noOfDigits(int n1);<br>
+int main()<br>
+{<br>
+  int n1,ctr;<br>
+    printf("\n\n count the digits of a given number :\n");<br>
+	printf("-----------------------------------------\n");<br>
+    printf(" Input  a number : ");<br>
+    scanf("%d",&n1);<br><br>
+
+    ctr = noOfDigits(n1);<br>
+
+    printf(" The number of digits in the number is :  %d \n\n",ctr);<br>
+    return 0;<br>
+}<br><br>
+
+int noOfDigits(int n1)<br>
+{<br>
+    static int ctr=0;<br>
+
+     if(n1!=0)<br>
+     {<br>
+          ctr++;<br>
+         noOfDigits(n1/10);<br>
+    }<br>
+
+    return ctr;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+ count the digits of a given number : <br>                                                                        
+----------------------------------------- <br>                                                                    
+ Input  a number : 50                         <br>                                                                
+ The number of digits in the number is :  2 <br>
+</fieldset>
+</body>
+</html>

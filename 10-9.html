@@ -1,0 +1,81 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>DISPLAY LOWER TRIANGULAR OF THE MATRIX</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+   {<br>
+  int arr1[10][10],i,j,n;<br>
+  float determinant=0;<br><br>
+
+  
+       printf("\n\nDisplay the lower triangular of a given matrix :\n");<br>
+       printf("----------------------------------------------------\n");  <br>
+
+
+     printf("Input the size of the square matrix : ");<br>
+     scanf("%d", &n); <br>
+	 printf("Input elements in the first matrix :\n");<br>
+       for(i=0;i<n;i++)<br>
+        {<br>
+            for(j=0;j<n;j++)<br>
+            {<br>
+	           printf("element - [%d],[%d] : ",i,j);<br>
+	           scanf("%d",&arr1[i][j]);<br>
+            }<br>
+        }  <br>
+	 printf("The matrix is :\n");<br>
+	 for(i=0;i<n;i++)<br>
+	 {<br>
+	   for(j=0;j<n ;j++)<br>
+	     printf("% 4d",arr1[i][j]);<br>
+	    printf("\n");<br>
+	 }<br>
+
+   printf("\nSetting zero in lower triangular matrix\n");<br>
+   for(i=0;i<n;i++)<br>{<br>
+      printf("\n");<br>
+      for(j=0;j<n;j++)<br>
+           if(i<=j)<br>
+             printf("% 4d",arr1[i][j]);<br>
+           else<br>
+             printf("% 4d",0);<br>
+  }<br>
+       printf("\n\n");<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+   Display the lower triangular of a given matrix :<br>                                                              
+----------------------------------------------------   <br>                                                       
+Input the size of the square matrix : 3                    <br>                                                   
+Input elements in the first matrix :<br>                                                                          
+element - [0],[0] : 1       <br>                                                                                  
+element - [0],[1] : 2   <br>                                                                                      
+element - [0],[2] : 3       <br>                                                                                  
+element - [1],[0] : 4           <br>                                                                              
+element - [1],[1] : 5               <br>                                                                          
+element - [1],[2] : 6                   <br>                                                                      
+element - [2],[0] : 7                       <br>                                                                  
+element - [2],[1] : 8                           <br>                                                              
+element - [2],[2] : 9                               <br>                                                          
+The matrix is :                                         <br>                                                      
+   1&nbsp &nbsp   2 &nbsp &nbsp   3    <br>                                                                                              
+   4&nbsp &nbsp    5&nbsp &nbsp    6        <br>                                                                                          
+   7&nbsp &nbsp    8 &nbsp &nbsp   9 <br>
+Setting zero in lower triangular matrix<br>                                                                       
+                                                                                                              
+   1&nbsp &nbsp    2&nbsp &nbsp    3                               <br>                                                                   
+   0&nbsp &nbsp    5&nbsp &nbsp    6        <br>                                                               
+   0&nbsp &nbsp    0&nbsp &nbsp    9        <br>
+</fieldset>
+</body>
+</html>

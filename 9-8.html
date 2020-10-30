@@ -1,0 +1,75 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>COUNT FREQUENCY OF EACH ELEMENT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{<br>
+    int arr1[100], fr1[100];<br>
+    int n, i, j, ctr;<br>
+	
+	
+       printf("\n\nCount frequency of each element of an array:\n");<br>
+       printf("------------------------------------------------\n");	<br>
+
+       printf("Input the number of elements to be stored in the array :");<br>
+       scanf("%d",&n);<br>
+   
+       printf("Input %d elements in the array :\n",n);<br>
+       for(i=0;i<n;i++)<br>
+            {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr1[i]);<br>
+		  fr1[i] = -1;<br>
+	    }<br>
+    for(i=0; i<n; i++)<br>
+    {<br>
+        ctr = 1;<br>
+        for(j=i+1; j<n; j++)<br>
+        {<br>
+            if(arr1[i]==arr1[j])<br>
+            {<br>
+                ctr++;<br>
+                fr1[j] = 0;<br>
+            }<br>
+        }<br>
+
+        if(fr1[i]!=0)<br>
+        {<br>
+            fr1[i] = ctr;<br>
+        }<br>
+    }<br>
+    printf("\nThe frequency of all elements of array : \n");<br>
+    for(i=0; i<n; i++)<br>
+    {<br>
+        if(fr1[i]!=0)<br>
+        {<br>
+            printf("%d occurs %d times\n", arr1[i], fr1[i]);<br>
+        }<br>
+    }<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Count frequency of each element of an array: <br>                                                                 
+------------------------------------------------ <br>                                                             
+Input the number of elements to be stored in the array :3<br>                                                     
+Input 3 elements in the array :<br>                                                                               
+element - 0 : 25                   <br>                                                                           
+element - 1 : 12                       <br>                                                                       
+element - 2 : 43                           <br><br>                                                                   
+                                                                                                              
+The frequency of all elements of array :<br>                                                                      
+25 occurs 1 times                           <br>                                                                  
+12 occurs 1 times                               <br>                                                              
+43 occurs 1 times  <br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>COUNT NO. OF DUPLICATE ELEMNET IN ARRAY</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{<br>
+    int arr1[100];<br>
+	int arr2[100];<br>
+	int arr3[100];<br>
+    int n,mm=1,ctr=0;<br>
+    int i, j;	<br>
+	
+	
+       printf("\n\nCount total number of duplicate elements in an array:\n");<br>
+       printf("---------------------------------------------------------\n");	<br>
+
+       printf("Input the number of elements to be stored in the array :");<br>
+       scanf("%d",&n);<br>
+   
+       printf("Input %d elements in the array :\n",n);<br>
+       for(i=0;i<n;i++)<br>
+        {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr1[i]);<br>
+	    }V
+/*----------------- copy in other array ------------------------------------*/<br>
+		for(i=0;i<n; i++)<br>
+        {<br>
+		arr2[i]=arr1[i];<br>
+		arr3[i]=0;<br>
+        }<br>
+/*------------------- mark the elements are duplicate -------------------------*/<br>
+	for(i=0;i<n; i++)<br>
+        {<br>
+		for(j=0;j<n;j++)<br>
+			{<br>
+				if(arr1[i]==arr2[j])<br>
+				{<br>
+				arr3[j]=mm;<br>
+				mm++;<br>
+				}<br>
+			}<br>
+			mm=1;<br>
+        }		<br>
+/*--------------- Prints the array ------------------------------------*/<br>
+   for(i=0; i<n; i++)<br>
+    {<br>
+      if(arr3[i]==2){ctr++;}  <br>
+    }<br>
+      printf("The total number of duplicate elements found in the array is: %d \n", ctr);<br>
+    
+	  printf("\n\n");		<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Count total number of duplicate elements in an array:<br>                                                         
+---------------------------------------------------------<br>                                                     
+Input the number of elements to be stored in the array :3    <br>                                                 
+Input 3 elements in the array :   <br>                                                                            
+element - 0 : 5              <br>                                                                                 
+element - 1 : 1               <br>                                                                                
+element - 2 : 1                <br><br>                                                                               
+                                                                                                              
+Total number of duplicate elements found in the array is : 1<br>
+</fieldset>
+</body>
+</html>

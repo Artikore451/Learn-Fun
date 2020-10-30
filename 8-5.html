@@ -1,0 +1,51 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>COUNT THE DIGITS OF GIVEN NUMBER </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include<<stdio.h>stdio.h><br>
+
+int findGCD(int num1,int num2);<br>
+int main()<br>
+{<br>
+  int num1,num2,gcd;<br>
+  printf("\n\n Recursion : Find GCD of two numbers :\n");<br>
+  printf("------------------------------------------\n");  <br>
+  printf(" Input 1st number: ");<br>
+  scanf("%d",&num1);<br>
+  printf(" Input 2nd number: ");<br>
+  scanf("%d",&num2);<br><br>
+  
+  gcd = findGCD(num1,num2);<br>
+  printf("\n The GCD of %d and %d is: %d\n\n",num1,num2,gcd);<br>
+  return 0;<br>
+}<br><br>
+
+int findGCD(int a,int b)<br>
+{<br>
+     while(a!=b)<br>
+     {<br>
+          if(a>b)<br>
+              return findGCD(a-b,b);<br>
+          else<br>
+             return findGCD(a,b-a);<br>
+     }<br>
+     return a;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+ Recursion : Find GCD of two numbers : <br>                                                                       
+------------------------------------------ <br>                                                                   
+ Input 1st number: 10                          <br>                                                               
+ Input 2nd number: 50                              <br>                                                           
+                                                                                                              
+ The GCD of 10 and 50 is: 10
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>MAX AND MIN ELEMENT IN ARRAY</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{<br>
+    int arr1[100];<br>
+    int i, mx, mn, n;<br><br>
+	
+	
+       printf("\n\nFind maximum and minimum element in an array :\n");<br>
+       printf("--------------------------------------------------\n");	<br>
+
+       printf("Input the number of elements to be stored in the array :");<br>
+       scanf("%d",&n);<br>
+   
+       printf("Input %d elements in the array :\n",n);<br>
+       for(i=0;i<n;i++)<br>
+            {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr1[i]);<br>
+	    }<br><br>
+
+
+    mx = arr1[0];<br>
+    mn = arr1[0];<br><br>
+
+    for(i=1; i<n; i++)<br>
+    {<br>
+        if(arr1[i]>mx)<br>
+        {<br>
+            mx = arr1[i];<br>
+        }<br><br>
+
+
+        if(arr1[i]<mn)<br>
+        {<br>
+            mn = arr1[i];<br>
+        }<br>
+    }<br>
+    printf("Maximum element is : %d\n", mx);<br>
+    printf("Minimum element is : %d\n\n", mn);<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Find maximum and minimum element in an array :   <br>                                                             
+--------------------------------------------------   <br>                                                         
+Input the number of elements to be stored in the array :3<br>                                                     
+Input 3 elements in the array :<br>                                                                               
+element - 0 : 45<br>                                                                                              
+element - 1 : 25    <br>                                                                                          
+element - 2 : 21        <br>                                                                                      
+Maximum element is : 45     <br>                                                                                  
+Minimum element is : 21<br>
+</fieldset>
+</body>
+</html>

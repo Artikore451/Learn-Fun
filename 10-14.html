@@ -1,0 +1,89 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>CHECK GIVEN MATRIX IS AN IDENTITY MATRIX</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+//In a square matrix if all the main diagonal elements are 1's and <br>
+//all the remaining elements are 0's is called an Identity Matrix.<br>
+
+void main()<br>
+{<br>
+   int arr1[10][10];<br>
+   int r1,c1;<br>
+   int i, j, yn =1;<br><br>
+   
+       printf("\n\n Check whether a given matrix is an identity matrix :\n ");<br>
+       printf("-----------------------------------------------------------\n");   <br>
+  
+   printf("Input number of Rows for the matrix :");<br>
+   scanf("%d", &r1);<br>
+   printf("Input number of Columns for the matrix :");<br>
+   scanf("%d",&c1);   <br>
+	 printf("Input elements in the first matrix :\n");<br>
+       for(i=0;i<r1;i++)<br>
+        {<br>
+            for(j=0;j<c1;j++)<br>
+            {<br>
+	           printf("element - [%d],[%d] : ",i,j);<br>
+	           scanf("%d",&arr1[i][j]);<br>
+            }<br>
+        }    <br>
+ 	 printf("The matrix is :\n");<br>
+	 for(i=0;i<r1;i++)<br>
+	 {<br>
+	   for(j=0;j<c1 ;j++)<br>
+	     printf("% 4d",arr1[i][j]);<br>
+	    printf("\n");<br>
+	 }<br>
+
+    for(i=0; i<r1; i++)<br>
+    {<br>
+     for(j=0; j<c1; j++)<br>
+     {<br>
+	 if(arr1[i][j] != 1 && arr1[j][i] !=0)<br>
+	 {<br>
+	   yn = 0;
+	   break;
+	 }<br>
+	}<br>
+   }<br>
+
+   if(yn == 1 )<br>
+	printf(" The matrix is an identity matrix.\n\n");<br>
+   else<br>
+	printf(" The matrix is not an identity matrix.\n\n");<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+ Check whether a given matrix is an identity matrix : <br>                                                        
+ -----------------------------------------------------------<br>                                                  
+Input number of Rows for the matrix :3   <br>                                                                     
+Input number of Columns for the matrix :3    <br>                                                                 
+Input elements in the first matrix :             <br>                                                             
+element - [0],[0] : 1   <br>                                                                                      
+element - [0],[1] : 0       <br>                                                                                  
+element - [0],[2] : 0           <br>                                                                              
+element - [1],[0] : 0               <br>                                                                          
+element - [1],[1] : 1                   <br>                                                                      
+element - [1],[2] : 0                       <br>                                                                  
+element - [2],[0] : 0                           <br>                                                              
+element - [2],[1] : 0                               <br>                                                          
+element - [2],[2] : 1                                   <br>                                                      
+The matrix is :   <br>                                                                                            
+   1&nbsp&nbsp   0&nbsp&nbsp   0          <br>                                                                                        
+   0&nbsp&nbsp   1&nbsp&nbsp   0              <br>                                                                                    
+   0&nbsp&nbsp   0&nbsp&nbsp   1                  <br>                                                                                
+The matrix is an identity matrix. <br>                                                          
+
+</fieldset>
+</body>
+</html>

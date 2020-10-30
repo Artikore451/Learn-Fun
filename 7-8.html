@@ -1,0 +1,92 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>CHECK ARMSTRONG AND PERFECT NUMBER USING FUNCTION</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+int checkArmstrong(int n1);<br>
+int checkPerfect(int n1);<br>
+ 
+int main()<br>
+{<br>
+    int n1;<br>
+	printf("\n\n Function : check Armstrong and perfect numbers :\n");<br>
+	printf("-----------------------------------------------------\n"); 	<br>
+     
+    printf(" Input any number: ");<br>
+    scanf("%d", &n1);<br><br>
+     
+     
+    //Calls the isArmstrong() function<br>
+    if(checkArmstrong(n1))<br>
+    {<br>
+        printf(" The %d is an Armstrong number.\n", n1);<br>
+    }<br>
+    else<br>
+    {<br>
+        printf(" The %d is not an Armstrong number.\n", n1);<br>
+    }<br>
+     
+    //Calls the checkPerfect() function<br>
+    if(checkPerfect(n1))<br>
+    {<br>
+        printf(" The %d is a Perfect number.\n\n", n1);<br>
+    }<br>
+    else<br>
+    {<br>
+        printf(" The %d is not a Perfect number.\n\n", n1);<br>
+    }<br>
+    return 0;<br>
+}<br><br>
+
+// Checks whether a three digits number is Armstrong number or not.<br> 
+//An Armstrong number is an n-digit number that is equal <br>
+//to the sum of the n-th powers of its digits.<br>
+int checkArmstrong(int n1) <br>
+{<br>
+    int ld, sum, num;<br>
+    sum = 0;<br>
+    num = n1;<br>
+    while(num!=0)<br>  
+    {  <br>
+        ld = num % 10;  // find the last digit of the number <br>
+        sum += ld * ld * ld;  //calculate the cube of the last digit and adds to sum<br>
+        num = num/10;  <br>
+    }<br>
+    return (n1 == sum);<br>
+}<br><br>
+// Checks whether the number is perfect number or not. <br>
+//a perfect number is a positive integer that is equal to <br>
+//the sum of its positive divisors excluding the number itself<br> 
+int checkPerfect(int n1) <br>
+{<br>
+    int i, sum, num;<br>
+    sum = 0;<br>
+    num = n1;<br>
+    for(i=1; i<num; i++)<br>  
+    {  <br>
+        /* If i is a divisor of n1 */ <br>
+        if(num%i == 0)  <br>
+        {  <br>
+            sum += i;<br>  
+        }  <br>
+    }<br>
+    return (n1 == sum);<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+ Function : check armstrong and perfect numbers :<br>
+-----------------------------------------------------<br>
+ Input any number: 371<br>
+ The 371 is an Armstrong number.<br>
+ The 371 is not a Perfect number.<br>
+</fieldset>
+</body>
+</html>

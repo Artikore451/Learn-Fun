@@ -1,0 +1,125 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>MULTIPLICATION OF TWO SQUARE MARTIX</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{<br>
+  int arr1[50][50],brr1[50][50],crr1[50][50],i,j,k,r1,c1,r2,c2,sum=0;<br><br>
+  
+       printf("\n\nMultiplication of two Matrices :\n");<br>
+       printf("----------------------------------\n");  <br><br>
+  
+  printf("\nInput the rows and columns of first matrix : ");<br>
+  scanf("%d %d",&r1,&c1);<br>
+  printf("\nInput the rows and columns of second matrix : ");<br>
+  scanf("%d %d",&r2,&c2);<br>
+  if(c1!=r2)<br>{<br>
+      printf("Mutiplication of Matrix is not possible.");<br>
+      printf("\nColumn of first matrix and row of second matrix must be same.");<br>
+  }<br>
+  else<br>
+      {<br>
+       printf("Input elements in the first matrix :\n");<br>
+       for(i=0;i<r1;i++)<br>
+        {<br>
+            for(j=0;j<c1;j++)<br>
+            {<br>
+	           printf("element - [%d],[%d] : ",i,j);<br>
+	           scanf("%d",&arr1[i][j]);<br>
+            }<br>
+        }   <br>
+       printf("Input elements in the second matrix :\n");<br>
+       for(i=0;i<r2;i++)<br>
+        {<br>
+            for(j=0;j<c2;j++)<br>
+            {<br>
+	           printf("element - [%d],[%d] : ",i,j);<br>
+	           scanf("%d",&brr1[i][j]);<br>
+            }<br>
+        }    <br>
+ 	 printf("\nThe First matrix is :\n");<br>
+  		for(i=0;i<r1;i++)<br>
+    		{<br>
+      		printf("\n");<br>
+      		for(j=0;j<c1;j++)<br>
+          	printf("%d\t",arr1[i][j]);<br>
+    		}<br><br>
+  
+  	printf("\nThe Second matrix is :\n");<br>
+  		for(i=0;i<r2;i++)<br>
+    		{<br>
+      		printf("\n");<br>
+      		for(j=0;j<c2;j++)<br>
+      		printf("%d\t",brr1[i][j]);<br>
+    		}<br>
+//multiplication of matrix<br>
+      for(i=0;i<r1;i++)<br>
+          for(j=0;j<c2;j++)<br>
+           crr1[i][j]=0;<br>
+             for(i=0;i<r1;i++)    //row of first matrix<br>
+                 { <br>
+                   for(j=0;j<c2;j++)    //column of second matrix<br>
+                     { <br> 
+                       sum=0;<br>
+                         for(k=0;k<c1;k++)<br>
+                           sum=sum+arr1[i][k]*brr1[k][j];<br>
+                           crr1[i][j]=sum;<br>
+                     }<br>
+                 }<br>
+  printf("\nThe multiplication of two matrices is : \n");<br>
+  for(i=0;i<r1;i++)<br>
+     {<br>
+        printf("\n");<br>
+        for(j=0;j<c2;j++)<br>
+         {<br>
+           printf("%d\t",crr1[i][j]);<br>
+         }<br>
+     }<br>
+  }<br>
+printf("\n\n");<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Multiplication of two Matrices :   <br>                                                                           
+----------------------------------     <br>                                                                       
+                                                                                                              
+Input the rows and columns of first matrix : 2<br>                                                                
+2                                                 <br>                                                            
+                                                                                                              
+Input the rows and columns of second matrix : 2 <br>                                                              
+2                                             <br>                                                                
+Input elements in the first matrix : <br>                                                                         
+element - [0],[0] : 1                    <br>                                                                     
+element - [0],[1] : 2                        <br>                                                                 
+element - [1],[0] : 3                            <br>                                                             
+element - [1],[1] : 4                                <br>                                                         
+Input elements in the second matrix :                    <br>                                                     
+element - [0],[0] : 5<br>                                                                                         
+element - [0],[1] : 6    <br>                                                                                     
+element - [1],[0] : 7        <br>                                                                                 
+element - [1],[1] : 8 <br>
+
+The First matrix is : <br>                                                                                        <br>
+                          <br>                                                                                    
+1&nbsp&nbsp       2                     <br>                                                                                
+3&nbsp&nbsp       4                         <br>                                                                            
+The Second matrix is :                <br>                                                                        
+                                          <br>                                                                    
+5&nbsp&nbsp       6                                     <br>                                                                
+7&nbsp&nbsp       8                                         <br>                                                            
+The multiplication of two matrices is :               <br>                                                        
+                     <br>                                                                                         
+19 &nbsp&nbsp     22               <br>                                                                                     
+43 &nbsp&nbsp     50                   <br>   
+</fieldset>
+</body>
+</html>

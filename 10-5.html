@@ -1,0 +1,83 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>TRANSPOSE OF MARTIX</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+  
+  {<br>
+  int arr1[50][50],brr1[50][50],i,j,r,c;<br><br>
+  
+       printf("\n\nTranspose of a Matrix :\n");<br>
+       printf("---------------------------\n"); <br>
+
+
+       printf("\nInput the rows and columns of the matrix : ");<br>
+       scanf("%d %d",&r,&c);<br>
+
+       printf("Input elements in the first matrix :\n");<br>
+       for(i=0;i<r;i++)<br>
+        {<br>
+            for(j=0;j<c;j++)<br>
+            {<br>
+	           printf("element - [%d],[%d] : ",i,j);<br>
+	           scanf("%d",&arr1[i][j]);<br>
+            }<br>
+        } <br>
+
+ 	 printf("\nThe matrix is :\n");<br>
+  		for(i=0;i<r;i++)<br>
+    		{<br>
+      		printf("\n");<br>
+      		for(j=0;j<c;j++)<br>
+          	printf("%d\t",arr1[i][j]);<br>
+    		}<br><br>
+  
+  for(i=0;i<r;i++)<br>
+     {<br>
+      for(j=0;j<c;j++)<br>
+            {<br>
+                   brr1[j][i]=arr1[i][j];<br>
+            }<br>
+      }<br>
+
+      printf("\n\nThe transpose of a matrix is : ");<br>
+      for(i=0;i<c;i++)<br>{<br>
+      printf("\n");<br>
+      for(j=0;j<r;j++)<br>{<br>
+           printf("%d\t",brr1[i][j]);<br>
+      }<br>
+  }<br>
+      printf("\n\n");<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Transpose of a Matrix :       <br>                                                                                
+---------------------------       <br>                                                                            
+                                                                                                              
+Input the rows and columns of the matrix : 2 2<br>                                                                
+Input elements in the first matrix :              <br>                                                            
+element - [0],[0] : 1 <br>                                                                                        
+element - [0],[1] : 2     <br>                                                                                    
+element - [1],[0] : 3         <br>                                                                                
+element - [1],[1] : 4             <br><br>                                                                            
+                                                                                                              
+The matrix is :                           <br>                                                                    
+                                              <br>                                                                
+1&nbsp&nbsp       2                                         <br>                                                            
+3&nbsp&nbsp       4   <br>                                                                                                  
+                                                                                                              
+The transpose of a matrix is :  <br>                                                                              
+1 &nbsp&nbsp      3     <br>                                                                                                
+2 &nbsp&nbsp      4   <br>
+</fieldset>
+</body>
+</html>

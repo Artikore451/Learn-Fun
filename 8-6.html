@@ -1,0 +1,64 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>NUMBER IS PRIME OR NOT </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include<<stdio.h>stdio.h><br>
+
+int checkForPrime(int);<br>
+int i;<br><br>
+
+int main()<br>
+{<br>
+
+    int n1,primeNo;<br>
+
+	printf("\n\n Recursion : Check a number is prime number or not :\n");<br>
+	printf("--------------------------------------------------------\n");<br>
+	
+    printf(" Input any positive number : ");<br>
+    scanf("%d",&n1);<br>
+    
+    i = n1/2;<br>
+
+    primeNo = checkForPrime(n1);//call the function checkForPrime<br>
+
+   if(primeNo==1)<br>
+        printf(" The number %d is a prime number. \n\n",n1);<br>
+   else<br>
+      printf(" The number %d is not a prime number. \nn",n1);<br>
+   return 0;<br>
+}<br>
+
+int checkForPrime(int n1)<br>
+{<br>
+    if(i==1)<br>
+    {<br>
+        return 1;<br>
+    }<br>
+    else if(n1 %i==0)<br>
+    {<br>
+         return 0;<br>
+    }     <br>
+    else<br>
+       {<br>
+         i = i -1;<br> 
+         checkForPrime(n1);//calling the function checkForPrime itself recursively<br>
+      }<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+ Recursion : Check a number is prime number or not :<br>                                                          
+--------------------------------------------------------<br>                                                      
+ Input any positive number : 7   <br>                                                                             
+ The number 7 is a prime number. <br>
+</fieldset>
+</body>
+</html>

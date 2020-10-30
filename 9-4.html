@@ -1,0 +1,71 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>COPY ELEMENTS OF ONE ARRAY INTO ANOTHER</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void main()<br>
+{<br>
+    int arr1[100], arr2[100];<br>
+    int i, n;<br><br>
+	
+	
+       printf("\n\nCopy the elements one array into another array :\n");<br>
+       printf("----------------------------------------------------\n");<br>
+	   
+       printf("Input the number of elements to be stored in the array :");<br>
+       scanf("%d",&n);<br>
+   
+       printf("Input %d elements in the array :\n",n);<br>
+       for(i=0;i<n;i++)<br>
+        {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr1[i]);<br>
+	    }<br>
+    /* Copy elements of first array into second array.*/ <br>
+    for(i=0; i<n; i++)<br>
+    {<br>
+        arr2[i] = arr1[i];<br>
+    }<br>
+
+    /* Prints the elements of first array   */<br>
+    printf("\nThe elements stored in the first array are :\n");<br>
+    for(i=0; i<n; i++)<br>
+    {<br>
+        printf("% 5d", arr1[i]);<br>
+    }<br>
+
+    /* Prints the elements copied into the second array. */<br>
+    printf("\n\nThe elements copied into the second array are :\n");<br>
+    for(i=0; i<n; i++)<br>
+    {<br>
+        printf("% 5d", arr2[i]);<br>
+    }<br>
+	       printf("\n\n");<br>
+}<br>
+
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Copy the elements one array into another array :<br>                                                              
+----------------------------------------------------<br>                                                          
+Input the number of elements to be stored in the array :3<br>                                                     
+Input 3 elements in the array :<br>                                                                               
+element - 0 : 15 <br>                                                                                             
+element - 1 : 10    <br>                                                                                          
+element - 2 : 12       <br>                                                                                       
+                                                                                                              
+The elements stored in the first array are : <br>                                                                 
+   15   10   12                                                                                               
+                                   <br>                                                                           
+The elements copied into the second array are :<br>                                                               
+   15   10   12 <br>
+</fieldset>
+</body>
+</html>

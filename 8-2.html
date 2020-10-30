@@ -1,0 +1,60 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SUM OF NUMBER FROM 1 TO N </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+ 
+int term; <br>
+int fibonacci(int prNo, int num); <br> <br>
+ 
+void main()  <br>
+{ <br>
+   static int prNo = 0, num = 1; <br>
+	printf("\n\n Recursion : Print Fibonacci Series :\n"); <br>
+	printf("-----------------------------------------\n");    <br>
+ 
+   printf(" Input number of terms for the Series (< 20) : "); <br>
+   scanf("%d", &term); <br>
+ printf(" The Series are :\n"); <br> 
+   printf(" 1  "); <br>
+   fibonacci(prNo, num); <br>
+    printf("\n\n"); <br>
+} <br> <br>
+ 
+int fibonacci(int prNo, int num)  <br>
+{ <br>
+   static int i = 1; <br>
+   int nxtNo; <br> <br>
+ 
+   if (i == term) <br>
+      return (0); <br>
+   else  <br>
+   { <br>
+      nxtNo = prNo + num; <br>
+      prNo = num; <br>
+      num = nxtNo; <br>
+      printf("%d  ", nxtNo); <br> <br>
+ 
+      i++; <br>
+      fibonacci(prNo, num); //recursion, calling the function fibonacci itself <br>
+   } <br>
+   return (0); <br>
+} <br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+ Recursion : Print Fibonacci Series :  <br>                                                                       
+-----------------------------------------  <br>                                                                   
+ Input number of terms for the Series (< 20) : 10<br>                                                             
+ The Series are :                                    <br>                                                         
+ 1  1  2  3  5  8  13  21  34  55<br>
+</fieldset>
+</body>
+</html>

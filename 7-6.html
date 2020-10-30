@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>CONVERT DECIMAL TO BINARY</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+long toBin(int);<br>
+
+int main()<br>
+{<br>
+    long bno;<br>
+    int dno;<br>
+	printf("\n\n Function : convert decimal to binary :\n");<br>
+	printf("-------------------------------------------\n");    <br>
+    printf(" Input any decimal number : ");<br>
+    scanf("%d",&dno);<br>
+    bno = toBin(dno);<br>
+    printf("\n The Binary value is : %ld\n\n",bno);<br><br>
+
+    return 0;<br>
+}<br>
+long toBin(int dno)<br>
+{<br>
+    long bno=0,remainder,f=1;<br>
+    while(dno != 0)<br>
+    {<br>
+         remainder = dno % 2;<br>
+         bno = bno + remainder * f;<br>
+         f = f * 10;<br>
+         dno = dno / 2;<br>
+    }<br>
+    return bno;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+ Function : convert decimal to binary :<br>
+------------------------------------------<br>
+ Input any decimal number : 65<br><br>
+
+ The Binary value is : 1000001<br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>SQUARE OF NUMBER USING FUNCTION</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+double square(double num)<br>
+
+{<br>
+
+    return (num * num);<br>
+
+}<br>
+
+int main()<br>
+
+{<br>
+
+    int num;<br>
+    double n;<br>
+	printf("\n\n Function : find square of any number :\n");<br>
+	printf("------------------------------------------------\n");<br>	
+     
+    printf("Input any number for square : ");<br>
+    scanf("%d", &num);<br>
+    n = square(num);<br>
+    printf("The square of %d is : %.2f\n", num, n);<br> 
+    return 0;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+ Function : find square of any number :<br>
+------------------------------------------------<br>
+Input any number for square : 20<br>
+The square of 20 is : 400.00<br>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>ELIGIBLE FOR ADMISSION FORM COURSE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+void main()<br>
+{<br>  int p,c,m,t,mp;<br>
+
+   printf("Eligibility Criteria :\n");<br>
+   printf("Marks in Maths >=65\n");<br>
+   printf("and Marks in Phy >=55\n");<br>
+   printf("and Marks in Chem>=50\n");<br>
+   printf("and Total in all three subject >=180\n");<br>
+   printf("or Total in Maths and Physics >=140\n");<br>
+   printf("-------------------------------------\n");<br>
+
+   printf("Input the marks obtained in Physics :");<br>
+   scanf("%d",&p);<br>
+   printf("Input the marks obtained in Chemistry :");<br>
+   scanf("%d",&c);<br>
+   printf("Input the marks obtained in Mathematics :");<br>
+   scanf("%d",&m);<br>
+   printf("Total marks of Maths, Physics and Chemistry : %d\n",m+p+c);<br>
+   printf("Total marks of Maths and  Physics : %d\n",m+p);<br><br>
+
+   if (m>=65)<br>
+         if(p>=55)<br>
+             if(c>=50)<br>
+	        if((m+p+c)>=180||(m+p)>=140)<br>
+	           printf("The  candidate is eligible for admission.\n");<br>
+	        else<br>
+	          printf("The candidate is not eligible.\n");<br>
+             else<br>
+	    printf("The candidate is not eligible.\n");<br>
+         else<br>
+	   printf("The candidate is not eligible.\n");<br>
+    else<br>
+     printf("The candidate is not eligible.\n");<br>
+}<br>
+
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+Eligibility Criteria :           <br>                                                                             
+Marks in Maths >=65                  <br>                                                                         
+and Marks in Phy >=55                    <br>                                                                     
+and Marks in Chem>=50                        <br>                                                                 
+and Total in all three subject >=180        <br>                                                             
+or Total in Maths and Physics >=140         <br>                                                         
+-------------------------------------          <br>                                                     
+Input the marks obtained in Physics :65          <br>                                                 
+Input the marks obtained in Chemistry :51        <br>                                             
+Input the marks obtained in Mathematics :72        <br>                                                           
+Total marks of Maths, Physics and Chemistry : 188   <br>                                                          
+Total marks of Maths and  Physics : 137             <br>                                                          
+The  candidate is eligible for admission.<br>
+</fieldset>
+</body>
+</html>

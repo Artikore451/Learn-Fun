@@ -1,0 +1,100 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>MERGE TWO ARRAYS OF SAME SIZE</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include <<stdio.h>stdio.h> <br>
+
+void main()<br>
+{<br>
+    int arr1[100], arr2[100], arr3[200];<br>
+    int s1, s2, s3;<br>
+    int i, j, k;<br><br>
+	
+	
+       printf("\n\nMerge two arrays of same size sorted in decending order.\n");<br>
+       printf("------------------------------------------------------------\n");<br><br>	
+	   
+       printf("Input the number of elements to be stored in the first array :");<br>
+       scanf("%d",&s1);<br><br>
+   
+       printf("Input %d elements in the array :\n",s1);<br>
+       for(i=0;i<s1;i++)<br>
+            {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr1[i]);<br>
+	    }<br><br>
+
+
+       printf("Input the number of elements to be stored in the second array :");<br>
+       scanf("%d",&s2);<br>
+   
+       printf("Input %d elements in the array :\n",s2);<br>
+       for(i=0;i<s2;i++)<br>
+            {<br>
+	      printf("element - %d : ",i);<br>
+	      scanf("%d",&arr2[i]);<br>
+	    }<br><br>
+
+    /* size of merged array is size of first array and  size of second array */<br>
+    s3 = s1 + s2;<br>
+/*----------------- insert in the third array------------------------------------*/<br>
+    for(i=0;i<s1; i++)<br>
+        {<br>
+            arr3[i] = arr1[i];<br>
+         }<br>
+     for(j=0;j<s2; j++)<br>
+        {<br>
+            arr3[i] = arr2[j];<br>
+            i++; <br>
+        }<br>
+/*----------------- sort the array in decending order ---------------------------*/<br>
+   for(i=0;i<s3; i++)<br>
+        {<br>
+           for(k=0;k<s3-1;k++)<br>
+             {<br>
+         
+                if(arr3[k]<=arr3[k+1])<br>
+                 {<br>
+                   j=arr3[k+1];<br>
+                   arr3[k+1]=arr3[k];<br>
+                   arr3[k]=j;<br>
+                 }  <br>
+              }<br>
+         }         <br>             
+
+/*--------------- Prints the merged array ------------------------------------*/<br>
+     printf("\nThe merged array in decending order is :\n");<br>
+    for(i=0; i<s3; i++)<br>
+    {<br>
+        printf("%d   ", arr3[i]);<br>
+    }<br>
+	printf("\n\n");<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+Merge two arrays of same size sorted in decending order.<br>                                                      
+------------------------------------------------------------<br>                                                  
+Input the number of elements to be stored in the first array :3 <br>                                              
+Input 3 elements in the array :   <br>                                                                            
+element - 0 : 1  <br>                                                                                             
+element - 1 : 2      <br>                                                                                         
+element - 2 : 3          <br>                                                                                     
+Input the number of elements to be stored in the second array :3<br>                                              
+Input 3 elements in the array :   <br>                                                                            
+element - 0 : 1  <br>                                                                                             
+element - 1 : 2      <br>                                                                                         
+element - 2 : 3          <br><br>                                                                                     
+                                                                                                              
+The merged array in decending order is :<br>                                                                      
+3   3   2   2   1   1 <br>
+3 5<br>
+</fieldset>
+</body>
+</html>

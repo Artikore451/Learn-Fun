@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> hello world </title>
+</head>
+<body><br><br><br>
+<h2><u><i>POWER OF ANY NUMBER </u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">
+#include<<stdio.h>stdio.h><br>
+ 
+long int CalcuOfPower(int x,int y)<br>
+{<br>
+    long int result=1;<br>
+    if(y == 0) return result;<br>
+    result=x*(CalcuOfPower(x,y-1));  //calling the  function CalcuOfPower itself recursively<br>
+}<br><br>
+int main()<br>
+{<br>
+    int bNum,pwr;<br>
+    long int result;<br>
+    printf("\n\n Recursion : Calculate the power of any number :\n");<br>
+	printf("----------------------------------------------------\n");<br>	
+     
+    printf(" Input the base  value : ");<br>
+    scanf("%d",&bNum);<br>
+     
+    printf(" Input the value of power : ");<br>
+    scanf("%d",&pwr);<br>
+     
+    result=CalcuOfPower(bNum,pwr);//called the function CalcuOfPower<br>
+     
+    printf(" The value of %d to the power of %d is : %ld\n\n",bNum,pwr,result);<br>
+     
+    return 0;<br>
+}<br>
+
+</fieldset><br>
+
+
+<h2><u><i>OUTPUT</u></i></h2><br>
+<fieldset style="background-color:#E6E6FA;">                                                                         
+ Recursion : Calculate the power of any number :<br>                                                              
+----------------------------------------------------<br>                                                          
+ Input the base  value : 2                              <br>                                                      
+ Input the value of power : 6                               <br>                                                  
+ The value of 2 to the power of 6 is : 64<br>
+</fieldset>
+</body>
+</html>
